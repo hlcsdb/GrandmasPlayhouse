@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: TeaTime
+  m_EditorClassIdentifier: 
+  scenarioObject: {fileID: 0}
+  scenarioType: 1
+  scenarioName: Thuyt tthu lutem
+  scenarioDraggableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: 18b2ae091e9374e8c974b3188b6737d9, type: 2}
+  - {fileID: 11400000, guid: 92d657655da6b479a82ce4d2899aecdf, type: 2}
+  - {fileID: 11400000, guid: b3329b020a73b4070b621f88b585215f, type: 2}
+  - {fileID: 11400000, guid: 6be8dcb53a0d24435b71bfc55eb03cd4, type: 2}
+  - {fileID: 11400000, guid: 504f16dd2100d4716be5e9076d705f7a, type: 2}
+  - {fileID: 11400000, guid: 0e1aa0f895e9a49afbb1db2e356ae956, type: 2}
+  - {fileID: 11400000, guid: f4ea240f5ca7c46f98ffeb8a02f7776c, type: 2}
+  - {fileID: 11400000, guid: 0b0db363d0ced4618a28f710950c0b49, type: 2}
+  sceneDescription:
+  - Thank you. The table is ready.
+  - "hay ch q\u2019a\u2019. hwu saay\u2019 tthu lutem!"
+  - 
+  openerPhrase:
+  - Okay! Let's set the table.
+  - "hey\u2019 kwu\u2019elh. \u2019ilhe nem\u2019 t\u2019un\u2019aalhum\u2019!"
+  - 
+  repeaterPhrase:
+  - 'lay down the '
+  - "lheq\u2019ut tthu "
+  - 
+  successPhrase:
+  - Good job!
+  - '''uy'' syaays!'
+  - 
+  completionPhrase:
+  - Thank you. The table is ready.
+  - "hay ch q\u2019a\u2019. hwu saay\u2019 tthu lutem!"
+  - 
+  sceneDescriptionAud: {fileID: 8300000, guid: 98081c70ac7f34aabb07ad3d191ad62e, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 3c3868534378e4922891bcf2b3871f60, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 187cca6b3eb234ee08bb7782f4560cb8, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: aa755537d2f414166acf4dc569ba66b4, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: 2934ef6e2aaa446cb9f5883746c06988, type: 3}
+  incorrectSelectionAud: {fileID: 8300000, guid: 31bdc0061c73f4bac9e6fefdd67d969a, type: 3}
+  numDraggables: 8
+  backgroundImage: {fileID: 21300000, guid: 9512c2db358ea4e3cb8423fbe667210d, type: 3}
+  dialect: 1
+  randSlots:
+  - {x: -400, y: 135}
+  - {x: -400, y: 20}
+  - {x: -400, y: -95}
+  - {x: -400, y: -210}
+  - {x: 400, y: 135}
+  - {x: 400, y: 20}
+  - {x: 400, y: -95}
+  - {x: 400, y: -210}
