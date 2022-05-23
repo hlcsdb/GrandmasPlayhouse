@@ -25,7 +25,7 @@ public class Scenario : ScriptableObject
 
     public string[] repeaterPhrase; //instructions that proceed the word of every item, eg. LAY DOWN THE plate // if this is different for different objects in the scenario, leave it blank and specify in DisplayDraggable
     public string[] successPhrase;
-
+    public string[] incorrectSelectionPhrase;
     public string[] completionPhrase;
 
     //public AudioSource audioS;

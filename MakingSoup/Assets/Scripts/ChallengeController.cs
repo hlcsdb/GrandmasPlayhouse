@@ -79,6 +79,7 @@ public class ChallengeController : MonoBehaviour
         return draggableIndices;
     }
 
+    //this needs to be custom to soup.... cause there are so many order conditions
      public void SetDraggableOrder()
     {
         List<DraggableItem> tempDraggables = selectedScenarioSO.scenarioDraggableItems;

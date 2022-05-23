@@ -34,7 +34,7 @@ public class SceneController : MonoBehaviour
 
     public void GotoPlayScene()
     {
-        SceneManager.LoadScene("SetTheTable");
+        SceneManager.LoadScene("MakingSoup");
         //if (gotoScene == 1)
         //{
         //    SceneManager.LoadScene("Freeplay");
