@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: Cup
+  m_EditorClassIdentifier: 
+  type: 4
+  description: 
+  wordString:
+  - cup
+  - lupat
+  customInstructionText:
+  - 
+  - "lheq\u2019ut tthu"
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 4b0feab8af81e44088db6357c422fe58, type: 3}
+  - {fileID: 21300000, guid: 4d9b413b561084bfdb23ed47a23f1d5f, type: 3}
+  thisRandIndex: 2
+  dragged: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882353, g: 0.93333334, b: 0.12941177, a: 1}
+  - {r: 0.9490196, g: 0.32941177, b: 0.1882353, a: 1}
+  audioClip: {fileID: 8300000, guid: 7052bdc73dc2b4093844ea6e40ac7a9a, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: d6ac570d21e754a8099873145dab9f51, type: 3}
+  dropPos: {x: 53, y: 83}
+  dropSize: {x: 2.1, y: 2.1}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: -60, y: 20}
