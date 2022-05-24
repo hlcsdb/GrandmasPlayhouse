@@ -51,7 +51,6 @@ public class ChallengeController : MonoBehaviour
 
     public void SetSelectedStart()
     {
-        
         inSelection = false;
         sceneAudButton.interactable = false;
 
@@ -69,10 +68,10 @@ public class ChallengeController : MonoBehaviour
         RandomizeDraggablePos();
     }
 
-    public List<int> IndicesArray(int length)
+    public List<int> IndicesArray(int startInt, int length)
     {
         List<int> draggableIndices = new List<int>();
-        for (int i = 0; i < length; i++)
+        for (int i = startInt; i < length + startInt; i++)
         {
             draggableIndices.Add(i);
         }
@@ -80,28 +79,38 @@ public class ChallengeController : MonoBehaviour
     }
 
     //this needs to be custom to soup.... cause there are so many order conditions
-     public void SetDraggableOrder()
+    public void SetDraggableOrder()
     {
         List<DraggableItem> tempDraggables = selectedScenarioSO.scenarioDraggableItems;
-        List<int> iArr = IndicesArray(numObjects);
-
+        List<int> iArr1 = IndicesArray(0, 4);
+        
         int iRand;
-        for (int i = 0; i < numObjects; i++)
+        for (int i = 0; i < 4; i++)
         {
-            iRand = Random.Range(0, iArr.Count);
-
-            draggables.Add(tempDraggables[iArr[iRand]]);
-            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr[iRand]).gameObject);
+            iRand = Random.Range(0, iArr1.Count);
+            draggables.Add(tempDraggables[iArr1[iRand]]);
+            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr1[iRand]).gameObject);
             draggables[i].ThisItemIndex(i);
             draggables[i].ResetSO();
             draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
-            iArr.RemoveAt(iRand);
+            iArr1.RemoveAt(iRand);
+        }
+        List<int> iArr2 = IndicesArray(4, 4);
+        for (int i = 4; i < 8; i++)
+        {
+            iRand = Random.Range(0, iArr2.Count);
+            draggables.Add(tempDraggables[iArr2[iRand]]);
+            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr2[iRand]).gameObject);
+            draggables[i].ThisItemIndex(i);
+            draggables[i].ResetSO();
+            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
+            iArr2.RemoveAt(iRand);
         }
     }
 
     public void RandomizeDraggablePos()
     {
-        List<int> iArr = IndicesArray(numObjects);
+        List<int> iArr = IndicesArray(0, numObjects);
         int iRand;
 
         foreach (GameObject draggable in draggableObjects)
@@ -124,6 +133,7 @@ public class ChallengeController : MonoBehaviour
         }
         else
         {
+            Debug.Log(draggables[curItem].WordString());
             selectedScenarioUI.ShowRepeater(draggables[curItem].WordString());
         }
 
@@ -190,11 +200,11 @@ public class ChallengeController : MonoBehaviour
 
     public IEnumerator Success()
     {
-        new WaitForSeconds(2);
-        selectedScenarioUI.ShowSuccess();
+        //new WaitForSeconds(2);
+        //selectedScenarioUI.ShowSuccess();
         //big particle effect
-        yield return new WaitWhile(() => audioSource.isPlaying);
-        audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
+        //yield return new WaitWhile(() => audioSource.isPlaying);
+        //audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
         yield return new WaitWhile(() => audioSource.isPlaying);
         yield return new WaitForSeconds(1);
         StartCoroutine(ShowCompletionScreen());
@@ -245,26 +255,4 @@ public class ChallengeController : MonoBehaviour
         curItem = 0;
     }
 
-
-    //ONLY USED WITH CAROUSEL
-    //IEnumerator WaitToResetCarousel(float secondsToWait)
-    //{
-    //    carouselSliderScript.ResetSlider();
-    //    yield return new WaitForSeconds(secondsToWait);
-    //    //selectionScreen.SetActive(false);
-    //}
-
-    ////ONLY USED WITH CAROUSEL
-    //public void HideInactiveScenarios(int scenarioIndex)
-    //{
-    //    for(int i = 0; i < allScenarios.Length; i++)
-    //    {
-    //        if(i != scenarioIndex)
-    //        {
-    //            allScenarios[i].HideScenarioObject();
-    //        }
-    //    }
-    //}
-
-   
 }

@@ -25,14 +25,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   scenarioDraggableItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ca79317ef32ae400b86249a37f707bc7, type: 2}
+  - {fileID: 11400000, guid: fc2105aac6cac464a82d3eb6cfdeca7a, type: 2}
+  - {fileID: 11400000, guid: c51e9606ef359465da1e9b9a419d2427, type: 2}
+  - {fileID: 11400000, guid: 16022527a455d45b3972ead0d1afcc41, type: 2}
+  - {fileID: 11400000, guid: b4694dc7e73a04e64b5653bfa368aa9f, type: 2}
+  - {fileID: 11400000, guid: 87944e0bff8fa4673bf4cdd18473d503, type: 2}
+  - {fileID: 11400000, guid: bc06b190bbda845e987099fe0f09570d, type: 2}
+  - {fileID: 11400000, guid: e66225cb17c5e4c47859e4b9f5fb8138, type: 2}
   sceneDescription:
   - "\u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019 slhap\u2019."
   - "\u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019 slhap\u2019."
@@ -52,12 +52,12 @@ MonoBehaviour:
   - "oo. \u2019uy\u2019eluqup tthu slhap\u2019 tst! "
   sceneDescriptionAud: {fileID: 0}
   openerPhraseAud: {fileID: 8300000, guid: 42f4c2604122f482081633169de3886c, type: 3}
-  repeaterPhraseAud: {fileID: 0}
+  repeaterPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}
   successPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}
-  completionPhraseAud: {fileID: 8300000, guid: 093ab776e580f431ba92314633d8e42c, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: d33bda5aa86214294ac9e29030f95948, type: 3}
   incorrectSelectionAud: {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
   numDraggables: 8
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: d5b9fc931dc824a4ab69a3bbb19eb600, type: 3}
   dialect: 1
   randSlots:
   - {x: -400, y: 118}
