@@ -34,7 +34,7 @@ public class SceneController : MonoBehaviour
 
     public void GotoPlayScene()
     {
-        SceneManager.LoadScene("SetTheTable");
+        SceneManager.LoadScene("Jewelry");
         //if (gotoScene == 1)
         //{
         //    SceneManager.LoadScene("Freeplay");

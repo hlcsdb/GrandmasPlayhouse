@@ -3647,8 +3647,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 98081c70ac7f34aabb07ad3d191ad62e, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3782,7 +3782,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 98081c70ac7f34aabb07ad3d191ad62e, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3877,7 +3877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662823209}
   m_Layer: 5
-  m_Name: Set the Table
+  m_Name: Jewelry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
