@@ -49,8 +49,8 @@ MonoBehaviour:
   - "\u2019uwu nilhus tthey\u2019."
   completionPhrase:
   - Oh, our soup smells good!
-  - "oo. \u2019uy\u2019eluqup tthu slhap\u2019 tst! "
-  sceneDescriptionAud: {fileID: 0}
+  - "ooo. \u2019uy\u2019eluqup tthu slhap\u2019 tst! "
+  sceneDescriptionAud: {fileID: 8300000, guid: 693d02834d05c41de97095cd81fd7530, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 42f4c2604122f482081633169de3886c, type: 3}
   repeaterPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}
   successPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}

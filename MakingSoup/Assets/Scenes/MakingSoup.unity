@@ -196,7 +196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.7, y: 238.8}
+  m_AnchoredPosition: {x: 119.3, y: 220.9}
   m_SizeDelta: {x: 554.7, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56991662
@@ -219,7 +219,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2019ul\u2019 \u2019iyas."
+  m_text: "ooo hay ch q\u2019a\u2019 \u2019u tthun\u2019 sts\u2019ewulhtun.\nooo.
+    \u2019uy\u2019eluqup tthu slhap\u2019 tst!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -246,15 +247,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.45
+  m_fontSize: 33.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 24.2
   m_fontSizeMax: 60
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -407,6 +408,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1218944969}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -885,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &343709057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -905,7 +918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.1, y: 13.3}
+  m_AnchoredPosition: {x: 8.1, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &352355476
@@ -1532,7 +1545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ts\u2019ewutham\u2019sh \u2019i\u2019 nuwu theyuwstham\u2019sh"
+  m_text: "ts\u2019ewutham\u2019sh \u2019i\u2019 nuwu theyuwstham\u2019sh."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
   m_sharedMaterial: {fileID: 827127699022072792, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
@@ -2236,7 +2249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b116892a6f18a421abec46b4947812b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c75119e44fc2946e899114a0b3502cd9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3248,7 +3261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1351201794
 RectTransform:
   m_ObjectHideFlags: 0

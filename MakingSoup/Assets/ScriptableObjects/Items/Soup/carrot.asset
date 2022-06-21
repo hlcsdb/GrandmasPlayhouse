@@ -19,8 +19,8 @@ MonoBehaviour:
   - shewuq
   customInstructionText:
   - 'Chop up the carrot and put it in the pot. '
-  - "lhe\u2019lhutsut tu shewuq \u2019un\u2019 suw\u2019 nuw\u2019ush \u2019u tu
-    shqwal\u2019s. "
+  - "lhe\u2019lhuts\u2019ut tthu shewuq \u2019un\u2019 suw\u2019 nuw\u2019ush \u2019u
+    tthu shqwal\u2019s."
   - 
   draggableImage:
   - {fileID: 21300000, guid: 1c5d5dd75d9124a61ba85475a79d6c1e, type: 3}
@@ -33,7 +33,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 50ab001702a254adf9b15dcbe0f0cf48, type: 3}
   draggableInstruction: {fileID: 8300000, guid: b334e401e582b45c097ba142d5392d2d, type: 3}
   dropPos: {x: 108.5, y: -49.8}
   dropSize: {x: 2.05, y: 2.1}

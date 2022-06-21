@@ -13,7 +13,8 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: "Hul\u2019q\u2019umi\u2019num\u2019 Language and Culture Society"
-  productName: Set The Table || Thuyt tthu lutem
+  productName: "Let\u2019s make some soup. || \u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019
+    slhap\u2019"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -134,7 +135,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2.0
+  bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

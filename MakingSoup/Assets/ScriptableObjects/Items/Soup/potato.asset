@@ -19,13 +19,13 @@ MonoBehaviour:
   - sqewth
   customInstructionText:
   - 'Chop up the potato and put it in the pot. '
-  - "lhe\u2019lhutsut tu sqewth \u2019un\u2019 suw\u2019 nuw\u2019ush \u2019u tu
-    shqwal\u2019s.  "
+  - "lhe\u2019lhuts\u2019ut tthu sqewth \u2019un\u2019 suw\u2019 nuw\u2019ush \u2019u
+    tthu shqwal\u2019s."
   - 
   draggableImage:
   - {fileID: 21300000, guid: a44990fc447c34903a4b1b4dcee4a261, type: 3}
-  - {fileID: 21300000, guid: a44990fc447c34903a4b1b4dcee4a261, type: 3}
-  thisRandIndex: 2
+  - {fileID: 21300000, guid: abc0e63c641044491a1beb3cddaba601, type: 3}
+  thisRandIndex: 0
   dragged: 0
   correct: 0
   dialect: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 3f863121e84fb41248fbd4171260e60e, type: 3}
   draggableInstruction: {fileID: 8300000, guid: 72a74cd28cff64004b3a3500fbed0002, type: 3}
   dropPos: {x: 108.5, y: -49.8}
   dropSize: {x: 0.8, y: 0.8}
