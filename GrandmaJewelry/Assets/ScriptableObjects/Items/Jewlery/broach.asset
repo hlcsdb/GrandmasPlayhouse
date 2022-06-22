@@ -22,8 +22,8 @@ MonoBehaviour:
   - 
   - 
   draggableImage:
-  - {fileID: 21300000, guid: a1aa35dd0bfe34a5597dd835c525a64c, type: 3}
-  - {fileID: 21300000, guid: 420b691e1e5844ef796ad7eb9b6bf498, type: 3}
+  - {fileID: 21300000, guid: f15584af6263a48a6ae0c975974d79e4, type: 3}
+  - {fileID: 21300000, guid: efb8243086e2d4151ba230aa74592734, type: 3}
   thisRandIndex: 0
   dragged: 0
   correct: 0
