@@ -30,7 +30,7 @@ public class ChallengeController : MonoBehaviour
     //Gameplay
     public bool inSelection = true;
     private int numItemsDropped;
-    internal int curItem = 0;
+    public int curItem = 0;
     int numErrors = 0;
     public Button sceneAudButton;
     internal bool inInstruction = true;
@@ -96,6 +96,7 @@ public class ChallengeController : MonoBehaviour
             iArr1.RemoveAt(iRand);
         }
         List<int> iArr2 = IndicesArray(4, 4);
+
         for (int i = 4; i < 8; i++)
         {
             iRand = Random.Range(0, iArr2.Count);
@@ -136,7 +137,7 @@ public class ChallengeController : MonoBehaviour
             Debug.Log(draggables[curItem].WordString());
             selectedScenarioUI.ShowRepeater(draggables[curItem].WordString());
         }
-
+        Debug.Log(draggables[curItem].name);
         audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
         
         yield return new WaitUntil(() => !audioSource.isPlaying);
