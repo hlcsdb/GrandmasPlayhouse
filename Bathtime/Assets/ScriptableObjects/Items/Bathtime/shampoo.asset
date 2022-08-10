@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: shampoo
+  m_EditorClassIdentifier: 
+  type: 7
+  description: 
+  wordString:
+  - shampoo
+  - "shhwii\u2019t\u2019a\u2019qwum\u2019"
+  customInstructionText:
+  - you getter get your shampoo.
+  - "yu kwun\u2019et kwthun\u2019 shhwii\u2019t\u2019a\u2019qwum\u2019."
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: c457238eef99144568145e733bac00c1, type: 3}
+  - {fileID: 21300000, guid: 9e795ddb3015f4d109b10729e027ff85, type: 3}
+  thisRandIndex: 0
+  dragged: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 8276f9e38b01b4c35bb764cac46f75d9, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: de5f86814592143fa82a2824d4150338, type: 3}
+  dropPos: {x: 0, y: 0}
+  dropSize: {x: 1, y: 1}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 0, y: 0}

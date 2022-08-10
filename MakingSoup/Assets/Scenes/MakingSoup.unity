@@ -3464,7 +3464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3099729393248254550, guid: f394ece484dc74751ae7569b710d16c0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3099729393248254550, guid: f394ece484dc74751ae7569b710d16c0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3691,11 +3691,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1278759256769345782}
   - {fileID: 5417390952753208059}
   - {fileID: 7575541669413096416}
   - {fileID: 6890099715957009379}
   - {fileID: 1489765827}
-  - {fileID: 1278759256769345782}
   - {fileID: 2437451153963666024}
   - {fileID: 734374297571585862}
   - {fileID: 474618542521072563}
@@ -4296,7 +4296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878143414259984430, guid: 9922d52c839614795b64d150e1494ff1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878143414259984430, guid: 9922d52c839614795b64d150e1494ff1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4665,7 +4665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8897700121692896591, guid: 7fd105e4113764fcd9b126cd821cf59d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8897700121692896591, guid: 7fd105e4113764fcd9b126cd821cf59d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4804,7 +4804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435835124560428342, guid: 6dac8843db229469b9d583aaef0878a1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3435835124560428342, guid: 6dac8843db229469b9d583aaef0878a1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5267,7 +5267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3808797705011789368, guid: 3db05438eed4343e3b777b7a7a16002f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3808797705011789368, guid: 3db05438eed4343e3b777b7a7a16002f, type: 3}
       propertyPath: m_AnchorMax.x
