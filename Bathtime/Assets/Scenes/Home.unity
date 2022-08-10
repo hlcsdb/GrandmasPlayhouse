@@ -1309,7 +1309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: -64}
+  m_AnchoredPosition: {x: 67, y: -48}
   m_SizeDelta: {x: 685.28, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619220987
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4030,7 +4030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662823209}
   m_Layer: 5
-  m_Name: Jewelry
+  m_Name: Bathtime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4837,7 +4837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: 235}
+  m_AnchoredPosition: {x: 30, y: 217}
   m_SizeDelta: {x: 753.87, y: 77.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116269632
@@ -4863,8 +4863,8 @@ MonoBehaviour:
   m_text: "\u2019uli\u2019yas suw\u2019a\u2019lum \u2019i\u2019 tthu \u2019i\u2019eluqup
     sp\u2019aqw\u2019um."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b347354a409fc45878783b6f162807c8, type: 2}
-  m_sharedMaterial: {fileID: 8675405919740107325, guid: b347354a409fc45878783b6f162807c8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
+  m_sharedMaterial: {fileID: 827127699022072792, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4888,14 +4888,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4924,7 +4924,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.4465788, w: 0}
+  m_margin: {x: -87.20102, y: 0, z: -38.564377, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

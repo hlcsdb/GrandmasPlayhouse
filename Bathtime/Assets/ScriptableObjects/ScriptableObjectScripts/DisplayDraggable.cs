@@ -15,7 +15,7 @@ public class DisplayDraggable : MonoBehaviour
     //internal Vector2 startRandPos;
     public Vector2 rectTransform;
     internal Vector2 randPos;
-    public Vector2[] dzB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180)};
+    public Vector2[] dzB;
     public int randI;
     public GameObject textBackground;
 
@@ -98,20 +98,10 @@ public class DisplayDraggable : MonoBehaviour
 
     public bool OverlappingDropZone()
     {
-        //Debug.Log("x: " + transform.localPosition.x + " y: " + transform.localPosition.y);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " > dzb[0].x: " + dzB[0].x);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " < dzb[2].x: " + dzB[2].x);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " > dzb[0].y: " + dzB[0].y);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " < dzb[1].y: " + dzB[1].y);
-        //Vector2[] db = GetBounds(transform.localPosition);
-        //Vector2 tp = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        //for (int i = 0; i < 4; i++)
-        //{
             if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
             {
                 return true;
             }
-        //}
         return false;
     }
 }

@@ -17,10 +17,7 @@ MonoBehaviour:
   wordString:
   - shampoo
   - "shhwii\u2019t\u2019a\u2019qwum\u2019"
-  customInstructionText:
-  - you getter get your shampoo.
-  - "yu kwun\u2019et kwthun\u2019 shhwii\u2019t\u2019a\u2019qwum\u2019."
-  - 
+  customInstructionText: []
   draggableImage:
   - {fileID: 21300000, guid: c457238eef99144568145e733bac00c1, type: 3}
   - {fileID: 21300000, guid: 9e795ddb3015f4d109b10729e027ff85, type: 3}
@@ -34,8 +31,8 @@ MonoBehaviour:
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: 8276f9e38b01b4c35bb764cac46f75d9, type: 3}
   draggableInstruction: {fileID: 8300000, guid: de5f86814592143fa82a2824d4150338, type: 3}
-  dropPos: {x: 0, y: 0}
+  dropPos: {x: 331, y: -93}
   dropSize: {x: 1, y: 1}
   selectionPos: {x: 0, y: 0}
-  startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
+  startSize: {x: 0.92, y: 0.92}
+  startPos: {x: -240, y: 65}

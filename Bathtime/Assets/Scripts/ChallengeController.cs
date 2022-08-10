@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ChallengeController : MonoBehaviour
 {
     //Selection
-    public Scenario[] allScenarios;
     //public GameObject selectionScreen;
     //public GameObject carousel;
     public int dialect = 1;
@@ -57,7 +56,6 @@ public class ChallengeController : MonoBehaviour
 
         //selectedScenarioObj = GameObject.Find("Scenarios").transform.GetChild(selectedScenarioIndex).gameObject;
         numObjects = selectedScenarioObj.transform.GetChild(0).gameObject.transform.childCount;
-        selectedScenarioSO = allScenarios[0];
         selectedScenarioUI = selectedScenarioObj.GetComponent<DisplayScenario>();
         /// IF USING MULTIPLE SCENARIOS / CAROUSEL -- will need to reorder when carousel is used
         /// 
@@ -117,15 +115,15 @@ public class ChallengeController : MonoBehaviour
     {
         yield return new WaitUntil(() => !audioSource.isPlaying);
         yield return new WaitForSeconds(2f);
-        if (draggables[curItem].IsInstructionCustom())
-        {
-            selectedScenarioUI.ShowCustomInstruction(draggables[curItem].InstructionString());
-        }
-        else
-        {
+        //if (draggables[curItem].IsInstructionCustom())
+        //{
+        //    selectedScenarioUI.ShowCustomInstruction(draggables[curItem].InstructionString());
+        //}
+        //else
+        //{
             selectedScenarioUI.ShowRepeater(draggables[curItem].WordString());
-        }
-
+        //}
+        Debug.Log(draggables[curItem].wordString[0]);
         audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
         
         yield return new WaitUntil(() => !audioSource.isPlaying);
@@ -170,10 +168,10 @@ public class ChallengeController : MonoBehaviour
         sceneAudButton.interactable = false;
         yield return new WaitUntil(() => !audioSource.isPlaying);
         if (selectedScenarioSO.repeaterPhraseAud)
-        {
-            audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
-        }
-        
+        audioSource.PlayOneShot(draggables[curItem].GetAudio());
+        yield return new WaitWhile(() => audioSource.isPlaying);
+        audioSource.PlayOneShot(selectedScenarioSO.correctSelectionAud);
+
 
         if (numItemsDropped == draggables.Count)
         {

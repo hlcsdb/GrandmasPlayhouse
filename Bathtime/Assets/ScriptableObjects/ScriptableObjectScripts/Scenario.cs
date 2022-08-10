@@ -48,7 +48,7 @@ public class Scenario : ScriptableObject
     public void Awake()
     {
         numDraggables = scenarioDraggableItems.Count;
-        randSlots = new List<Vector2> { new Vector2(-400, 118), new Vector2(-400, 3), new Vector2(-400, -112), new Vector2(-400, -227), new Vector2(-273, 118), new Vector2(-273, 3), new Vector2(-273, -112), new Vector2(-273, -227) };
+        
         //PopulateStartSlots(numDraggables);
     }
     public void SetDialect(int currDialect)

@@ -55,14 +55,17 @@ public class DraggableItem : ScriptableObject
 
     public string InstructionString()
     {
-        string instruction = customInstructionText[dialect] + " " + wordString[dialect];
-        return instruction;
+        {
+            return customInstructionText[dialect] + " " + wordString[dialect];
+        }
     }
 
     public bool IsInstructionCustom()
     {
+        Debug.Log(customInstructionText[dialect] != "");
         return customInstructionText[dialect] != ""; 
     }
+
 
     public Sprite GetImage(int draggableStatus)
     {

@@ -42,8 +42,8 @@ MonoBehaviour:
   - "yu kwun\u2019et kwthun\u2019 "
   - 
   successPhrase:
-  - You are nice and clean.
-  - "\u2019i ch \u2019uw\u2019 \u2019uy\u2019iima\u2019"
+  - Aaa, thank you, grandchild.
+  - "aaa hay ch q\u2019a\u2019, \u2019imiye\u2019."
   - 
   completionPhrase:
   - 
@@ -53,16 +53,16 @@ MonoBehaviour:
   openerPhraseAud: {fileID: 8300000, guid: ca1dea0b60db0465eafbfb177bf6f7e0, type: 3}
   repeaterPhraseAud: {fileID: 0}
   successPhraseAud: {fileID: 8300000, guid: fa1efe2d81c154db8bf378d052ef4b86, type: 3}
-  completionPhraseAud: {fileID: 8300000, guid: cfb74c0fcd6dc4620965262f950266b2, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: b1d44ad1a7ee34da7a4a36477183af62, type: 3}
   incorrectSelectionAud: {fileID: 8300000, guid: 31bdc0061c73f4bac9e6fefdd67d969a, type: 3}
   correctSelectionAud: {fileID: 8300000, guid: 187cca6b3eb234ee08bb7782f4560cb8, type: 3}
   numDraggables: 6
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 5abe265dd8d99444bb946e2f86b12447, type: 3}
   dialect: 1
   randSlots:
-  - {x: -385, y: 65}
-  - {x: -385, y: -65}
-  - {x: -385, y: -195}
-  - {x: -273, y: 65}
-  - {x: -273, y: -65}
-  - {x: -273, y: -195}
+  - {x: -390, y: 65}
+  - {x: -390, y: -65}
+  - {x: -390, y: -195}
+  - {x: -240, y: 65}
+  - {x: -240, y: -65}
+  - {x: -240, y: -195}
