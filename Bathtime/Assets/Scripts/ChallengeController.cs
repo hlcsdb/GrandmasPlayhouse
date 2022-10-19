@@ -15,7 +15,6 @@ public class ChallengeController : MonoBehaviour
     public Scenario selectedScenarioSO;
     public GameObject selectedScenarioObj;
     private DisplayScenario selectedScenarioUI;
-   
     public List<DraggableItem> draggables;
     public List<GameObject> draggableObjects = new List<GameObject>();
     public int numObjects;

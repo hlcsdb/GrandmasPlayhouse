@@ -21,7 +21,7 @@ MonoBehaviour:
   draggableImage:
   - {fileID: 21300000, guid: b50aa816f4e524251ad78c467f0f2fac, type: 3}
   - {fileID: 21300000, guid: 879cca79ac2734df583bf6379644cfea, type: 3}
-  thisRandIndex: 4
+  thisRandIndex: 6
   dragged: 0
   correct: 0
   dialect: 1
@@ -31,8 +31,8 @@ MonoBehaviour:
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: 4c0ffed19f795401f94a5e2089b205b7, type: 3}
   draggableInstruction: {fileID: 8300000, guid: 7756337bfe21a46aca7db29115bd7011, type: 3}
-  dropPos: {x: 148, y: 0}
+  dropPos: {x: 185, y: 5}
   dropSize: {x: 1, y: 1}
   selectionPos: {x: 0, y: 0}
-  startSize: {x: 0.92, y: 0.92}
-  startPos: {x: 0, y: -80}
+  startSize: {x: 0.8, y: 0.8}
+  startPos: {x: -250, y: -80}

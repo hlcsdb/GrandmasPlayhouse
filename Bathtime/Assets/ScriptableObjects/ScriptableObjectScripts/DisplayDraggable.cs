@@ -24,6 +24,7 @@ public class DisplayDraggable : MonoBehaviour
         draggableArtwork.sprite = draggable.GetImage(0);
         draggable.startPos = transform.localPosition;
         randI = draggable.thisRandIndex;
+        draggableArtwork.rectTransform.localScale = draggable.startSize;
     }
 
     public void SetRandPos(Vector2 rPos)
@@ -68,6 +69,7 @@ public class DisplayDraggable : MonoBehaviour
     public void DroppedDraggableImage()
     {
         draggableArtwork.sprite = draggable.GetImage(1);
+        draggableArtwork.rectTransform.localScale = draggable.dropSize;
     }
 
     public void ResetDraggableDisplay()

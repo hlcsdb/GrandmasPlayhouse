@@ -13,8 +13,8 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: "Hul\u2019q\u2019umi\u2019num\u2019 Language and Culture Society"
-  productName: "\u2019uli\u2019yas suw\u2019a\u2019lum \u2019i\u2019 tthu \u2019i\u2019eluqup
-    sp\u2019aqw\u2019um || cute little toys & clean scented bubbles "
+  productName: '''uli''yas suw''a''lum ''i'' tthu ''i''eluqup sp''aqw''um cute little
+    toys and clean scented bubbles '
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}

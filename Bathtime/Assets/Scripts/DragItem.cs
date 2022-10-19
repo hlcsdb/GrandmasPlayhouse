@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//CHANGE hierarchy position of object on drag
+//docs.unity3d.com/ScriptReference/Transform.SetSiblingIndex.html
+
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private RectTransform rectTransform;
@@ -52,7 +55,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
         {
             rectTransform = GetComponent<RectTransform>();
-            Debug.Log("begin dragging");
+            //Debug.Log("begin dragging");
             // canvasGroup.blocksRaycasts = false;
             StartCoroutine(Grow(1.2f));
         }
@@ -70,30 +73,31 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
         {
-            Debug.Log("end dragging");
+            //Debug.Log("end dragging");
 
             if (!draggableUI.OverlappingDropZone())
             {
-                Debug.Log("not overlapping");
+                //Debug.Log("not overlapping");
                 transform.localPosition = draggableUI.ThisRandomPos();
+                StartCoroutine(Shrink(1f));
                 //transform.position = transform.position;
             }
 
 
             else
             {
-                Debug.Log("overlapping");
-                Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
+                //Debug.Log("overlapping");
+                //Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
                 if (draggable.thisRandIndex == currSceneController.curItem)
                 {
-                    Debug.Log("correct item dragged");
+                    //Debug.Log("correct item dragged");
                     canvasGroup.blocksRaycasts = true;
                     CorrectItemDropped();
                 }
 
                 else
                 {
-                    Debug.Log("incorrect item dragged");
+                    //Debug.Log("incorrect item dragged");
                     StartCoroutine(IncorrectItemDropped());
                     currSceneController.CountItemsLayered(false);
                 }
