@@ -15,7 +15,7 @@ public class DisplayDraggable : MonoBehaviour
     //internal Vector2 startRandPos;
     public Vector2 rectTransform;
     internal Vector2 randPos;
-    public Vector2[] dzB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180)};
+    public Vector2[] dzB = new Vector2[] { new Vector2(-80, -230), new Vector2(-80, 145), new Vector2(85, 145), new Vector2(85, -230)};
     public int randI;
     public GameObject textBackground;
 

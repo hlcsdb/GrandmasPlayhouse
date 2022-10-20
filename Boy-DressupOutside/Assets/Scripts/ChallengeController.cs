@@ -82,10 +82,10 @@ public class ChallengeController : MonoBehaviour
     public void SetDraggableOrder()
     {
         List<DraggableItem> tempDraggables = selectedScenarioSO.scenarioDraggableItems;
-        List<int> iArr1 = IndicesArray(0, 4);
+        List<int> iArr1 = IndicesArray(0, 3);
         
         int iRand;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             iRand = Random.Range(0, iArr1.Count);
             draggables.Add(tempDraggables[iArr1[iRand]]);
@@ -95,9 +95,9 @@ public class ChallengeController : MonoBehaviour
             draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
             iArr1.RemoveAt(iRand);
         }
-        List<int> iArr2 = IndicesArray(4, 4);
+        List<int> iArr2 = IndicesArray(3, 5);
 
-        for (int i = 4; i < 8; i++)
+        for (int i = 3; i < 8; i++)
         {
             iRand = Random.Range(0, iArr2.Count);
             draggables.Add(tempDraggables[iArr2[iRand]]);

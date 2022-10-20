@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Soup
   m_EditorClassIdentifier: 
   scenarioObject: {fileID: 0}
-  scenarioType: 4
-  scenarioName: Making Soup
+  scenarioType: 2
+  scenarioName: Boy Dressup for School
   scenarioDraggableObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   scenarioDraggableItems:
-  - {fileID: 11400000, guid: ca79317ef32ae400b86249a37f707bc7, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: fc2105aac6cac464a82d3eb6cfdeca7a, type: 2}
   - {fileID: 11400000, guid: c51e9606ef359465da1e9b9a419d2427, type: 2}
   - {fileID: 11400000, guid: 16022527a455d45b3972ead0d1afcc41, type: 2}
@@ -34,12 +34,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e66225cb17c5e4c47859e4b9f5fb8138, type: 2}
   - {fileID: 11400000, guid: b4694dc7e73a04e64b5653bfa368aa9f, type: 2}
   sceneDescription:
-  - "\u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019 slhap\u2019."
-  - "\u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019 slhap\u2019."
+  - 
+  - 
   openerPhrase:
-  - "Let\u2019s make some soup. "
-  - "ooo, \u2019imiye\u2019! \u2019i tsun wulh kw\u2019ey\u2019. \u2019ilhe xte\u2019um\u2019
-    \u2019ukw\u2019 slhap\u2019."
+  - 
+  - 
   repeaterPhrase: []
   successPhrase:
   - 

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 public enum ScenarioType
 {
     Default,
-    TeaTime,
-    Cake,
-    Breakfast,
-    Soup,
-    Jewlery
+    Kitchen,
+    Kids_Room,
+    Grandmas_Room,
+    Bathroom,
+    Living_Room
 }
 
 [CreateAssetMenu(fileName = "New Scenario", menuName = "Scenarios")]

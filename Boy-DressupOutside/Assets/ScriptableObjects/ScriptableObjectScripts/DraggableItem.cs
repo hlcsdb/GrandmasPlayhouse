@@ -7,7 +7,8 @@ public enum ItemType
     Utensil,
     Fabric,
     Dishware,
-    Jewlery
+    Jewlery,
+    Clothing
 }
 
 [CreateAssetMenu(fileName = "New Draggable Item", menuName = "Draggable/DraggableItem")]
