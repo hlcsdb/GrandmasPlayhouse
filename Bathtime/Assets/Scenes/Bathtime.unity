@@ -718,6 +718,8 @@ MonoBehaviour:
   - {fileID: 8843508617555228094}
   - {fileID: 6300812032537660183}
   - {fileID: 6300812033341994007}
+  - {fileID: 445136569}
+  - {fileID: 708767558}
   sceneText: {fileID: 1839593256}
   scenarioName: {fileID: 1839593256}
   sceneDescriptionAud: {fileID: 0}
@@ -1089,6 +1091,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441197981}
   m_CullTransparentMesh: 1
+--- !u!1 &445136569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 718375001214366047, guid: 551324e1bfbea4a88a57febce7e74df5, type: 3}
+  m_PrefabInstance: {fileID: 1165722458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &458040751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1825,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686174161}
   m_CullTransparentMesh: 1
+--- !u!1 &708767558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 718375001214366047, guid: 551324e1bfbea4a88a57febce7e74df5, type: 3}
+  m_PrefabInstance: {fileID: 1975732415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &788326110
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     int activeState = 1;
     int wrongState = 2;
     bool mobileClicked = false;
+    int siblingIndex;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvasGroup = GetComponent<CanvasGroup>();
         draggableUI = GetComponent<DisplayDraggable>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        siblingIndex = transform.GetSiblingIndex();
     }
 
     public void Update(){
@@ -49,8 +51,10 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(7);
         if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
         {
+            
             rectTransform = GetComponent<RectTransform>();
             Debug.Log("begin dragging");
             // canvasGroup.blocksRaycasts = false;
@@ -68,8 +72,11 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(siblingIndex);
         if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
         {
+            
+
             Debug.Log("end dragging");
 
             if (!draggableUI.OverlappingDropZone())
@@ -102,6 +109,15 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void CorrectItemDropped()
     {
+        //if(!GameObject.Find("mirror glass").activeSelf)
+        //{
+        //    GameObject.Find("mirror glass").SetActive(true);
+        //}
+
+        if (gameObject.name== "underpants"){
+            GameObject.Find("towel").SetActive(false);
+        }
+
         transform.localScale = draggable.dropSize;
         transform.localPosition = draggable.dropPos;
         draggableUI.DroppedDraggableImage();

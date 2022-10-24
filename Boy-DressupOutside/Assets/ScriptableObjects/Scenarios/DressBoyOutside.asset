@@ -28,8 +28,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9fc44fb7774c4b2d8f6a53c1a731777, type: 2}
   - {fileID: 11400000, guid: 87909db0e1bce4d03bead37e320ff108, type: 2}
   - {fileID: 11400000, guid: 78fd084616f7b4ad281f2f92728f4f2d, type: 2}
-  - {fileID: 11400000, guid: 2a4ed2194fbbe4d18a0425256b812cf8, type: 2}
   - {fileID: 11400000, guid: f87466b6100ea44d28547684df3f7deb, type: 2}
+  - {fileID: 11400000, guid: 2a4ed2194fbbe4d18a0425256b812cf8, type: 2}
   - {fileID: 11400000, guid: 886e156587b4d49a6a569c38336a843d, type: 2}
   - {fileID: 11400000, guid: 82c5cc838175f4eb9a62b5a289f939eb, type: 2}
   - {fileID: 11400000, guid: b863f923c0a354164941eca7b162b486, type: 2}
@@ -59,16 +59,16 @@ MonoBehaviour:
   repeaterPhraseAud: {fileID: 0}
   successPhraseAud: {fileID: 8300000, guid: f64d4812ea3c34fe8a4c59b00d2bae6e, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: 01b67500da4c34a55ac52398c89cad53, type: 3}
-  incorrectSelectionAud: {fileID: 0}
+  incorrectSelectionAud: {fileID: 8300000, guid: 538d7e53f9ea14d5fbe84466f7c7d330, type: 3}
   numDraggables: 8
   backgroundImage: {fileID: 21300000, guid: 6cd903c2d7f1040bcb4bee79ec89fca6, type: 3}
   dialect: 1
   randSlots:
-  - {x: -385, y: 30}
-  - {x: -265, y: 30}
-  - {x: 265, y: 30}
-  - {x: 385, y: 30}
-  - {x: -385, y: -130}
-  - {x: -265, y: -130}
-  - {x: 265, y: -130}
-  - {x: 385, y: -130}
+  - {x: -400, y: 60}
+  - {x: 400, y: 60}
+  - {x: -250, y: 60}
+  - {x: 250, y: 60}
+  - {x: -400, y: -90}
+  - {x: 400, y: -90}
+  - {x: -250, y: -90}
+  - {x: 250, y: -90}

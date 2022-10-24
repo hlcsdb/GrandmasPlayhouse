@@ -12,26 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
   m_Name: sweater
   m_EditorClassIdentifier: 
-  type: 0
-  description: 
-  wordString: []
+  type: 6
+  description: sweater
+  wordString:
+  - sweater
+  - "swew\u2019tu"
   customInstructionText:
+  - Put on your sweater.
+  - "hakwush tthun\u2019 swew\u2019tu."
   - 
-  - 
-  - 
-  draggableImage: []
-  thisRandIndex: 0
-  dragged: 0
+  draggableImage:
+  - {fileID: 21300000, guid: 33b20c9b02a0d42aea9cc25988cee897, type: 3}
+  - {fileID: 21300000, guid: 1bce10b4126da453c9c77865a92c1abe, type: 3}
+  thisRandIndex: 7
+  dragged: 1
   correct: 0
   dialect: 1
   tileStateOutlineColors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 0}
-  draggableInstruction: {fileID: 0}
-  dropPos: {x: 0, y: 0}
-  dropSize: {x: 0, y: 0}
+  audioClip: {fileID: 8300000, guid: 0cc5cea04be8d47e8b2fe9a086d5cc01, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: b32dcfd9ec8a0426690047524b33632d, type: 3}
+  dropPos: {x: 0, y: 7}
+  dropSize: {x: 1.75, y: 1.7}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
+  startPos: {x: 280, y: -100}

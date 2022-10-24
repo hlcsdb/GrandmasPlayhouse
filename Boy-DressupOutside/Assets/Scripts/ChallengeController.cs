@@ -34,6 +34,7 @@ public class ChallengeController : MonoBehaviour
     int numErrors = 0;
     public Button sceneAudButton;
     internal bool inInstruction = true;
+    public GameObject towel;
 
     
     //public AudioClip incorrectSelectionAudio;
@@ -90,14 +91,16 @@ public class ChallengeController : MonoBehaviour
             iRand = Random.Range(0, iArr1.Count);
             draggables.Add(tempDraggables[iArr1[iRand]]);
             draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr1[iRand]).gameObject);
+            //Debug.Log(draggables[i].wordString[0]);
             draggables[i].ThisItemIndex(i);
             draggables[i].ResetSO();
             draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
             iArr1.RemoveAt(iRand);
         }
-        List<int> iArr2 = IndicesArray(3, 5);
 
-        for (int i = 3; i < 8; i++)
+        List<int> iArr2 = IndicesArray(3, 2);
+
+        for (int i = 3; i < 5; i++)
         {
             iRand = Random.Range(0, iArr2.Count);
             draggables.Add(tempDraggables[iArr2[iRand]]);
@@ -107,6 +110,33 @@ public class ChallengeController : MonoBehaviour
             draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
             iArr2.RemoveAt(iRand);
         }
+
+        List<int> iArr3 = IndicesArray(5, 2);
+
+        for (int i = 5; i < 7; i++)
+        {
+            iRand = Random.Range(0, iArr3.Count);
+            draggables.Add(tempDraggables[iArr3[iRand]]);
+            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr3[iRand]).gameObject);
+            draggables[i].ThisItemIndex(i);
+            draggables[i].ResetSO();
+            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
+            iArr3.RemoveAt(iRand);
+        }
+
+        List<int> iArr4 = IndicesArray(7, 1);
+
+        for (int i = 7; i < 8; i++)
+        {
+            iRand = Random.Range(0, iArr4.Count);
+            draggables.Add(tempDraggables[iArr4[iRand]]);
+            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr4[iRand]).gameObject);
+            draggables[i].ThisItemIndex(i);
+            draggables[i].ResetSO();
+            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
+            iArr4.RemoveAt(iRand);
+        }
+
     }
 
     public void RandomizeDraggablePos()
@@ -154,7 +184,8 @@ public class ChallengeController : MonoBehaviour
     }
 
     public void CountItemsLayered(bool correct)
-    {
+    { 
+
         if (!correct)
         {
             audioSource.PlayOneShot(selectedScenarioSO.incorrectSelectionAud);
@@ -232,8 +263,10 @@ public class ChallengeController : MonoBehaviour
     }
 
     public void ResetAllDraggableObjects()
-    { 
-        foreach(GameObject draggableObject in draggableObjects)
+    {
+        towel.SetActive(true);
+
+        foreach (GameObject draggableObject in draggableObjects)
         {
             draggableObject.GetComponent<DisplayDraggable>().ResetDraggableDisplay();
         }

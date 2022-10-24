@@ -15,7 +15,7 @@ public class DisplayDraggable : MonoBehaviour
     //internal Vector2 startRandPos;
     public Vector2 rectTransform;
     internal Vector2 randPos;
-    public Vector2[] dzB = new Vector2[] { new Vector2(-80, -230), new Vector2(-80, 145), new Vector2(85, 145), new Vector2(85, -230)};
+    public Vector2[] dzB = new Vector2[] { new Vector2(-105, -235), new Vector2(105, 150)}; //BL, TR
     public int randI;
     public GameObject textBackground;
 
@@ -99,15 +99,19 @@ public class DisplayDraggable : MonoBehaviour
     public bool OverlappingDropZone()
     {
         //Debug.Log("x: " + transform.localPosition.x + " y: " + transform.localPosition.y);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " > dzb[0].x: " + dzB[0].x);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " < dzb[2].x: " + dzB[2].x);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " > dzb[0].y: " + dzB[0].y);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " < dzb[1].y: " + dzB[1].y);
+        //Debug.Log(dzB[0].x < transform.localPosition.x); //t
+        //Debug.Log(transform.localPosition.x < dzB[1].x); //f
+        //Debug.Log(dzB[0].y < transform.localPosition.y); //t
+        //Debug.Log(transform.localPosition.y < dzB[1].y); //f
+        //Debug.Log("tp.x: " + transform.localPosition.x + " > min dzb[0].x: " + dzB[0].x);
+        //Debug.Log("tp.x: " + transform.localPosition.x + " < max dzb[1].x: " + dzB[1].x);
+        //Debug.Log("tp.y: " + transform.localPosition.y + " > min dzb[0].y: " + dzB[0].y);
+        //Debug.Log("tp.y: " + transform.localPosition.y + " < max dzb[1].y: " + dzB[1].y);
         //Vector2[] db = GetBounds(transform.localPosition);
         //Vector2 tp = new Vector2(transform.localPosition.x, transform.localPosition.y);
         //for (int i = 0; i < 4; i++)
         //{
-            if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
+        if (dzB[0].x < transform.localPosition.x && transform.localPosition.x < dzB[1].x && dzB[0].y < transform.localPosition.y && transform.localPosition.y < dzB[1].y)
             {
                 return true;
             }

@@ -12,26 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
   m_Name: boys_undershirt
   m_EditorClassIdentifier: 
-  type: 0
-  description: 
-  wordString: []
+  type: 6
+  description: undershirt
+  wordString:
+  - undershirt
+  - "sh-tsiw\u2019s"
   customInstructionText:
-  - 
-  - 
-  - 
-  draggableImage: []
+  - Put on your undershirt.
+  - "hakwush tthun\u2019 sh-tsiw\u2019s."
+  draggableImage:
+  - {fileID: 21300000, guid: 0899bd88569e64310928b4cb85aac944, type: 3}
+  - {fileID: 21300000, guid: 5160291bfbf784fe58e427b6b4806163, type: 3}
   thisRandIndex: 0
-  dragged: 0
+  dragged: 1
   correct: 0
   dialect: 1
   tileStateOutlineColors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 0}
-  draggableInstruction: {fileID: 0}
-  dropPos: {x: 0, y: 0}
-  dropSize: {x: 0, y: 0}
+  audioClip: {fileID: 8300000, guid: dba05a72e21a84c3999036f428880d8c, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 9dfcd172a56b44c6fbedec04b2c63619, type: 3}
+  dropPos: {x: -8.1, y: 11.9}
+  dropSize: {x: 1.5, y: 1.5}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
+  startPos: {x: -100, y: 50}
