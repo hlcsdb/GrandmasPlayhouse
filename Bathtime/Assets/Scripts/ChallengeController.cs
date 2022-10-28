@@ -134,6 +134,7 @@ public class ChallengeController : MonoBehaviour
     {
         if (!inSelection)
         {
+            if (audioSource.isPlaying){ audioSource.Stop(); }
             audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
         }
     }
@@ -146,6 +147,8 @@ public class ChallengeController : MonoBehaviour
             numErrors++;
             if (numErrors == 3)
             {
+                Debug.Log(draggableObjects[curItem]);
+                Debug.Log(draggables[curItem]);
                 draggableObjects[curItem].GetComponent<DragItem>().HighlightCorrectItem();
             }
         }
@@ -235,32 +238,11 @@ public class ChallengeController : MonoBehaviour
 
     public void BackToSelection()
     {
+        if (audioSource.isPlaying) { audioSource.Stop(); }
         ResetAllDraggableObjects();
         inSelection = true;
         numItemsDropped = 0;
         curItem = 0;
     }
-
-
-    //ONLY USED WITH CAROUSEL
-    //IEnumerator WaitToResetCarousel(float secondsToWait)
-    //{
-    //    carouselSliderScript.ResetSlider();
-    //    yield return new WaitForSeconds(secondsToWait);
-    //    //selectionScreen.SetActive(false);
-    //}
-
-    ////ONLY USED WITH CAROUSEL
-    //public void HideInactiveScenarios(int scenarioIndex)
-    //{
-    //    for(int i = 0; i < allScenarios.Length; i++)
-    //    {
-    //        if(i != scenarioIndex)
-    //        {
-    //            allScenarios[i].HideScenarioObject();
-    //        }
-    //    }
-    //}
-
    
 }

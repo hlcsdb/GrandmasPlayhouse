@@ -31,9 +31,11 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     int activeState = 1;
     int wrongState = 2;
     bool mobileClicked = false;
+    int siblingIndex;
 
     private void Awake()
     {
+        siblingIndex = transform.GetSiblingIndex();
         draggable = GetComponent<DisplayDraggable>().draggable;
         audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         //if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Challenge"))
@@ -52,6 +54,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(7);
         if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
         {
             rectTransform = GetComponent<RectTransform>();
@@ -71,6 +74,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        
         if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
         {
             //Debug.Log("end dragging");
@@ -80,7 +84,6 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 //Debug.Log("not overlapping");
                 transform.localPosition = draggableUI.ThisRandomPos();
                 StartCoroutine(Shrink(1f));
-                //transform.position = transform.position;
             }
 
 
@@ -114,7 +117,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         audioSource.PlayOneShot(draggable.audioClip);
         draggable.Dragged(true);
         HideTile();
-        //little particle effect
+        transform.SetSiblingIndex(siblingIndex);
     }
 
     public IEnumerator IncorrectItemDropped()
@@ -123,8 +126,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         yield return new WaitForSeconds(2.5f);
         transform.localPosition = draggableUI.ThisRandomPos();
         draggableUI.ColourTileOutline(idleState);
+        transform.SetSiblingIndex(siblingIndex);
         StartCoroutine(Shrink(1f));
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -139,7 +142,6 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             draggableUI.SetWord();
             //hovertext.SetActive(true);
         }
-        
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -183,28 +185,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void HighlightCorrectItem()
     {
-        //StartCoroutine(TwistDraggable());
         StartCoroutine(GrowShrinkLoop());
     }
-
-    // public IEnumerator TwistDraggable()
-    // {
-    //     Debug.Log("twisting");
-    //     transform.Rotate(0.0f, 0.0f, rotateAmount / 2);
-    //     for (int i = 0; i < 2; i++)
-    //     {
-    //         if (transform.rotation.z > 0)
-    //         {
-    //             transform.Rotate(0.0f, 0.0f, -rotateAmount);
-    //         }
-    //         else if (transform.rotation.z < 0)
-    //         {
-    //             transform.Rotate(0.0f, 0.0f, rotateAmount);
-    //         }
-    //         yield return new WaitForSeconds(0.07f);
-    //     }
-    //     transform.Rotate(0.0f, 0.0f, -(rotateAmount / 2));
-    // }
 
     public IEnumerator GrowShrinkLoop()
     {
@@ -240,7 +222,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (!mobileClicked)
             {
                 if (!audioSource.isPlaying)
-            {
+                {
                     Debug.Log("audio will start");
                     audioSource.PlayOneShot(draggable.audioClip);
                     mobileClicked = true;

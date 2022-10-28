@@ -78,7 +78,7 @@ public class DisplayDraggable : MonoBehaviour
         draggableArtwork.sprite = draggable.GetImage(0);
         transform.localPosition = draggable.startPos;
         tile.SetActive(true);
-        transform.localScale = draggable.startSize;
+        //transform.localScale = draggable.startSize;
     }
 
     public Vector2 ThisRandomPos()
