@@ -25,14 +25,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   scenarioDraggableItems:
-  - {fileID: 11400000, guid: 7eb7d7fcbac90419f8ab661226cf3a48, type: 2}
-  - {fileID: 11400000, guid: 2f3ce736a1e2f4d2398ac941a9bb1e02, type: 2}
-  - {fileID: 11400000, guid: df39e4bf23c2946ff88412952de29cc8, type: 2}
-  - {fileID: 11400000, guid: 1a38a4645518541c7902076879755b1c, type: 2}
+  - {fileID: 11400000, guid: 9f17f3e2c93784bfaab274e62a5bc8bc, type: 2}
   - {fileID: 11400000, guid: 06e7a696fe9e9466596f1df0d6a62782, type: 2}
+  - {fileID: 11400000, guid: df39e4bf23c2946ff88412952de29cc8, type: 2}
+  - {fileID: 11400000, guid: 7eb7d7fcbac90419f8ab661226cf3a48, type: 2}
   - {fileID: 11400000, guid: 4bf660b710ec54937a466dd5441b357f, type: 2}
   - {fileID: 11400000, guid: 7273d248e679947e2906dfe8624daffe, type: 2}
-  - {fileID: 11400000, guid: 9f17f3e2c93784bfaab274e62a5bc8bc, type: 2}
+  - {fileID: 11400000, guid: 2f3ce736a1e2f4d2398ac941a9bb1e02, type: 2}
+  - {fileID: 11400000, guid: 1a38a4645518541c7902076879755b1c, type: 2}
   sceneDescription:
   - 
   - 
@@ -56,7 +56,8 @@ MonoBehaviour:
   repeaterPhraseAud: {fileID: 0}
   successPhraseAud: {fileID: 8300000, guid: fa1efe2d81c154db8bf378d052ef4b86, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: e93117c345c6a4f7fb5ee644a948f85a, type: 3}
-  incorrectSelectionAud: {fileID: 0}
+  correctPhraseAud: {fileID: 8300000, guid: ac3b43295e321495aade6e9b766dd79f, type: 3}
+  incorrectSelectionAud: {fileID: 8300000, guid: cc3aa8f0f9608445a82763894dff46b6, type: 3}
   numDraggables: 8
   backgroundImage: {fileID: 21300000, guid: 46d6751d9fe234758be6d4ceb376ab59, type: 3}
   dialect: 1

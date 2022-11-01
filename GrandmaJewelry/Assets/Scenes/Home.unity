@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gorgeous Granny
+  m_text: Gorgeous Granny!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
   m_sharedMaterial: {fileID: 827127699022072792, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
@@ -4706,7 +4706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "thu they\u2019uw\u2019sum\u2019 sisul\u2019u"
+  m_text: "thu they\u2019uw\u2019sum\u2019 sisul\u2019u!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b347354a409fc45878783b6f162807c8, type: 2}
   m_sharedMaterial: {fileID: 8675405919740107325, guid: b347354a409fc45878783b6f162807c8, type: 2}

@@ -127,7 +127,7 @@ public class ChallengeController : MonoBehaviour
         }
 
         audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
-        
+        Debug.Log(draggables[curItem].name);
         yield return new WaitUntil(() => !audioSource.isPlaying);
         sceneAudButton.interactable = true;
         inInstruction = false;
@@ -165,14 +165,16 @@ public class ChallengeController : MonoBehaviour
 
     public IEnumerator AudAfterCorrDrop()
     {
-        inInstruction = true;
+        //inInstruction = true;
         yield return new WaitForSeconds(1);
         sceneAudButton.interactable = false;
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        if (selectedScenarioSO.repeaterPhraseAud)
-        {
-            audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
-        }
+        //if (selectedScenarioSO.repeaterPhraseAud)
+        //{
+        //    audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
+        //    yield return new WaitUntil(() => !audioSource.isPlaying);
+            audioSource.PlayOneShot(selectedScenarioSO.correctPhraseAud);
+        //}
         
 
         if (numItemsDropped == draggables.Count)

@@ -16,6 +16,7 @@ public class DisplayScenario : MonoBehaviour
     public AudioClip openerPhraseAud;
     public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
     public AudioClip successPhraseAud;
+    public AudioClip correctPhraseAud;
     public AudioClip completionPhraseAud;
     public Image backgroundImage;
     internal ChallengeController challengeController;
@@ -32,7 +33,9 @@ public class DisplayScenario : MonoBehaviour
         repeaterPhraseAud = scenario.repeaterPhraseAud;
         successPhraseAud = scenario.successPhraseAud;
         completionPhraseAud = scenario.completionPhraseAud;
+        correctPhraseAud = scenario.correctPhraseAud;
         challengeController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
+
     }
 
     public void PopulateStartSlots()
@@ -51,12 +54,12 @@ public class DisplayScenario : MonoBehaviour
 
     public void ShowRepeater(string wordText)
     {
-        sceneText.text = ""+ scenario.repeaterPhrase[1] + wordText;
+        sceneText.text = ""+ scenario.repeaterPhrase[1] + wordText + ".";
     }
 
     public void ShowCustomInstruction(string customInstructionText)
     {
-        sceneText.text = "" + customInstructionText;
+        sceneText.text = "" + customInstructionText + ".";
     }
 
     public void EmptyScenarioText()
