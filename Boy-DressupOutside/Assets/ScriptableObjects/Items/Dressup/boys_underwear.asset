@@ -16,10 +16,10 @@ MonoBehaviour:
   description: boy's underwear
   wordString:
   - boy's underwear
-  - "p\u2019ux-s"
+  - "p\u2019uxs"
   customInstructionText:
   - Put on your underwear.
-  - "hakwush tthun\u2019 p\u2019ux-s."
+  - "hakwush tthun\u2019 p\u2019uxs."
   - 
   draggableImage:
   - {fileID: 21300000, guid: 78634e35e5e3a41a180a90f1635fffe4, type: 3}

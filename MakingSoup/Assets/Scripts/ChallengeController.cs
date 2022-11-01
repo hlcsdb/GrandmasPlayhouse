@@ -82,22 +82,21 @@ public class ChallengeController : MonoBehaviour
     public void SetDraggableOrder()
     {
         List<DraggableItem> tempDraggables = selectedScenarioSO.scenarioDraggableItems;
-        List<int> iArr1 = IndicesArray(0, 4);
-        
         int iRand;
-        for (int i = 0; i < 4; i++)
-        {
-            iRand = Random.Range(0, iArr1.Count);
-            draggables.Add(tempDraggables[iArr1[iRand]]);
-            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr1[iRand]).gameObject);
-            draggables[i].ThisItemIndex(i);
-            draggables[i].ResetSO();
-            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
-            iArr1.RemoveAt(iRand);
-        }
-        List<int> iArr2 = IndicesArray(4, 4);
+        Debug.Log(tempDraggables.Count);
+        List<int> iArr1 = IndicesArray(0,1);
 
-        for (int i = 4; i < 8; i++)
+        int i = 0;
+        iRand = 0;
+        draggables.Add(tempDraggables[iArr1[iRand]]);
+        draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr1[iRand]).gameObject);
+        draggables[i].ThisItemIndex(i);
+        draggables[i].ResetSO();
+        draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
+        iArr1.RemoveAt(iRand);
+        
+        List<int> iArr2 = IndicesArray(1, 4);
+        for (i = 1; i < 5; i++)
         {
             iRand = Random.Range(0, iArr2.Count);
             draggables.Add(tempDraggables[iArr2[iRand]]);
@@ -106,6 +105,20 @@ public class ChallengeController : MonoBehaviour
             draggables[i].ResetSO();
             draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
             iArr2.RemoveAt(iRand);
+            
+        }
+Debug.Log(draggableObjects.Count);
+        List<int> iArr3 = IndicesArray(5, 3);
+        for (i = 5; i < 8; i++)
+        {
+            Debug.Log(iArr3.Count);
+            iRand = Random.Range(0, iArr3.Count);
+            draggables.Add(tempDraggables[iArr3[iRand]]);
+            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr3[iRand]).gameObject);
+            draggables[i].ThisItemIndex(i);
+            draggables[i].ResetSO();
+            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
+            iArr3.RemoveAt(iRand);
         }
     }
 

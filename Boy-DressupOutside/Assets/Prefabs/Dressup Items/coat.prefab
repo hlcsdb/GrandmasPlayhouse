@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 6134517460988384678}
   - component: {fileID: 7114609453132624887}
   m_Layer: 5
-  m_Name: sweater
+  m_Name: coat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

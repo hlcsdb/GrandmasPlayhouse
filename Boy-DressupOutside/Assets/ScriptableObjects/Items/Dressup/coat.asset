@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
-  m_Name: sweater
+  m_Name: coat
   m_EditorClassIdentifier: 
   type: 6
-  description: sweater
+  description: coat
   wordString:
-  - sweater
-  - "swew\u2019tu"
+  - coat
+  - 
   customInstructionText:
-  - Put on your sweater.
-  - "hakwush tthun\u2019 swew\u2019tu."
+  - Put on your coat.
+  - "hakwush tthun\u2019 kupou."
   - 
   draggableImage:
-  - {fileID: 21300000, guid: 33b20c9b02a0d42aea9cc25988cee897, type: 3}
-  - {fileID: 21300000, guid: 1bce10b4126da453c9c77865a92c1abe, type: 3}
+  - {fileID: 21300000, guid: 1e8480e0969ee478c958878f726dfe1b, type: 3}
+  - {fileID: 21300000, guid: 50d1eb3db33464a15a408ee33215c93a, type: 3}
   thisRandIndex: 7
   dragged: 1
   correct: 0

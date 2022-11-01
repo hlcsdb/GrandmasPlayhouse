@@ -21,6 +21,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private float scaleDur = 0.3f;
     private GameObject hovertext;
     internal DisplayDraggable draggableUI;
+    int siblingIndex;
     // private float rotateAmount = 10.0f; //Amount to rotate in degrees
 
     //outline colours
@@ -42,6 +43,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvasGroup = GetComponent<CanvasGroup>();
         draggableUI = GetComponent<DisplayDraggable>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        siblingIndex = transform.GetSiblingIndex();
     }
 
     public void Update(){
@@ -49,6 +51,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(7);
         if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
         {
             rectTransform = GetComponent<RectTransform>();
@@ -68,6 +71,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(siblingIndex);
         if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
         {
             Debug.Log("end dragging");
@@ -75,6 +79,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (!draggableUI.OverlappingDropZone())
             {
                 Debug.Log(" not overlapping");
+                transform.localScale = draggable.dropSize;
                 transform.localPosition = draggableUI.ThisRandomPos();
             }
 
