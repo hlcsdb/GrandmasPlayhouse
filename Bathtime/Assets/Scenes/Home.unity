@@ -4860,7 +4860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2019uli\u2019yas suw\u2019a\u2019lum \u2019i\u2019 tthu \u2019i\u2019eluqup
+  m_text: "\u2019uli\u2019yas suw\u2019a\u2019lum\u2019 \u2019i\u2019 tthu \u2019i\u2019eluqup
     sp\u2019aqw\u2019um!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
