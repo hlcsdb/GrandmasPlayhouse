@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: DressBoyWarm
+  m_EditorClassIdentifier: 
+  scenarioObject: {fileID: 0}
+  scenarioType: 2
+  scenarioName: Dress Boy Up Warm
+  scenarioDraggableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: c2c012010e4174167a4aa68a1fa69474, type: 2}
+  - {fileID: 11400000, guid: 0c7c9fbfbf46b44e1b30e160f83dec1d, type: 2}
+  - {fileID: 11400000, guid: 47129886161ec46a1b3f739a3b3a866b, type: 2}
+  - {fileID: 11400000, guid: f7ad03388353c4395b074da41c46f19a, type: 2}
+  - {fileID: 11400000, guid: 299cbae5408014096b8aa847f1ab2e6d, type: 2}
+  - {fileID: 11400000, guid: cb5908260873a4494b8db9f86bd40930, type: 2}
+  - {fileID: 11400000, guid: 836d5dbdb3b4c4b8483801618ff41636, type: 2}
+  - {fileID: 11400000, guid: 1907128139a104bcd93f8e1f42c16073, type: 2}
+  sceneDescription: []
+  openerPhrase:
+  - Grandchild, put your warm clothing on to play outside.
+  - "\u2019imuth, hakwush tthu tl\u2019ehwum s\u2019itth\u2019um, nem\u2019 ch huw\u2019alum\u2019
+    s\u2019e\u2019tl\u2019q."
+  repeaterPhrase:
+  - 'Put on your '
+  - "nem\u2019 hakwush tthun\u2019 "
+  successPhrase:
+  - You are now ready to go play outside.
+  - "ni\u2019 ch hwu saay\u2019 kwun\u2019s nem\u2019 \u2019utl\u2019qul huw\u2019alum\u2019."
+  incorrectSelectionPhrase:
+  - Not that one.
+  - "\u2019uwu nilhus tthey\u2019."
+  completionPhrase:
+  - Go outside and play!
+  - " nem\u2019 \u2019utl\u2019qul huw\u2019alum\u2019 s\u2019e\u2019tl\u2019q!"
+  sceneDescriptionAud: {fileID: 0}
+  openerPhraseAud: {fileID: 8300000, guid: 17756292c73884c9fb9c17b5b036ead6, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 71ebd0d79270f414984e917c8793e0c0, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: ed1d136675840485085932c4e2f0ad3b, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: 4f0453b7d41b84bcbbdda670d20c1a84, type: 3}
+  correctSelectionAud: {fileID: 8300000, guid: 2c353e05f2c1946a98750e74b1a54e20, type: 3}
+  incorrectSelectionAud: {fileID: 8300000, guid: 538d7e53f9ea14d5fbe84466f7c7d330, type: 3}
+  numDraggables: 8
+  backgroundImage: {fileID: 21300000, guid: d282a6535e45a4afc85fe4a99d99837a, type: 3}
+  dialect: 1
+  randSlots:
+  - {x: -400, y: 118}
+  - {x: -400, y: 3}
+  - {x: -400, y: -112}
+  - {x: -400, y: -227}
+  - {x: -273, y: 118}
+  - {x: -273, y: 3}
+  - {x: -273, y: -112}
+  - {x: -273, y: -227}

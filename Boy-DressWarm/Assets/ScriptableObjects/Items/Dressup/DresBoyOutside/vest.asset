@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: vest
+  m_EditorClassIdentifier: 
+  type: 6
+  description: vest
+  wordString:
+  - vest
+  - "shnuwul\u2019exutun"
+  customInstructionText:
+  - Put on your vest.
+  - "hakwush tthun\u2019 shnuwul\u2019exutun"
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 006d17f0c0f8e44fead2c3b804403849, type: 3}
+  - {fileID: 21300000, guid: e3f91b30437f34b84bc847b1a3647cfe, type: 3}
+  thisRandIndex: 5
+  dragged: 1
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 01f014d66c81843a59a4217d8e5f7d60, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 06c693b5f4cdf4b4ba01ae3fc402bf38, type: 3}
+  dropPos: {x: -4, y: 15}
+  dropSize: {x: 1.5, y: 1.4}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: -280, y: -100}
