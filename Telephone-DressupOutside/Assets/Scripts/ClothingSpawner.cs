@@ -13,8 +13,6 @@ public class ClothingSpawner : MonoBehaviour
 	public GameObject[] peoplePrefabs = new GameObject[2]; //prefab [male, female]
 	public GameObject[] peoplePositions = new GameObject[4]; //[model container, dresser container]
 
-	int siblingIndex;
-
 	void Start()
 	{
 
@@ -33,7 +31,7 @@ public class ClothingSpawner : MonoBehaviour
 	public void DressModel(List<ClothingItem> modelClothing)
 	{
 		List<ClothingItem> orderedClothing = RelayerClothes(modelClothing);
-		Debug.Log("Dressing model in spawner");
+		//Debug.Log("Dressing model in spawner");
 		foreach (ClothingItem item in orderedClothing)
 		{
 			SpawnClothingLayer(item, peoplePositions[0]);
@@ -49,7 +47,7 @@ public class ClothingSpawner : MonoBehaviour
 			//Debug.Log(item.GetSpriteFilename());
 			SpawnClothingLayer(item, peoplePositions[1]);
 		}
-		Debug.Log("finished dressing");
+		//Debug.Log("finished dressing");
 		MovePeopleOnResult();
 	}
 
@@ -63,7 +61,7 @@ public class ClothingSpawner : MonoBehaviour
 	public void SpawnClothingLayer(ClothingItem item, GameObject person)
 	{
 		Sprite itemSprite = item.GetSprite();
-		Debug.Log(item.GetSpriteFilename());
+		//Debug.Log(item.GetSpriteFilename());
         //transform.GetChild(0).GetComponent<Image>().sprite = clothingItemSprite;
         GameObject clothingLayer = Instantiate(clothingImageContainer, person.transform.position, Quaternion.identity);
 		clothingLayer.name = item.GetItemName();

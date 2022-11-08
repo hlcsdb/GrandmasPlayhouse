@@ -115,7 +115,7 @@ public class ClothingItem : MonoBehaviour
 		return audio_filename;
 	}
 
-	public AudioClip getClothingAudio()
+	public AudioClip GetClothingAudio()
 	{
 		return Resources.Load<AudioClip>(GetAudioFilename());
 	}

@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class OptionButtonSettings : MonoBehaviour
+public class OptionButtonSettings : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField]
-	internal string buttonWord;
-	internal TextMeshProUGUI buttonTextField;
-	internal bool isSelected;
+	internal AudioSource buttonAudioSource;
+	internal Image buttonImage;
 	public Sprite[] optionButtonSprites = new Sprite[5];
+	internal TextMeshProUGUI buttonTextField;
+
 	internal SMSController smsController;
 	internal QuestionManager questionManager;
-	internal Image buttonImage;
+
+	internal bool isSelected;
+	internal ClothingItem clothingItem;
+	internal string clothingWord;
+	internal string clothingEngl;
 
 	void Start()
 	{
@@ -27,16 +33,30 @@ public class OptionButtonSettings : MonoBehaviour
 		buttonTextField = transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
 		//Debug.Log(buttonTextField.text);
 		buttonImage = GetComponent<Image>();
+		buttonAudioSource = gameObject.GetComponentInParent(typeof(AudioSource)) as AudioSource;
+	}
 
-}
-
-public void SetButton(string word)
+	public void SetButton(ClothingItem clothingButtonOption)
 	{
-		ActivateOptionButtons();
-		buttonWord = word;
-		buttonTextField.text = buttonWord;
 		isSelected = false;
+		ActivateOptionButtons();
+		clothingItem = clothingButtonOption;
+		clothingWord = clothingButtonOption.GetHulqWord();
 		buttonImage.sprite = optionButtonSprites[0];
+		buttonTextField.text = clothingWord;
+	}
+
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+		buttonAudioSource.PlayOneShot(clothingItem.GetClothingAudio());
+	}
+
+	public void OnPointerExit(PointerEventData eventData)
+	{
+        if (buttonAudioSource.isPlaying)
+        {
+			buttonAudioSource.Stop();
+		}
 	}
 
 	public void ButtonClicked()
@@ -52,30 +72,30 @@ public void SetButton(string word)
 			buttonImage.sprite = optionButtonSprites[0];
 		}
 
-		questionManager.SetSelectedItemWords(isSelected, buttonWord);
-		Debug.Log(buttonWord + " is selected: " + isSelected);
+		questionManager.SetSelectedItemWords(isSelected, clothingItem);
+		Debug.Log(clothingWord + " is selected: " + isSelected);
 	}
 
 	public void HighlightBox(bool correctAnswer)
 	{
-		if (correctAnswer && isSelected)
+		if (correctAnswer) //change sprite color to green
 		{
-			Debug.Log(buttonWord + " should turn green");
-			//change sprite color to green
-			buttonImage.sprite = optionButtonSprites[3];
+            if (isSelected) 
+            {
+				Debug.Log(clothingWord + " should turn green");
+				buttonImage.sprite = optionButtonSprites[3];
+            }
+            else if (!isSelected)
+            {
+				Debug.Log(clothingWord + " should turn green");
+				buttonImage.sprite = optionButtonSprites[4];
+			}
 		}
 
-		if (correctAnswer && !isSelected)
+		else if (!correctAnswer && isSelected) //change sprite color to red
 		{
-			Debug.Log(buttonWord + " should turn green");
-			//change sprite color to green
-			buttonImage.sprite = optionButtonSprites[4];
-		}
-
-		else if (!correctAnswer && isSelected)
-		{
-			Debug.Log(buttonWord + " should turn red");
-			buttonImage.sprite = optionButtonSprites[2]; //make re
+			Debug.Log(clothingWord + " should turn red");
+			buttonImage.sprite = optionButtonSprites[2]; 
 		}
 	}
 }

@@ -14,6 +14,7 @@ public class QuestionManager : MonoBehaviour
 	internal string modelGender;
 	internal string dresserGender;
 	internal bool inQuestion = false;
+	public GameObject resultsScreen;
 
 	public GameObject optionButtons; //attach parent object containing all of the answer option buttons
 	internal OptionButtons optionButtonsScript;
@@ -26,7 +27,7 @@ public class QuestionManager : MonoBehaviour
 	internal List<ClothingItem> clothingOptions = new List<ClothingItem>();
 	internal List<ClothingItem> modelClothing = new List<ClothingItem>();
 	internal List<ClothingItem> selectedItems = new List<ClothingItem>();
-	internal List<string> optionWords;
+	internal List<ClothingItem> optionItems = new List<ClothingItem>();
 	internal List<string> selectedItemWords = new List<string>();
 
 	public GameObject SMSController;
@@ -63,7 +64,12 @@ public class QuestionManager : MonoBehaviour
 		inQuestion = true;
 	}
 
-	bool SetRoles()
+    internal void SetSelectedItems(bool isSelected, ClothingItem clothingItem)
+    {
+        throw new NotImplementedException();
+    }
+
+    bool SetRoles()
 	{
 		modelGender = people[UnityEngine.Random.Range(0, 2)];
 		if (modelGender == "boy")
@@ -204,45 +210,44 @@ public class QuestionManager : MonoBehaviour
 	{
 		//set list with names of items active on model with modelClothingList. choose other words at random until list count = 8
 		//Generates a list of words of clothing items optionWords and sends it to OptionButtons script to populate the button texts.
-		List<string> unshuffledItems = new List<string>();
-		List<string> namesOfItems = clothingDataLoader.GetItemNames();
+		List<ClothingItem> unshuffledItems = new List<ClothingItem>();
+		List<ClothingItem> listAllItems = modelClothingList;
 
-		string itemHulqWord;
+		int randItem;
 		//fills options with correct answers
 		for (int i = 0; i < modelClothing.Count; i++)
 		{
-			itemHulqWord = modelClothing[i].GetHulqWord();
-			unshuffledItems.Add(itemHulqWord);
-			namesOfItems.Remove(itemHulqWord);
+			unshuffledItems.Add(modelClothing[i]);
+			listAllItems.Remove(modelClothing[i]);
 		}
 
-		int randItem;
         //fills options with incorrect answers
         //UNCOMMENT
         for (int i = modelClothing.Count; i < 8; i++)
         {
-            randItem = Random.Range(0, namesOfItems.Count); ;//choose random item from an genderallitemlist
-			itemHulqWord = namesOfItems[randItem];
-            unshuffledItems.Add(itemHulqWord);
-            namesOfItems.Remove(itemHulqWord);
+            randItem = Random.Range(0, listAllItems.Count); ;//choose random item from an genderallitemlist
+            unshuffledItems.Add(listAllItems[randItem]);
+			listAllItems.Remove(listAllItems[randItem]);
         }
 
         //sends a shuffled list to set buttons
         
 		StartCoroutine(PopulateOptionButtons());
+
 		IEnumerator PopulateOptionButtons(){
-			optionWords = ShuffleArray(unshuffledItems);
-			yield return new WaitUntil(() => optionWords.Count == 8);
-			optionButtonsScript.SetOptionButtons(optionWords);
+			optionItems = ShuffleClothingOptions(unshuffledItems);
+			yield return new WaitUntil(() => optionItems.Count == 8);
+			optionButtonsScript.SetOptionButtons(optionItems);
 
 		}
-		Debug.Log("number of options: " + optionWords.Count);
+		Debug.Log("number of options: " + optionItems.Count);
     }
 
     //UNCOMMENT
-    List<string> ShuffleArray(List<string> unshuffledItems)
+    List<ClothingItem> ShuffleClothingOptions(List<ClothingItem> unshuffledItems)
     {
-		List<string> shuffledItems = new List<string>();
+		List<ClothingItem> shuffledItems = new List<ClothingItem>();
+
 		int l = unshuffledItems.Count;
 		int rand;
 
@@ -256,30 +261,39 @@ public class QuestionManager : MonoBehaviour
 
 	}
 
-    internal void SetSelectedItemWords(bool selected, string itemName)
+    internal void SetSelectedItemWords(bool selected, ClothingItem selectedItem)
 	{
 		//Sent to SMSConainerScript
 
 		if (selected)
 		{
-			selectedItemWords.Add(itemName);
-			selectedItems.Add(dresserClothingList.First(item => itemName == item.GetHulqWord()));
+			selectedItems.Add(selectedItem);
 		}
 		else
 		{
-			selectedItemWords.Remove(itemName);
-			selectedItems.Remove(dresserClothingList.First(item => itemName == item.GetHulqWord()));
+			selectedItems.Remove(selectedItem);
 		}
 
-		SMSControllerScript.EditSMSText(selectedItemWords);
+		SMSControllerScript.EditSMSText(selectedItems);
 	}
 
 	public void SubmitAnswers()
 	{
 		SMSControllerScript.SetSentText();
-		clothingSpawner.DressDresser(selectedItems);
-		optionButtonsScript.HighlightAnswers(modelClothingList);
+	}
 
+    internal void GoToResults()
+    {
+		StartCoroutine(AfterSMSSent());
+		IEnumerator AfterSMSSent()
+		{
+			yield return new WaitForSeconds(0.7f);
+			yield return new WaitUntil(() => !optionButtons.GetComponent<AudioSource>().isPlaying);
+			clothingSpawner.DressDresser(selectedItems);
+			optionButtonsScript.HighlightAnswers(modelClothing);
+			resultsScreen.SetActive(true);
+			GameObject.Find("Questions Screen").SetActive(false);
+		}
 	}
 
 	internal void ResetQuestion()

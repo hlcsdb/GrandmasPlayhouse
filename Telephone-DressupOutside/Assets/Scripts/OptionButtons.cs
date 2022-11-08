@@ -23,19 +23,20 @@ public class OptionButtons : MonoBehaviour
     public GameObject[] optionButtons = new GameObject[8];
     //public GameObject SMSField; //attach game object that contains textmeshpro component
     public GameObject QBResultsPos;
+    internal AudioSource buttonAudSource;
 
     void Start()
     {
-
+        buttonAudSource = GetComponent<AudioSource>();
     }
 
-    public void SetOptionButtons(List<String> optionText)
+    public void SetOptionButtons(List<ClothingItem> clothingOptions)
     {
 
         //Sets button text and listeners
         for (int i = 0; i < optionButtons.Length; i++)
         {
-            optionButtons[i].GetComponent<OptionButtonSettings>().SetButton(optionText[i]);
+            optionButtons[i].GetComponent<OptionButtonSettings>().SetButton(clothingOptions[i]);
         }
     }
 
@@ -53,17 +54,17 @@ public class OptionButtons : MonoBehaviour
         foreach (GameObject optionButton in optionButtons)
         {
             OptionButtonSettings buttonSetting = optionButton.GetComponent<OptionButtonSettings>();
-            Debug.Log(buttonSetting.buttonWord);
-            if (modelClothingList.Find(item => item.GetHulqWord() == buttonSetting.buttonWord))
+            //Debug.Log(buttonSetting.clothingWord);
+            if (modelClothingList.Find(item => item.GetHulqWord() == buttonSetting.clothingWord))
             {
-                Debug.Log("correct option: " + buttonSetting.buttonWord);
-                buttonSetting.HighlightBox(false);
+                //Debug.Log("correct option: " + buttonSetting.clothingWord);
+                buttonSetting.HighlightBox(true);
             }
             
             else
             {
-                Debug.Log("incorrect option" + buttonSetting.buttonWord);
-                buttonSetting.HighlightBox(true);
+                //Debug.Log("incorrect option" + buttonSetting.clothingWord);
+                buttonSetting.HighlightBox(false);
             }
         }
     }
