@@ -23,11 +23,11 @@ public class QuestionManager : MonoBehaviour
 	internal List<ClothingItem> modelClothingList;
 	internal List<ClothingItem> dresserClothingList;
 	internal List<string> namesOfItems;
-	internal List<ClothingItem> clothingOptions;
-	internal List<ClothingItem> modelClothing;
-	internal List<ClothingItem> selectedItems;
+	internal List<ClothingItem> clothingOptions = new List<ClothingItem>();
+	internal List<ClothingItem> modelClothing = new List<ClothingItem>();
+	internal List<ClothingItem> selectedItems = new List<ClothingItem>();
 	internal List<string> optionWords;
-	internal List<string> selectedItemWords;
+	internal List<string> selectedItemWords = new List<string>();
 
 	public GameObject SMSController;
 	internal SMSController SMSControllerScript;
@@ -38,156 +38,225 @@ public class QuestionManager : MonoBehaviour
 	{
 		optionButtonsScript = optionButtons.GetComponent<OptionButtons>();
 		clothingDataLoader = GetComponent<LoadTextData>();
-		namesOfItems = clothingDataLoader.GetItemNames();
+		clothingDataLoader.ClothingReader();
 		SMSControllerScript = SMSController.GetComponent<SMSController>();
 	}
 
 	public void SetQuestion()
 	{
+		
 		//there's a lot going on in this function, and each line requires the previous function to be completed. if there are issues, check first how this runs.
-		SetRoles();
-		DressModel();
-		SetOptions();
+		
+		StartCoroutine(PreparePeople());
+			IEnumerator PreparePeople()
+			{
+			bool rolesSet = false;
+			bool modelDressed = false;
+			rolesSet = SetRoles();
+			yield return new WaitUntil(() => rolesSet);
+			modelDressed = DressModel();
+			yield return new WaitUntil(() => modelDressed);
+			Debug.Log("finished picking clothes");
+			clothingSpawner.DressModel(modelClothing);
+			SMSControllerScript.StartSMS();
+			}
 		inQuestion = true;
-		SMSControllerScript.StartSMS();
 	}
 
-	void SetRoles()
+	bool SetRoles()
 	{
 		modelGender = people[UnityEngine.Random.Range(0, 2)];
-		if (modelGender == "male")
+		if (modelGender == "boy")
 		{
-			dresserGender = "female";
+			dresserGender = "girl";
 			clothingSpawner.SetPeople(0, 1); //(0 male = model, 1 female = dresser)
-		}
-		else
-		{
-			dresserGender = "male";
-			clothingSpawner.SetPeople(1, 0);
-		}
-	}
-
-	void SetPeopleClothingList(string modelGender)
-	{
-		if (modelGender == "male")
-		{
 			modelClothingList = clothingDataLoader.GetMaleClothingItems();
+			//Debug.Log(modelClothingList.Count);
 			dresserClothingList = clothingDataLoader.GetFemaleClothingItems();
+			//Debug.Log(dresserClothingList.Count);
+			return true;
 		}
 		else
 		{
+			dresserGender = "boy";
+			clothingSpawner.SetPeople(1, 0);
 			modelClothingList = clothingDataLoader.GetFemaleClothingItems();
 			dresserClothingList = clothingDataLoader.GetMaleClothingItems();
+			return true;
 		}
+		//return true;
 	}
 
-	void DressModel()
+	bool DressModel()
 	{
+		//SETUP
+		Debug.Log("starting dress function in question manager");
 		//populate modelClothing list with random items
 		List<ClothingItem> tempAllItems = modelClothingList; //duplicate list of possible options
+		//Debug.Log("row 88 temp items: " + tempAllItems.Count);
 
-		modelClothing.Add(GetRandomItemFromLayerList(1, tempAllItems)); //random top (shirt) //no dependencies
-		modelClothing.Add(GetRandomItemFromLayerList(2, tempAllItems)); //random bottom (pants)//no dependencies
+		//PANTS
+		ClothingItem layer1Item = GetRandomItemFromLayerList(1, tempAllItems);
+		modelClothing.Add(layer1Item); //random pants //no dependencies
+		tempAllItems.Remove(layer1Item);
+		//Debug.Log("bottoms: "+ modelClothing[0].GetItemName());
 
-		ClothingItem randFootwear = GetRandomItemFromLayerList(3, tempAllItems); //random footwear// required additions
-		modelClothing = CheckRequiredPairing(randFootwear, modelClothing, tempAllItems);
+		//FOOTWEAR
+		ClothingItem randFootwear = GetRandomItemFromLayerList(2, tempAllItems); //random footwear// required additions
+		tempAllItems.Remove(randFootwear);
 
-		ClothingItem randJacket = GetRandomItemFromLayerList(4, tempAllItems); //random jacket // requires check prohibited eg shirt
-		modelClothing = CheckProhibitedConditions(randJacket, modelClothing);
+		ClothingItem additionFootwear = CheckRequiredPairing(randFootwear, modelClothing, tempAllItems);
+		if(additionFootwear != null)
+        {
+			modelClothing.Add(additionFootwear);
+			tempAllItems.Remove(additionFootwear);
+			//Debug.Log("required addition to footwear: " + modelClothing[modelClothing.Count-1].GetItemName());
+		}
+		modelClothing.Add(randFootwear);
+		//Debug.Log("footwear: " + modelClothing[modelClothing.Count - 1].GetItemName());
 
-		ClothingItem randAccessory = GetRandomItemFromLayerList(5, tempAllItems); //random accessory // add one if wanted and required pairing exists
-		modelClothing = AddOptionalAccessory(randAccessory, modelClothing, tempAllItems);
+		//TOP/JACKET
+		ClothingItem randTop = GetRandomItemFromLayerList(3, tempAllItems); //random jacket // requires check prohibited eg shirt
+		tempAllItems.Remove(randTop);
 
+		ClothingItem additionTop = CheckRequiredPairing(randTop, modelClothing, tempAllItems);
+		if (additionTop != null)
+		{
+			modelClothing.Add(additionTop);
+			tempAllItems.Remove(additionTop);
+			//Debug.Log("required addition to top: " + modelClothing[modelClothing.Count - 1].GetItemName());
+		}
+		modelClothing.Add(randTop);
+		//Debug.Log("top: " + modelClothing[modelClothing.Count - 1].GetItemName());
+
+
+		ClothingItem optionAccessory = AddOptionalAccessory(modelClothing, tempAllItems);
+		if(optionAccessory != null)
+        {
+			modelClothing.Add(optionAccessory);
+			tempAllItems.Remove(optionAccessory);
+			//Debug.Log("optional accessory: " + modelClothing[modelClothing.Count - 1].GetItemName());
+
+		}
 		//the model now has all required clothing
-		clothingSpawner.DressModel(modelClothing);
+		return true;
 	}
 
 	ClothingItem GetRandomItemFromLayerList(int layerNumber, List<ClothingItem> remainingItems)
 	{
+		//Debug.Log(remainingItems.Count);
 		List<ClothingItem> layer = remainingItems.Where(x => x.GetLayerNumber() == layerNumber).ToList();
 		int randItemIndex = UnityEngine.Random.Range(0, layer.Count);
 		return layer[randItemIndex];
 	}
 
-	List<ClothingItem> CheckRequiredPairing(ClothingItem item, List<ClothingItem> clothesSoFar, List<ClothingItem> modelClothingOptions)
+	ClothingItem CheckRequiredPairing(ClothingItem item, List<ClothingItem> clothesSoFar, List<ClothingItem> modelClothingOptions)
 	{
 		//something might be wrong with this... line 15 variable
 		if (item.GetRequiredPairing() != null)
 		{
-			clothesSoFar.Add(modelClothingOptions.Find(c => c.GetItemName() == item.GetRequiredPairing()));
+			//clothesSoFar.Add(modelClothingOptions.Find(c => c.GetItemName() == item.GetRequiredPairing()));
+		return modelClothingOptions.Find(c => c.GetItemName() == item.GetRequiredPairing());
 		}
-		return clothesSoFar;
+		return null;
 	}
 
-	List<ClothingItem> CheckProhibitedConditions(ClothingItem item, List<ClothingItem> clothesSoFar)
+	ClothingItem AddOptionalAccessory(List<ClothingItem> clothesSoFar, List<ClothingItem> modelClothingOptions)
 	{
-		if (item.GetProhibitedPairing() != null)
+		//choose a random accessory
+		ClothingItem randomAccessory = GetRandomItemFromLayerList(4, modelClothingOptions);
+		string prohibitedPairing = randomAccessory.GetProhibitedPairing(); //get name of any prohibited pairing, eg. gloves not with tshirt
+		//If there is no prohibited pairing, and we randomly choose to add that accessory, return it. 
+		if (prohibitedPairing == "" && WantAccessory())
+        {
+			return randomAccessory;
+        }
+
+		//if there is a prohibited pairing, look for it in the list of clothes to be worn
+		if (clothesSoFar.Find(c => c.GetItemName() == prohibitedPairing))
 		{
-			clothesSoFar.Remove(clothesSoFar.Find(c => c.GetItemName() == item.GetProhibitedPairing()));
+			return null; //if it is, return nothing. No accessory will be added
 		}
-		return clothesSoFar;
-	}
 
-	List<ClothingItem> AddOptionalAccessory(ClothingItem item, List<ClothingItem> clothesSoFar, List<ClothingItem> modelClothingOptions)
-	{
-		string requiredPairing = item.GetRequiredPairing();
-		if (clothesSoFar.Find(c => c.GetItemName() == requiredPairing) != null)
-		{ //if an accessory's required item is already on the model, decide if we even want it
-            int random = Random.Range(0, 2);
-			if (random == 0) //allow accessory
+		//if the prohibited item isn't already to be worn, check to see if we want to add it
+		else
+		{
+			if (WantAccessory())
 			{
-				clothesSoFar.Add(clothesSoFar.Find(c => c.GetItemName() == requiredPairing));
+				return randomAccessory;
 			}
 		}
-		return clothesSoFar;
+		return null;
 	}
 
 
-	void SetOptions()
+	bool WantAccessory()
+	{
+		int random = Random.Range(0, 2);
+		if (random == 0) //allow accessory
+		{
+		return true;
+		}
+		return false;
+	}
+
+	internal void SetOptions()
 	{
 		//set list with names of items active on model with modelClothingList. choose other words at random until list count = 8
 		//Generates a list of words of clothing items optionWords and sends it to OptionButtons script to populate the button texts.
-		string[] unshuffledItems = new string[8];
-		List<string> tempItems = namesOfItems;
+		List<string> unshuffledItems = new List<string>();
+		List<string> namesOfItems = clothingDataLoader.GetItemNames();
 
-		//int randIndex;
 		string itemHulqWord;
 		//fills options with correct answers
-
 		for (int i = 0; i < modelClothing.Count; i++)
 		{
 			itemHulqWord = modelClothing[i].GetHulqWord();
-			unshuffledItems[i] = itemHulqWord;
-			tempItems.Remove(itemHulqWord);
+			unshuffledItems.Add(itemHulqWord);
+			namesOfItems.Remove(itemHulqWord);
 		}
 
+		int randItem;
         //fills options with incorrect answers
-//UNCOMMENT
-        //for (int i = modelClothingList.Count; i < 8; i++)
-        //{
-        //	int randItem = Random.Range(0, namesOfItems.Count); ;//choose random item from an genderallitemlist
-        //	unshuffledItems[i] = tempItems[randItem];
-        //	tempItems.Remove(randItem);
-        //}
+        //UNCOMMENT
+        for (int i = modelClothing.Count; i < 8; i++)
+        {
+            randItem = Random.Range(0, namesOfItems.Count); ;//choose random item from an genderallitemlist
+			itemHulqWord = namesOfItems[randItem];
+            unshuffledItems.Add(itemHulqWord);
+            namesOfItems.Remove(itemHulqWord);
+        }
 
-        ////sends a shuffled list to set buttons
-        //ShuffleArray(unshuffledItems);
-        //optionButtonsScript.SetOptionButtons(clothingOptions);
+        //sends a shuffled list to set buttons
+        
+		StartCoroutine(PopulateOptionButtons());
+		IEnumerator PopulateOptionButtons(){
+			optionWords = ShuffleArray(unshuffledItems);
+			yield return new WaitUntil(() => optionWords.Count == 8);
+			optionButtonsScript.SetOptionButtons(optionWords);
+
+		}
+		Debug.Log("number of options: " + optionWords.Count);
     }
 
-	//UNCOMMENT
- //   void ShuffleArray(string[] unshuffledItems)
-	//{
+    //UNCOMMENT
+    List<string> ShuffleArray(List<string> unshuffledItems)
+    {
+		List<string> shuffledItems = new List<string>();
+		int l = unshuffledItems.Count;
+		int rand;
 
-	//	random = new Random();
-	//	unshuffledItems = arr.OrderBy(x => random.Next()).ToArray();
-	//	foreach (string item in unshuffledItems)
-	//	{
-	//		clothingOptions.Add(item);
-	//	}
-	//}
+        for(int i=0; i<l; i++)
+        {
+			rand = Random.Range(0, unshuffledItems.Count);
+			shuffledItems.Add(unshuffledItems[rand]);
+			unshuffledItems.RemoveAt(rand);
+        }
+		return shuffledItems;
 
-	internal void SetSelectedItemWords(bool selected, string itemName)
+	}
+
+    internal void SetSelectedItemWords(bool selected, string itemName)
 	{
 		//Sent to SMSConainerScript
 
@@ -205,17 +274,19 @@ public class QuestionManager : MonoBehaviour
 		SMSControllerScript.EditSMSText(selectedItemWords);
 	}
 
-	internal void SubmitAnswers()
+	public void SubmitAnswers()
 	{
 		SMSControllerScript.SetSentText();
 		clothingSpawner.DressDresser(selectedItems);
 		optionButtonsScript.HighlightAnswers(modelClothingList);
+
 	}
 
 	internal void ResetQuestion()
 	{
+		clothingSpawner.ResetPeople();
 		clothingOptions.Clear();
-		clothingSpawner.ClearClothingFromPeople();
+		SetOptions();
 	}
 }
 

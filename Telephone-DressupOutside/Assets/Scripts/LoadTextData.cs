@@ -15,18 +15,13 @@ public class LoadTextData : MonoBehaviour
     public int numItems; //set in inspector to 23 as of Nov 5
 
     [SerializeField]
-    private List<ClothingItem> clothingItems; //holds the list of clothing data as clothing objects
-    private List<ClothingItem> maleClothingItems;
-    private List<ClothingItem> femaleClothingItems;
-    private List<String> itemNames;
-
+    internal List<ClothingItem> clothingItems = new List<ClothingItem>(); //holds the list of clothing data as clothing objects
+ 
     internal bool loaded = false;
 
     void Start()
     {
-        ClothingReader();
-        SetMaleClothingItems();
-        SetFemaleClothingItems();
+        //ClothingReader();
     }
 
     public void ClothingReader()
@@ -34,28 +29,28 @@ public class LoadTextData : MonoBehaviour
         string[] data = clothingData.text.Split(new string[] { ",", "\n" }, System.StringSplitOptions.None);
         //Debug.Log(data.Length);
         int numCols = data.Length / numItems;
+        //Debug.Log("num items:" + numItems + ";  num cols: " + numCols);
+        //Debug.Log("first item: " + data[numCols * 1]);
+        //ClothingItem[] items = new ClothingItem[numItems];
 
-        ClothingItem[] items = new ClothingItem[numItems];
-
-        for (int i = 1; i < numItems; i++) //starting at i = 1 to skip first row of textasset. this should work...?
+        for (int i = 0; i < numItems; i++) //starting at i = 0 because the index of the list needs to start at 0
         {
             clothingItems.Add(gameObject.AddComponent<ClothingItem>());
-            clothingItems[i].SetSpriteFilename("TelephoneClothingImages/" + data[numItems * i]);
-            clothingItems[i].SetFileGender(data[numItems * i + 1]);
-            clothingItems[i].SetItemName(data[numItems * i + 2]);
-            clothingItems[i].SetClothingGender(data[numItems * i + 3]);
-            clothingItems[i].SetLayerNumber(data[numItems * i + 4]);
-            clothingItems[i].SetClothingCategory(data[numItems * i + 5]);
-            clothingItems[i].SetRequiredPairing(data[numItems * i + 6]);
-            clothingItems[i].SetProhibitedPairing(data[numItems * i + 7]);
-            clothingItems[i].SetAudioFilename("TelephoneClothingAudio/" + data[numItems * i + 8]);
-            clothingItems[i].SetHulqWord(data[numItems * i + 9]);
+            clothingItems[i].SetSpriteFilename("TelephoneClothingImages/" + data[numCols * (i+1)]);
+            clothingItems[i].SetFileGender(data[numCols * (i+1) + 1]);
+            clothingItems[i].SetItemName(data[numCols * (i + 1) + 2]);
+            clothingItems[i].SetClothingGender(data[numCols * (i + 1) + 3]);
+            clothingItems[i].SetLayerNumber(data[numCols * (i + 1) + 4]);
+            clothingItems[i].SetClothingCategory(data[numCols * (i + 1) + 5]);
+            clothingItems[i].SetRequiredPairing(data[numCols * (i + 1) + 6]);
+            clothingItems[i].SetProhibitedPairing(data[numCols * (i + 1) + 7]);
+            clothingItems[i].SetAudioFilename("TelephoneClothingAudio/" + data[numCols * (i + 1) + 8]);
+            clothingItems[i].SetHulqWord(data[numCols * (i + 1) + 9]);
 
-            Debug.Log(clothingItems[i].GetItemName());
+            //Debug.Log(clothingItems[i].GetItemName());
         }
-        Debug.Log(clothingItems.Count);
-        clothingItems = items.ToList();
-        loaded = true;
+        //Debug.Log(clothingItems.Count);
+        //clothingItems = items.ToList();
     }
 
     // internal List<ClothingItem>GetAllClothingItems(){
@@ -63,55 +58,57 @@ public class LoadTextData : MonoBehaviour
     //     else{return clothingItems();}
     // }
 
-    internal void SetMaleClothingItems()
+    internal List<ClothingItem> GetMaleClothingItems()
     {
-        if (clothingItems.Count != 0)
-        {
-            for (int i = 0; i < clothingItems.Count; i++)
-            {
-                if (clothingItems[i].GetFileGender() == "male")
-                {
-                    maleClothingItems.Add(clothingItems[i]);
-                }
-            }
-            Debug.Log("clothing items not loaded");
-        }
-    }
+        List<ClothingItem> maleClothingItems = new List<ClothingItem>();
+        List<ClothingItem> tempAllItems = clothingItems;
+        //Debug.Log("All items in male: " + tempAllItems.Count);
 
-    internal void SetFemaleClothingItems()
-    {
-        if (clothingItems.Count != 0)
+        if (tempAllItems.Count != 0)
         {
-            for (int i = 0; i < clothingItems.Count; i++)
+            //Debug.Log(tempAllItems[0].GetItemName());
+            for (int i = 0; i < tempAllItems.Count; i++)
             {
-                if (clothingItems[i].GetFileGender() == "female")
+                if (tempAllItems[i].GetFileGender() == "boy")
                 {
-                    femaleClothingItems.Add(clothingItems[i]);
+                    maleClothingItems.Add(tempAllItems[i]);
                 }
             }
+            //Debug.Log("clothing items not loaded");
         }
+        return maleClothingItems;
     }
 
     internal List<ClothingItem> GetFemaleClothingItems()
     {
+        List<ClothingItem> femaleClothingItems = new List<ClothingItem>();
+        List<ClothingItem> tempAllItems = clothingItems;
+
+        //Debug.Log("All items in female: " + tempAllItems.Count);
+
+        if (tempAllItems.Count != 0)
+        {
+            //Debug.Log(tempAllItems[0].GetItemName());
+            for (int i = 0; i < tempAllItems.Count; i++)
+            {
+                if (tempAllItems[i].GetFileGender() == "girl")
+                {
+                    femaleClothingItems.Add(tempAllItems[i]);
+                }
+            }
+        }
         return femaleClothingItems;
     }
 
-    internal List<ClothingItem> GetMaleClothingItems()
+  
+    internal List<string> GetItemNames()
     {
-        return maleClothingItems;
-    }
-
-    internal void SetItemNames()
-    {
-        foreach (ClothingItem item in maleClothingItems)
+        List<ClothingItem> clothingItems = GetFemaleClothingItems();
+        List<string> itemNames = new List<string>();
+        foreach (ClothingItem item in clothingItems)
         {
             itemNames.Add(item.GetHulqWord());
         }
-    }
-
-    internal List<String> GetItemNames()
-    {
         return itemNames;
     }
 }

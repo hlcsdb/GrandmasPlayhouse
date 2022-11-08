@@ -8,35 +8,39 @@ public class OptionButtonSettings : MonoBehaviour
 {
 	[SerializeField]
 	internal string buttonWord;
-	internal TextMeshPro buttonTextField;
+	internal TextMeshProUGUI buttonTextField;
 	internal bool isSelected;
-	public Sprite[] optionButtonSprites = new Sprite[2];
+	public Sprite[] optionButtonSprites = new Sprite[5];
 	internal SMSController smsController;
 	internal QuestionManager questionManager;
-	private bool checkedEver;
 	internal Image buttonImage;
-
 
 	void Start()
 	{
-		buttonTextField = transform.GetChild(0).GetComponent<TextMeshPro>();
+		
+	}
+	public void ActivateOptionButtons()
+    {
 		smsController = GameObject.Find("SMS OBJECT").GetComponent<SMSController>();
 		questionManager = GameObject.Find("Question Manager").GetComponent<QuestionManager>();
-	}
+		//Debug.Log(transform.GetChild(0).name);
+		buttonTextField = transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+		//Debug.Log(buttonTextField.text);
+		buttonImage = GetComponent<Image>();
 
-	public void SetButton(string word)
+}
+
+public void SetButton(string word)
 	{
-		checkedEver = false;
+		ActivateOptionButtons();
 		buttonWord = word;
 		buttonTextField.text = buttonWord;
 		isSelected = false;
-		GetComponent<Image>().sprite = optionButtonSprites[0];
+		buttonImage.sprite = optionButtonSprites[0];
 	}
 
 	public void ButtonClicked()
 	{
-		checkedEver = true;
-
 		isSelected = !isSelected; //starts at false. first time selected, it changes to true and then the sprite changes to the second(checked)
 
 		if (isSelected)
@@ -48,23 +52,30 @@ public class OptionButtonSettings : MonoBehaviour
 			buttonImage.sprite = optionButtonSprites[0];
 		}
 
-		GetComponentInParent<QuestionManager>().SetSelectedItemWords(isSelected, buttonWord);
+		questionManager.SetSelectedItemWords(isSelected, buttonWord);
+		Debug.Log(buttonWord + " is selected: " + isSelected);
 	}
 
 	public void HighlightBox(bool correctAnswer)
 	{
-		if (checkedEver)
+		if (correctAnswer && isSelected)
 		{
-			if (correctAnswer)
-			{
-				//change sprite color to green
-				buttonImage.color = new Color(189, 243, 141, 255); //make green
-			}
+			Debug.Log(buttonWord + " should turn green");
+			//change sprite color to green
+			buttonImage.sprite = optionButtonSprites[3];
+		}
 
-			else
-			{
-				buttonImage.color = new Color(243, 150, 141, 255); //make red
-			}
+		if (correctAnswer && !isSelected)
+		{
+			Debug.Log(buttonWord + " should turn green");
+			//change sprite color to green
+			buttonImage.sprite = optionButtonSprites[4];
+		}
+
+		else if (!correctAnswer && isSelected)
+		{
+			Debug.Log(buttonWord + " should turn red");
+			buttonImage.sprite = optionButtonSprites[2]; //make re
 		}
 	}
 }

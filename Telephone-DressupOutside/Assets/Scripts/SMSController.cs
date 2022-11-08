@@ -14,63 +14,65 @@ public class SMSController : MonoBehaviour
 	public GameObject sentTextBox;
 	internal string dresserGender;
 	internal QuestionManager questionManagerScript;
-	internal string maleDeterminer = "tthun’ ";
-	internal string femaleDeterminer = "thun’ ";
-	internal string SMS;
+	internal string boyDeterminer = "tthun’ ";
+	internal string girlDeterminer = "thun’ ";
+	internal string smsText;
 	internal string dresserDeterminer;
 
 	void Start()
 	{
-		questionManagerScript = GameObject.Find("QuestionManager").GetComponent<QuestionManager>();
+		questionManagerScript = GameObject.Find("Question Manager").GetComponent<QuestionManager>();
 	}
 
 	internal void StartSMS()
 	{
-		if (questionManagerScript.dresserGender == "male")
+		if (questionManagerScript.dresserGender == "boy")
 		{
-			dresserDeterminer = maleDeterminer;
+			dresserDeterminer = boyDeterminer;
 		}
-		else { dresserDeterminer = femaleDeterminer; }
+		else { dresserDeterminer = girlDeterminer; }
 
-		SMS = "hakwush " + dresserDeterminer + "...";
 	}
 
 
-	void ConcatenateSMSText(List<string> clothingWords)
+	string ConcatenateSMSText(List<string> clothingWords)
 	{
+		string sms = "hakwush " + dresserDeterminer;
+
 		if (clothingWords.Count > 0)
 		{
 			if (clothingWords.Count == 1)
 			{
-				SMS += clothingWords[0] + ".";
+				sms += clothingWords[0] + ".";
 			}
-			else
+			else if (clothingWords.Count > 1)
 			{
 				for (int i = 0; i < clothingWords.Count - 1; i++)
 				{
-					SMS += clothingWords[i] + ",";
+					sms += clothingWords[i] + ", ";
 				}
-				SMS += "’i’ " + dresserDeterminer + clothingWords[clothingWords.Count] + ".";
+				sms += "’i’ " + dresserDeterminer + clothingWords[clothingWords.Count-1] + ".";
 			}
 		}
 		else
 		{
-			SMS += "...";
+			sms = "hakwush " + dresserDeterminer + "...";
 		}
+		return sms;
 	}
 
 	public void EditSMSText(List<String> clothingWords)
 	{
-		ConcatenateSMSText(clothingWords);
-		activeTexting.GetComponent<TextMeshPro>().text = SMS;
+		smsText = ConcatenateSMSText(clothingWords).Replace("\r", "");
+		activeTexting.GetComponent<TextMeshProUGUI>().text = "";
+		activeTexting.GetComponent<TextMeshProUGUI>().text = smsText;
 	}
 
 	public void SetSentText()
     {
 		IPTextBox.SetActive(false);
 		sentTextBox.SetActive(true);
-		sentText.GetComponent<TextMeshPro>().text = SMS;
-
+		sentText.GetComponent<TextMeshProUGUI>().text = smsText;
 	}
 
 }

@@ -31,12 +31,11 @@ public class OptionButtons : MonoBehaviour
 
     public void SetOptionButtons(List<String> optionText)
     {
+
         //Sets button text and listeners
-        int i = 0;
-        foreach (GameObject optionButton in optionButtons)
+        for (int i = 0; i < optionButtons.Length; i++)
         {
-            optionButton.GetComponent<OptionButtonSettings>().SetButton(optionText[i]);
-            i++;
+            optionButtons[i].GetComponent<OptionButtonSettings>().SetButton(optionText[i]);
         }
     }
 
@@ -48,14 +47,24 @@ public class OptionButtons : MonoBehaviour
 
     public void HighlightAnswers(List<ClothingItem> modelClothingList)
     {
-        transform.localPosition = QBResultsPos.transform.localPosition;
-        //foreach (GameObject optionButton in optionButtons)
-        //{
-        //    if (modelClothingList.Find(item => item.GetHulqWord() == optionButton.buttonWord) != null)
-        //    {
-                optionButtons[0].GetComponent<OptionButtonSettings>().HighlightBox(true);
-        //    } //First might not be the right method
-        //    else { optionButton.GetComponent<OptionButtonSettings>().HighlightBox(false); }
-        //}
+        Debug.Log("strt highlighting answers");
+
+        transform.position = QBResultsPos.transform.position;
+        foreach (GameObject optionButton in optionButtons)
+        {
+            OptionButtonSettings buttonSetting = optionButton.GetComponent<OptionButtonSettings>();
+            Debug.Log(buttonSetting.buttonWord);
+            if (modelClothingList.Find(item => item.GetHulqWord() == buttonSetting.buttonWord))
+            {
+                Debug.Log("correct option: " + buttonSetting.buttonWord);
+                buttonSetting.HighlightBox(false);
+            }
+            
+            else
+            {
+                Debug.Log("incorrect option" + buttonSetting.buttonWord);
+                buttonSetting.HighlightBox(true);
+            }
+        }
     }
 }

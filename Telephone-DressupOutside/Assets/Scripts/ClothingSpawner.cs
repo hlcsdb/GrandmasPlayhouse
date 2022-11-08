@@ -11,7 +11,7 @@ public class ClothingSpawner : MonoBehaviour
 	public GameObject clothingImageContainer; //set to the correct dimensions as per the layer artboards (156x, 399.1y)
 	public QuestionManager questionManager;
 	public GameObject[] peoplePrefabs = new GameObject[2]; //prefab [male, female]
-	public GameObject[] peoplePositions = new GameObject[2]; //[model container, dresser container]
+	public GameObject[] peoplePositions = new GameObject[4]; //[model container, dresser container]
 
 	int siblingIndex;
 
@@ -23,43 +23,70 @@ public class ClothingSpawner : MonoBehaviour
 	public void SetPeople(int model, int dresser)
 	{ //sort out where model/dresser go based on male/female. also right now this is a co-ed game, no same gender. issue?
 	  //(0 male = model, 1 female = dresser)
-		Instantiate(peoplePrefabs[model], peoplePositions[model].transform.position, Quaternion.identity);
+		GameObject modelPrefab = Instantiate(peoplePrefabs[model], peoplePositions[0].transform.position, Quaternion.identity);
+		modelPrefab.transform.SetParent(peoplePositions[0].transform);
 
-		peoplePrefabs[0] = peoplePositions[model]; //(0,1) (male, female) 
-		peoplePrefabs[0].transform.SetParent(peoplePositions[model].transform);
-		peoplePrefabs[1] = peoplePositions[dresser];
-		peoplePrefabs[1].transform.SetParent(peoplePositions[dresser].transform);
+		GameObject dresserPrefab = Instantiate(peoplePrefabs[dresser], peoplePositions[1].transform.position, Quaternion.identity);
+		dresserPrefab.transform.SetParent(peoplePositions[1].transform);
 	}
 
 	public void DressModel(List<ClothingItem> modelClothing)
 	{
-		foreach (ClothingItem item in modelClothing)
+		List<ClothingItem> orderedClothing = RelayerClothes(modelClothing);
+		Debug.Log("Dressing model in spawner");
+		foreach (ClothingItem item in orderedClothing)
 		{
-			SpawnClothingLayer(item.GetSprite(), item.GetLayerNumber(), peoplePositions[0]);
+			SpawnClothingLayer(item, peoplePositions[0]);
 		}
+		questionManager.SetOptions();
 	}
 
 	public void DressDresser(List<ClothingItem> selectedItems)
 	{
-		foreach (ClothingItem item in selectedItems)
+		List<ClothingItem> orderedClothing = RelayerClothes(selectedItems);
+		foreach (ClothingItem item in orderedClothing)
 		{
-			SpawnClothingLayer(item.GetSprite(), item.GetLayerNumber(), peoplePositions[1]);
+			//Debug.Log(item.GetSpriteFilename());
+			SpawnClothingLayer(item, peoplePositions[1]);
 		}
+		Debug.Log("finished dressing");
+		MovePeopleOnResult();
 	}
 
-	public void SpawnClothingLayer(Sprite clothingItemSprite, int clothingLayerNum, GameObject person)
+	public List<ClothingItem> RelayerClothes(List<ClothingItem> clothesToWear)
 	{
-		GameObject clothingLayer = Instantiate(clothingImageContainer, person.transform.localPosition, Quaternion.identity);
-		clothingLayer.transform.SetParent(person.transform);
-		transform.SetSiblingIndex(clothingLayerNum); //this may pose an issue if there's no socks
-		clothingLayer.GetComponent<Image>().sprite = clothingItemSprite;
+		List<ClothingItem> orderedItems = new List<ClothingItem>();
+		orderedItems = clothesToWear.OrderBy(c => c.GetLayerNumber()).ToList();
+		return orderedItems;
+    }
+
+	public void SpawnClothingLayer(ClothingItem item, GameObject person)
+	{
+		Sprite itemSprite = item.GetSprite();
+		Debug.Log(item.GetSpriteFilename());
+        //transform.GetChild(0).GetComponent<Image>().sprite = clothingItemSprite;
+        GameObject clothingLayer = Instantiate(clothingImageContainer, person.transform.position, Quaternion.identity);
+		clothingLayer.name = item.GetItemName();
+        clothingLayer.GetComponent<Image>().sprite = itemSprite;
+        clothingLayer.transform.SetParent(person.transform);
 	}
 
-	public void ClearClothingFromPeople()
-	{ //this may pose an issue since clothes are now children of model and dresser GOs
-		foreach (Transform child in transform)
+	public void MovePeopleOnResult()
+    {
+		peoplePositions[0].transform.position = peoplePositions[2].transform.position;
+		peoplePositions[1].transform.position = peoplePositions[3].transform.position;
+	}
+
+
+    public void ResetPeople()
+    {
+		foreach (Transform child in peoplePositions[0].transform)
 		{
-			Destroy(child.gameObject); //will probably have to fix this for lost position objects
+			GameObject.Destroy(child.gameObject);
+		}
+		foreach (Transform child in peoplePositions[1].transform)
+		{
+			GameObject.Destroy(child.gameObject);
 		}
 	}
 }

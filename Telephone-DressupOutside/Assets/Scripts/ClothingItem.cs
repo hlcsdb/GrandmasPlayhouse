@@ -6,8 +6,10 @@ public class ClothingItem : MonoBehaviour
 {
 
 	//can't modify without setters or access without getters
-	private string sprite_filename;
+	internal string sprite_filename;
+	[SerializeField]
 	private string file_gender;
+	[SerializeField]
 	private string item_name;
 	private string clothing_gender;
 	private string layer;
@@ -17,11 +19,15 @@ public class ClothingItem : MonoBehaviour
 	private string audio_filename;
 	private string word_hulq;
 
-
-	//SETTERS - only set within code
-	internal void SetSpriteFilename(string spriteFilename)
+  //  public void Start()
+  //  {
+		//Debug.Log("made a clothing item");
+  //  }
+    //SETTERS - only set within code
+    internal void SetSpriteFilename(string spriteFilename)
 	{
-        sprite_filename = spriteFilename;
+		sprite_filename = spriteFilename;
+
 	}
 
 	internal void SetFileGender(string fileGender)
