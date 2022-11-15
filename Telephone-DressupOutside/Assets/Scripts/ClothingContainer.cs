@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ClothingContainer : MonoBehaviour
 {
-    public Sprite currSprite;
+    //public Sprite currSprite;
     public Image containerImage;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class ClothingContainer : MonoBehaviour
 
     internal void ChangeSprite(Sprite spritename)
     {
-        currSprite = spritename;
+        //currSprite = spritename;
         containerImage.sprite = spritename;
 
     }

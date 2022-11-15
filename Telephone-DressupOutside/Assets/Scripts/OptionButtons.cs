@@ -22,7 +22,7 @@ public class OptionButtons : MonoBehaviour
     //Make sure to attach these Buttons in the Inspector
     public GameObject[] optionButtons = new GameObject[8];
     //public GameObject SMSField; //attach game object that contains textmeshpro component
-    public GameObject QBResultsPos;
+    public GameObject[] QBPositions = new GameObject[2];
     internal AudioSource buttonAudSource;
 
     void Start()
@@ -32,7 +32,6 @@ public class OptionButtons : MonoBehaviour
 
     public void SetOptionButtons(List<ClothingItem> clothingOptions)
     {
-
         //Sets button text and listeners
         for (int i = 0; i < optionButtons.Length; i++)
         {
@@ -50,22 +49,23 @@ public class OptionButtons : MonoBehaviour
     {
         Debug.Log("strt highlighting answers");
 
-        transform.position = QBResultsPos.transform.position;
+        transform.position = QBPositions[0].transform.position;
         foreach (GameObject optionButton in optionButtons)
         {
             OptionButtonSettings buttonSetting = optionButton.GetComponent<OptionButtonSettings>();
-            //Debug.Log(buttonSetting.clothingWord);
             if (modelClothingList.Find(item => item.GetHulqWord() == buttonSetting.clothingWord))
             {
-                //Debug.Log("correct option: " + buttonSetting.clothingWord);
                 buttonSetting.HighlightBox(true);
             }
             
             else
             {
-                //Debug.Log("incorrect option" + buttonSetting.clothingWord);
                 buttonSetting.HighlightBox(false);
             }
         }
+    }
+    public void ResetQBs()
+    {
+        transform.position = QBPositions[1].transform.position;
     }
 }

@@ -38,7 +38,6 @@ public class SMSController : MonoBehaviour
 			dresserDeterminer = boyDeterminer;
 		}
 		else { dresserDeterminer = girlDeterminer; }
-
 	}
 
 
@@ -97,12 +96,10 @@ public class SMSController : MonoBehaviour
 			int i = 0;
 			foreach (string s in smsContent)
 			{
-				Debug.Log(s);
 				yield return new WaitUntil(() => !audioSource.isPlaying);
 
 				if(templateAudio.Find(a => (s.Equals(a.name) || s == a.name)))
                 {
-					Debug.Log("audio to play : " + smsContent[i]);
 					audioSource.PlayOneShot(templateAudio[templateAudio.FindIndex(a => (s.Equals(a.name) || s == a.name))]);
 				}
 				    
@@ -115,7 +112,7 @@ public class SMSController : MonoBehaviour
 			yield return new WaitForSeconds(2);
 			questionManagerScript.GoToResults();
 			gameObject.SetActive(false);
-        }
+		}
 	}
 
 	public void EditSMSText(List<ClothingItem> clothingWords)
@@ -131,5 +128,13 @@ public class SMSController : MonoBehaviour
 		PlaySMSAud(smsText);
 		sentTextBox.SetActive(true);
 		sentText.GetComponent<TextMeshProUGUI>().text = smsText;
+	}
+
+	public void ResetSMS()
+    {
+		IPTextBox.SetActive(true);
+		sentTextBox.SetActive(false);
+		activeTexting.GetComponent<TextMeshProUGUI>().text = "";
+		sentText.GetComponent<TextMeshProUGUI>().text = "";
 	}
 }

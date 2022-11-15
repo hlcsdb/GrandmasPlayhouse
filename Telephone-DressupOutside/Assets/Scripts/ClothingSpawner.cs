@@ -7,31 +7,42 @@ using UnityEngine.UI;
 
 public class ClothingSpawner : MonoBehaviour
 {
-
 	public GameObject clothingImageContainer; //set to the correct dimensions as per the layer artboards (156x, 399.1y)
 	public QuestionManager questionManager;
 	public GameObject[] peoplePrefabs = new GameObject[2]; //prefab [male, female]
 	public GameObject[] peoplePositions = new GameObject[4]; //[model container, dresser container]
+	internal ModelClothingRandomizer clothingRandomizerScript;
 
 	void Start()
 	{
+		clothingRandomizerScript = GetComponent<ModelClothingRandomizer>();
 
 	}
 
-	public void SetPeople(int model, int dresser)
+	public void SetPeople(int model, int dresser, List<ClothingItem> modelClothingList)
 	{ //sort out where model/dresser go based on male/female. also right now this is a co-ed game, no same gender. issue?
 	  //(0 male = model, 1 female = dresser)
 		GameObject modelPrefab = Instantiate(peoplePrefabs[model], peoplePositions[0].transform.position, Quaternion.identity);
 		modelPrefab.transform.SetParent(peoplePositions[0].transform);
-
+		modelPrefab.transform.localScale = new Vector3(1, 1, 1);
 		GameObject dresserPrefab = Instantiate(peoplePrefabs[dresser], peoplePositions[1].transform.position, Quaternion.identity);
 		dresserPrefab.transform.SetParent(peoplePositions[1].transform);
+		dresserPrefab.transform.localScale = new Vector3(1, 1, 1);
+
+		Debug.Log(modelClothingList.Count);
+		clothingRandomizerScript.DressModel(modelClothingList); //should this be moved into the clothing spawner script?
+		StartCoroutine(StartDressing());
+		IEnumerator StartDressing()
+        {
+			yield return new WaitUntil(() => clothingRandomizerScript.modelClothingGenerated);
+			questionManager.modelClothing = clothingRandomizerScript.modelClothing;
+			DressModel(questionManager.modelClothing);
+        }
 	}
 
 	public void DressModel(List<ClothingItem> modelClothing)
 	{
 		List<ClothingItem> orderedClothing = RelayerClothes(modelClothing);
-		//Debug.Log("Dressing model in spawner");
 		foreach (ClothingItem item in orderedClothing)
 		{
 			SpawnClothingLayer(item, peoplePositions[0]);
@@ -44,47 +55,57 @@ public class ClothingSpawner : MonoBehaviour
 		List<ClothingItem> orderedClothing = RelayerClothes(selectedItems);
 		foreach (ClothingItem item in orderedClothing)
 		{
-			//Debug.Log(item.GetSpriteFilename());
 			SpawnClothingLayer(item, peoplePositions[1]);
 		}
-		//Debug.Log("finished dressing");
 		MovePeopleOnResult();
 	}
 
 	public List<ClothingItem> RelayerClothes(List<ClothingItem> clothesToWear)
 	{
 		List<ClothingItem> orderedItems = new List<ClothingItem>();
-		orderedItems = clothesToWear.OrderBy(c => c.GetLayerNumber()).ToList();
+		orderedItems = clothesToWear.OrderBy(c => c.GetCategory()).ToList();
 		return orderedItems;
     }
 
 	public void SpawnClothingLayer(ClothingItem item, GameObject person)
 	{
-		Sprite itemSprite = item.GetSprite();
-		//Debug.Log(item.GetSpriteFilename());
-        //transform.GetChild(0).GetComponent<Image>().sprite = clothingItemSprite;
         GameObject clothingLayer = Instantiate(clothingImageContainer, person.transform.position, Quaternion.identity);
 		clothingLayer.name = item.GetItemName();
-        clothingLayer.GetComponent<Image>().sprite = itemSprite;
-        clothingLayer.transform.SetParent(person.transform);
+		clothingLayer.GetComponent<Image>().sprite = item.GetSprite();
+        clothingLayer.transform.SetParent(person.transform.GetChild(0));
+		clothingLayer.transform.localPosition = Vector3.zero;
+		clothingLayer.transform.localScale = new Vector3(1, 1, 1);
 	}
 
 	public void MovePeopleOnResult()
     {
-		peoplePositions[0].transform.position = peoplePositions[2].transform.position;
-		peoplePositions[1].transform.position = peoplePositions[3].transform.position;
+		peoplePositions[0].transform.GetChild(0).SetParent(peoplePositions[2].transform);
+		peoplePositions[2].transform.GetChild(0).localPosition = Vector3.zero;
+		peoplePositions[1].transform.GetChild(0).SetParent(peoplePositions[3].transform);
+		peoplePositions[3].transform.GetChild(0).localPosition = Vector3.zero;
 	}
 
+	public void ReturnPeopleToStart()
+	{
+		peoplePositions[2].transform.GetChild(0).SetParent(peoplePositions[0].transform);
+		peoplePositions[0].transform.GetChild(0).localPosition = Vector3.zero;
+		peoplePositions[3].transform.GetChild(0).SetParent(peoplePositions[1].transform);
+		peoplePositions[1].transform.GetChild(0).localPosition = Vector3.zero;
+	}
 
-    public void ResetPeople()
+	public void ResetPeople()
     {
+		clothingRandomizerScript.ResetClothingRandomizer();
+		ReturnPeopleToStart();
 		foreach (Transform child in peoplePositions[0].transform)
 		{
-			GameObject.Destroy(child.gameObject);
+			Destroy(child.gameObject);
 		}
 		foreach (Transform child in peoplePositions[1].transform)
 		{
-			GameObject.Destroy(child.gameObject);
+			Destroy(child.gameObject);
 		}
+
 	}
+
 }

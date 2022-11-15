@@ -16,7 +16,9 @@ public class LoadTextData : MonoBehaviour
 
     [SerializeField]
     internal List<ClothingItem> clothingItems = new List<ClothingItem>(); //holds the list of clothing data as clothing objects
- 
+    internal List<ClothingItem> maleClothing = new List<ClothingItem>();
+    internal List<ClothingItem> femaleClothing = new List<ClothingItem>();
+
     internal bool loaded = false;
 
     void Start()
@@ -48,6 +50,15 @@ public class LoadTextData : MonoBehaviour
             clothingItems[i].SetHulqWord(data[numCols * (i + 1) + 9]);
 
             //Debug.Log(clothingItems[i].GetItemName());
+        }
+
+        StartCoroutine(LoadByGender());
+        IEnumerator LoadByGender(){
+            yield return new WaitUntil(() => clothingItems.Count == numItems);
+            maleClothing = GetMaleClothingItems();
+            femaleClothing = GetFemaleClothingItems();
+            yield return new WaitUntil(() => (maleClothing.Count + femaleClothing.Count) == numItems);
+            loaded = true;
         }
         //Debug.Log(clothingItems.Count);
         //clothingItems = items.ToList();

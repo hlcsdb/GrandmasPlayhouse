@@ -48,12 +48,15 @@ public class OptionButtonSettings : MonoBehaviour, IPointerEnterHandler, IPointe
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		buttonAudioSource.PlayOneShot(clothingItem.GetClothingAudio());
+        if (questionManager.inQuestion || questionManager.inResults)
+        {
+			buttonAudioSource.PlayOneShot(clothingItem.GetClothingAudio());
+		}
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-        if (buttonAudioSource.isPlaying)
+        if ((questionManager.inQuestion || questionManager.inResults) && buttonAudioSource.isPlaying)
         {
 			buttonAudioSource.Stop();
 		}
@@ -62,18 +65,20 @@ public class OptionButtonSettings : MonoBehaviour, IPointerEnterHandler, IPointe
 	public void ButtonClicked()
 	{
 		isSelected = !isSelected; //starts at false. first time selected, it changes to true and then the sprite changes to the second(checked)
-
-		if (isSelected)
-		{
-			buttonImage.sprite = optionButtonSprites[1];
-		}
-		else
-		{
-			buttonImage.sprite = optionButtonSprites[0];
-		}
+        if (questionManager.inQuestion)
+        {
+			if (isSelected)
+			{
+				buttonImage.sprite = optionButtonSprites[1];
+			}
+			else
+			{
+				buttonImage.sprite = optionButtonSprites[0];
+			}
 
 		questionManager.SetSelectedItemWords(isSelected, clothingItem);
 		Debug.Log(clothingWord + " is selected: " + isSelected);
+        }
 	}
 
 	public void HighlightBox(bool correctAnswer)
