@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 
 //All the stuff regarding the sms texting window happens here.
 
@@ -24,6 +25,7 @@ public class SMSController : MonoBehaviour
 	internal AudioSource audioSource;
 	public List<AudioClip> templateAudio; //[hakwush, thun, thu, ’i’]
 	public List<AudioClip> selectedItemAudio;
+	public GameObject smsAud;
 
 	void Start()
 	{
@@ -86,11 +88,12 @@ public class SMSController : MonoBehaviour
 		return smsContent;
 	}
 
-	public void PlaySMSAud(string textContent)
+	public void PlaySMSAud()
     {
-		List<string> smsContent = GetSMSContent(textContent);
+		smsAud.GetComponent<Button>().interactable = false;
+		List<string> smsContent = GetSMSContent(smsText);
 		StartCoroutine(PlaySMS());
-
+		
 		IEnumerator PlaySMS()
         {
 			int i = 0;
@@ -113,6 +116,7 @@ public class SMSController : MonoBehaviour
 			questionManagerScript.GoToResults();
 			gameObject.SetActive(false);
 		}
+		smsAud.GetComponent<Button>().interactable = true;
 	}
 
 	public void EditSMSText(List<ClothingItem> clothingWords)
@@ -125,7 +129,7 @@ public class SMSController : MonoBehaviour
 	public void SetSentText()
     {
 		IPTextBox.SetActive(false);
-		PlaySMSAud(smsText);
+		PlaySMSAud();
 		sentTextBox.SetActive(true);
 		sentText.GetComponent<TextMeshProUGUI>().text = smsText;
 	}
