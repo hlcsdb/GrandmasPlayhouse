@@ -59,6 +59,7 @@ MonoBehaviour:
   repeaterPhraseAud: {fileID: 0}
   successPhraseAud: {fileID: 8300000, guid: f64d4812ea3c34fe8a4c59b00d2bae6e, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: 01b67500da4c34a55ac52398c89cad53, type: 3}
+  correctSelectionAud: {fileID: 8300000, guid: 7722a3ab7925446eaa2b309426a1e320, type: 3}
   incorrectSelectionAud: {fileID: 8300000, guid: 538d7e53f9ea14d5fbe84466f7c7d330, type: 3}
   numDraggables: 8
   backgroundImage: {fileID: 21300000, guid: f17632a12008749a780a73ff399fb2ec, type: 3}

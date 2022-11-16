@@ -34,6 +34,7 @@ public class Scenario : ScriptableObject
     public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
     public AudioClip successPhraseAud;
     public AudioClip completionPhraseAud;
+    public AudioClip correctSelectionAud;
     public AudioClip incorrectSelectionAud;
 
     public int numDraggables;

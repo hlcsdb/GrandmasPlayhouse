@@ -16,7 +16,7 @@ MonoBehaviour:
   description: coat
   wordString:
   - coat
-  - 
+  - kupou
   customInstructionText:
   - Put on your coat.
   - "hakwush tthun\u2019 kupou."
@@ -34,8 +34,8 @@ MonoBehaviour:
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: 0cc5cea04be8d47e8b2fe9a086d5cc01, type: 3}
   draggableInstruction: {fileID: 8300000, guid: b32dcfd9ec8a0426690047524b33632d, type: 3}
-  dropPos: {x: 0, y: 7}
-  dropSize: {x: 1.75, y: 1.7}
+  dropPos: {x: 2, y: 6.5}
+  dropSize: {x: 1.8, y: 1.75}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
   startPos: {x: 280, y: -100}

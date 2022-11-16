@@ -209,15 +209,11 @@ public class ChallengeController : MonoBehaviour
     public IEnumerator AudAfterCorrDrop()
     {
         inInstruction = true;
-        yield return new WaitForSeconds(1);
         sceneAudButton.interactable = false;
+        yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        if (selectedScenarioSO.repeaterPhraseAud)
-        {
-            audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
-        }
+        audioSource.PlayOneShot(selectedScenarioSO.correctSelectionAud);
         
-
         if (numItemsDropped == draggables.Count)
         {
             yield return new WaitForSeconds(1);
