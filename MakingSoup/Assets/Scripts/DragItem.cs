@@ -79,7 +79,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (!draggableUI.OverlappingDropZone())
             {
                 Debug.Log(" not overlapping");
-                transform.localScale = draggable.dropSize;
+                //transform.localScale = draggable.dropSize;
+                StartCoroutine(Shrink(1f));
                 transform.localPosition = draggableUI.ThisRandomPos();
             }
 
