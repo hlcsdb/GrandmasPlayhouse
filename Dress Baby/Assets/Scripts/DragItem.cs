@@ -83,6 +83,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             {
                 Debug.Log(" not overlapping");
                 transform.localPosition = draggableUI.ThisRandomPos();
+                StartCoroutine(Shrink(1f));
             }
 
 

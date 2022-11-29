@@ -1823,7 +1823,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1315559771}
         m_TargetAssemblyTypeName: ChallengeController, Assembly-CSharp
-        m_MethodName: ReplaySceneAud
+        m_MethodName: PlayInstructionAud
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4027,13 +4027,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1315559771}
-        m_TargetAssemblyTypeName: ChallengeController, Assembly-CSharp
-        m_MethodName: ReplaySceneAud
-        m_Mode: 1
+      - m_Target: {fileID: 1218944969}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8300000, guid: 34edf01023e2540a0bd5026f9b803c52, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/IyusSplash.unity
+    guid: b7f799f16c3724607b2949bc6e5cb9e8
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 3db987f7f86ad448db82839ca8d7ec3d
+  - enabled: 1
+    path: Assets/Scenes/Dressup.unity
+    guid: 5b1986468e5684cb98d182afc11e80ea
   m_configObjects: {}

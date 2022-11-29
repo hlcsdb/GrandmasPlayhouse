@@ -72,4 +72,9 @@ public class Scenario : ScriptableObject
     {
         scenarioObject.SetActive(true);
     }
+
+    public AudioClip GetRepeaterAudio()
+    {
+        return repeaterPhraseAud;
+    }
 }

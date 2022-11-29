@@ -31,8 +31,8 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 8300000, guid: dba05a72e21a84c3999036f428880d8c, type: 3}
-  draggableInstruction: {fileID: 8300000, guid: 9dfcd172a56b44c6fbedec04b2c63619, type: 3}
+  audioClip: {fileID: 8300000, guid: bb2c224da7a3d42e182a78f785beb9fc, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: adfc98dd17b2d4920a943d08d54b7306, type: 3}
   dropPos: {x: -8.1, y: 11.9}
   dropSize: {x: 1.5, y: 1.5}
   selectionPos: {x: 0, y: 0}

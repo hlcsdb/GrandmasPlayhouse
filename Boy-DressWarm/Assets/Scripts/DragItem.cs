@@ -56,7 +56,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             
             rectTransform = GetComponent<RectTransform>();
-            Debug.Log("begin dragging");
+            //Debug.Log("begin dragging");
             // canvasGroup.blocksRaycasts = false;
             StartCoroutine(Grow(1.2f));
         }
@@ -77,29 +77,29 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             
 
-            Debug.Log("end dragging");
+            //Debug.Log("end dragging");
 
             if (!draggableUI.OverlappingDropZone())
             {
-                Debug.Log(" not overlapping");
+                //Debug.Log(" not overlapping");
                 transform.localPosition = draggableUI.ThisRandomPos();
             }
 
 
             else
             {
-                Debug.Log("overlapping");
-                Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
+                //Debug.Log("overlapping");
+                //Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
                 if (draggable.thisRandIndex == currSceneController.curItem)
                 {
-                    Debug.Log("correct item dragged");
+                    //Debug.Log("correct item dragged");
                     canvasGroup.blocksRaycasts = true;
                     CorrectItemDropped();
                 }
 
                 else
                 {
-                    Debug.Log("incorrect item dragged");
+                    //Debug.Log("incorrect item dragged");
                     StartCoroutine(IncorrectItemDropped());
                     currSceneController.CountItemsLayered(false);
                 }
@@ -249,7 +249,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             {
                 if (!audioSource.isPlaying)
             {
-                    Debug.Log("audio will start");
+                    //Debug.Log("audio will start");
                     audioSource.PlayOneShot(draggable.audioClip);
                     mobileClicked = true;
                 }

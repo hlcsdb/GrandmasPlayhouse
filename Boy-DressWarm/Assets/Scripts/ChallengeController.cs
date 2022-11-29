@@ -154,18 +154,23 @@ public class ChallengeController : MonoBehaviour
             selectedScenarioUI.ShowRepeater(draggables[curItem].WordString());
         }
         Debug.Log(draggables[curItem].name);
-        audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
-        
+        PlayInstructionAud();
+
         yield return new WaitUntil(() => !audioSource.isPlaying);
         sceneAudButton.interactable = true;
         inInstruction = false;
     }
-
-     public void ReplaySceneAud()
+    public void PlayInstructionAud()
     {
         if (!inSelection)
         {
-            audioSource.PlayOneShot(draggables[curItem].draggableInstruction);
+            StartCoroutine(PairInstruction());
+            IEnumerator PairInstruction()
+            {
+                audioSource.PlayOneShot(selectedScenarioSO.GetRepeaterAud());
+                yield return new WaitUntil(() => !audioSource.isPlaying);
+                audioSource.PlayOneShot(draggables[curItem].GetAudio());
+            }
         }
     }
 

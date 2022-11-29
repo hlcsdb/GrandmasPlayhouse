@@ -18,10 +18,10 @@ MonoBehaviour:
   - broth
   - "qwul\u2019smun"
   customInstructionText:
-  - Now add a little broth.
-  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul qwul\u2019smun."
+  - Put the broth in the pot.
+  - "nuw\u2019ush tthu qwul\u2019smun \u2019u tthu shqwal\u2019s."
   draggableImage:
-  - {fileID: 21300000, guid: 538e1655e696547deaf3b2f45d86b60b, type: 3}
+  - {fileID: 21300000, guid: 9a9193117a614427dbe0d85ab3c1ac39, type: 3}
   - {fileID: 21300000, guid: 987c3cbc4cc0344b3a92747b880afde9, type: 3}
   thisRandIndex: 0
   dragged: 1
@@ -32,7 +32,7 @@ MonoBehaviour:
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: f000bdebda2454e4084652babea7824f, type: 3}
-  draggableInstruction: {fileID: 8300000, guid: 67b9d5bdc7ee24e7c8e6b007c413ebb7, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 66a023d2f204346b7a2bbefff3d22414, type: 3}
   dropPos: {x: 108.5, y: -49.8}
   dropSize: {x: 2.05, y: 2.1}
   selectionPos: {x: 0, y: 0}

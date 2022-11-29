@@ -3685,7 +3685,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0cda30f47d6244ef88a25b7382a43fda, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8f772d99b4ea3473a9a8665a8f024c36, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3820,7 +3820,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 0cda30f47d6244ef88a25b7382a43fda, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 8f772d99b4ea3473a9a8665a8f024c36, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

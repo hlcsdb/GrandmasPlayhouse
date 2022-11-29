@@ -52,8 +52,8 @@ MonoBehaviour:
   - "ooo. \u2019uy\u2019eluqup tthu slhap\u2019 tst! "
   sceneDescriptionAud: {fileID: 8300000, guid: 693d02834d05c41de97095cd81fd7530, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 42f4c2604122f482081633169de3886c, type: 3}
-  repeaterPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}
-  successPhraseAud: {fileID: 8300000, guid: ad5b0492162104a8a9d4c99aaefb1311, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 5afb3a05b9cd747c69b5cae079cf35f1, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: 5afb3a05b9cd747c69b5cae079cf35f1, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: d33bda5aa86214294ac9e29030f95948, type: 3}
   incorrectSelectionAud: {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
   numDraggables: 8

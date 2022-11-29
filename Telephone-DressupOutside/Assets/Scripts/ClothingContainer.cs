@@ -18,6 +18,5 @@ public class ClothingContainer : MonoBehaviour
     {
         //currSprite = spritename;
         containerImage.sprite = spritename;
-
     }
 }

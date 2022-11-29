@@ -19,7 +19,7 @@ MonoBehaviour:
   - "tl\u2019elhum"
   customInstructionText:
   - Now add a little salt.
-  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul tl\u2019elhum."
+  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul\u2019 tl\u2019elhum."
   - 
   draggableImage:
   - {fileID: 21300000, guid: 42b4836158fe04a5c8c238063ea871e9, type: 3}
@@ -38,4 +38,4 @@ MonoBehaviour:
   dropSize: {x: 2.05, y: 2.1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
+  startPos: {x: -220, y: 20}

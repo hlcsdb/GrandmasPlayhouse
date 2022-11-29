@@ -15,8 +15,8 @@ MonoBehaviour:
   type: 6
   description: hat
   wordString:
-  - hat
-  - "ya\u2019ysa\u2019qw"
+  - little hat
+  - "yay\u2019sa\u2019qw"
   customInstructionText:
   - 
   - 
@@ -31,7 +31,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 8300000, guid: b733d28c7d468470fb4ae64621d4c4ec, type: 3}
+  audioClip: {fileID: 8300000, guid: 15f8303c76c4143c49f71a9832d62508, type: 3}
   draggableInstruction: {fileID: 8300000, guid: ba19a2e10c9414915b7fd8449033e7b2, type: 3}
   dropPos: {x: 17.3, y: 44}
   dropSize: {x: 0.95, y: 0.95}

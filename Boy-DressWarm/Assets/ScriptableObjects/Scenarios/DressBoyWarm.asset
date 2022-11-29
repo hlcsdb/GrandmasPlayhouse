@@ -36,8 +36,8 @@ MonoBehaviour:
   sceneDescription: []
   openerPhrase:
   - Grandchild, put your warm clothing on to play outside.
-  - "\u2019imuth, hakwush tthu tl\u2019ehwum s\u2019itth\u2019um, nem\u2019 ch huw\u2019alum\u2019
-    s\u2019e\u2019tl\u2019q."
+  - "\u2019imuth, hakwush tthun\u2019 tl\u2019ehwum s\u2019itth\u2019um, nem\u2019
+    ch huw\u2019alum\u2019 s\u2019e\u2019tl\u2019q."
   repeaterPhrase:
   - 'Put on your '
   - "nem\u2019 hakwush tthun\u2019 "
@@ -52,7 +52,7 @@ MonoBehaviour:
   - " nem\u2019 \u2019utl\u2019qul huw\u2019alum\u2019 s\u2019e\u2019tl\u2019q!"
   sceneDescriptionAud: {fileID: 0}
   openerPhraseAud: {fileID: 8300000, guid: 17756292c73884c9fb9c17b5b036ead6, type: 3}
-  repeaterPhraseAud: {fileID: 8300000, guid: 71ebd0d79270f414984e917c8793e0c0, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: efefff46160cf48c086f48a89abc56ba, type: 3}
   successPhraseAud: {fileID: 8300000, guid: ed1d136675840485085932c4e2f0ad3b, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: 4f0453b7d41b84bcbbdda670d20c1a84, type: 3}
   correctSelectionAud: {fileID: 8300000, guid: 2c353e05f2c1946a98750e74b1a54e20, type: 3}

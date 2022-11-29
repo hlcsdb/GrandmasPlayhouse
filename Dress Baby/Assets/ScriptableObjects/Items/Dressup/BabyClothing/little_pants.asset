@@ -16,7 +16,7 @@ MonoBehaviour:
   description: little pants
   wordString:
   - little pants
-  - little pants
+  - "si\u2019sqiw\u2019s"
   customInstructionText:
   - 
   - 
@@ -31,7 +31,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 8300000, guid: d2ef13927e8e14513a11244d175291b4, type: 3}
+  audioClip: {fileID: 8300000, guid: ea74789708bd747bcb760469e7e7ac9c, type: 3}
   draggableInstruction: {fileID: 8300000, guid: 14301f511fd3243f497c534305194665, type: 3}
   dropPos: {x: 18.1, y: -97.2}
   dropSize: {x: 1.15, y: 1.12}

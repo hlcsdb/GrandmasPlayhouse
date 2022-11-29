@@ -16,7 +16,7 @@ MonoBehaviour:
   description: boy's underwear
   wordString:
   - boy's underwear
-  - "p\u2019uxs"
+  - "p\u2019ux\u2019s"
   customInstructionText:
   - Put on your underwear.
   - "hakwush tthun\u2019 p\u2019uxs."
@@ -32,7 +32,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 8300000, guid: 2997441f437304b21b657ece30e273f8, type: 3}
+  audioClip: {fileID: 8300000, guid: 5bae653816df2429588a486e9b638a3b, type: 3}
   draggableInstruction: {fileID: 8300000, guid: c5fb5a0ba12f341eca3d05aef9771c09, type: 3}
   dropPos: {x: -1.1, y: -60.2}
   dropSize: {x: 1.15, y: 1.1}

@@ -42,7 +42,7 @@ MonoBehaviour:
     nuwu theyuwstham\u2019sh."
   repeaterPhrase:
   - 'Please bring me my '
-  - "tth\u2019ihwum \u2019i\u2019 \u2019ewustuhw tthunu "
+  - "tth\u2019ihwum \u2019i\u2019 m\u2019ewustuhw tthunu "
   successPhrase:
   - 'Thank you, grandchild. '
   - "aaa hay ch q\u2019a\u2019, \u2019imiye\u2019."
@@ -53,7 +53,7 @@ MonoBehaviour:
     \u2019im, \u2019uystuhw tsun kwuns nets\u2019uw\u2019t-hwum."
   sceneDescriptionAud: {fileID: 0}
   openerPhraseAud: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
-  repeaterPhraseAud: {fileID: 0}
+  repeaterPhraseAud: {fileID: 8300000, guid: 8361984133caf4db1a48616d03da6225, type: 3}
   successPhraseAud: {fileID: 8300000, guid: fa1efe2d81c154db8bf378d052ef4b86, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: e93117c345c6a4f7fb5ee644a948f85a, type: 3}
   correctPhraseAud: {fileID: 8300000, guid: ac3b43295e321495aade6e9b766dd79f, type: 3}

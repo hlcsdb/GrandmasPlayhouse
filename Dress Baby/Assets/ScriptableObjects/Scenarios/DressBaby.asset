@@ -50,8 +50,8 @@ MonoBehaviour:
   - The baby is content.
   - "na\u2019ut hwu si\u2019yus tthu qeq."
   sceneDescriptionAud: {fileID: 0}
-  openerPhraseAud: {fileID: 8300000, guid: 8f772d99b4ea3473a9a8665a8f024c36, type: 3}
-  repeaterPhraseAud: {fileID: 0}
+  openerPhraseAud: {fileID: 8300000, guid: 0cda30f47d6244ef88a25b7382a43fda, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 8b7ca225ac1a143c3a7a07c438c720af, type: 3}
   successPhraseAud: {fileID: 8300000, guid: c401bb6b7317f4625b10898d1ce040ef, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: 2da95ec2546ba4a51bbf4fa7c649a906, type: 3}
   correctSelectionAud: {fileID: 8300000, guid: d40432af6a65c469b9b4907fb166de44, type: 3}

@@ -19,7 +19,7 @@ MonoBehaviour:
   - pupu
   customInstructionText:
   - Now add a little pepper.
-  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul pupu."
+  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul\u2019 pupu."
   - 
   draggableImage:
   - {fileID: 21300000, guid: d74808703cfa24bc0a2faf2a909b77b9, type: 3}
@@ -38,4 +38,4 @@ MonoBehaviour:
   dropSize: {x: 2.05, y: 2.1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
+  startPos: {x: 260, y: 20}

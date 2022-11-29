@@ -33,7 +33,7 @@ MonoBehaviour:
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: afe9c663b0bad45d1930bad69c7e97dc, type: 3}
-  draggableInstruction: {fileID: 8300000, guid: a5faaf37f1308473182c0b9bb6c11d0c, type: 3}
+  draggableInstruction: {fileID: 0}
   dropPos: {x: 91, y: -90}
   dropSize: {x: 1.18, y: 1.18}
   selectionPos: {x: 0, y: 0}
