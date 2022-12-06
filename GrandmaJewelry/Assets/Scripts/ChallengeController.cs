@@ -34,6 +34,7 @@ public class ChallengeController : MonoBehaviour
     int numErrors = 0;
     public Button sceneAudButton;
     internal bool inInstruction = true;
+    internal bool draggingAllowed = false;
 
     
     //public AudioClip incorrectSelectionAudio;
@@ -137,19 +138,22 @@ public class ChallengeController : MonoBehaviour
     {
         if (!inSelection)
         {
+            if (audioSource.isPlaying) { audioSource.Stop(); }
             StartCoroutine(PairInstruction());
             IEnumerator PairInstruction()
             {
                 audioSource.PlayOneShot(selectedScenarioSO.GetRepeaterAudio());
                 yield return new WaitUntil(() => !audioSource.isPlaying);
                 audioSource.PlayOneShot(draggables[curItem].GetAudio());
+                yield return new WaitUntil(() => !audioSource.isPlaying);
+                draggingAllowed = true;
             }
         }
-    
     }
 
     public void CountItemsLayered(bool correct)
     {
+        draggingAllowed = false;
         if (!correct)
         {
             audioSource.PlayOneShot(selectedScenarioSO.incorrectSelectionAud);

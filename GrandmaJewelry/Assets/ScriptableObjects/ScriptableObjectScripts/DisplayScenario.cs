@@ -12,6 +12,8 @@ public class DisplayScenario : MonoBehaviour
     public GameObject[] scenarioDraggableObjects;
     public TextMeshProUGUI sceneText;
     public TextMeshProUGUI scenarioName;
+    public TextMeshProUGUI successText;
+    public TextMeshProUGUI successTextEngl;
     public AudioClip sceneDescriptionAud;
     public AudioClip openerPhraseAud;
     public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
@@ -65,11 +67,20 @@ public class DisplayScenario : MonoBehaviour
     public void EmptyScenarioText()
     {
         sceneText.text = "";
+        successText.text = "";
+        successTextEngl.text = "";
     }
 
     public void ShowSuccess()
     {
-        sceneText.text = scenario.successPhrase[scenario.dialect];
+        sceneText.text = "";
+        successText.text = scenario.successPhrase[scenario.dialect];
+        if(scenario.dialect == 0)
+        {
+            successTextEngl.text = scenario.successPhrase[1];
+        }
+        else {successTextEngl.text = scenario.successPhrase[0]; }
+        
     }
 
     public void ShowCompletionText()

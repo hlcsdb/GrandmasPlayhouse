@@ -8,6 +8,10 @@ public class PassSplashScreen : MonoBehaviour
 {
     void Start() {
         var videoPlayer = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
+        videoPlayer.playOnAwake = false;
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "iyusLogo.mp4");
+
+        videoPlayer.Play();
         StartCoroutine(WaitForLogoToFinish());
         IEnumerator WaitForLogoToFinish()
         {

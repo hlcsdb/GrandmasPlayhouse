@@ -4597,6 +4597,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1120496604}
     m_Modifications:
+    - target: {fileID: 6638470814056337860, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470814056337861, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_text
+      value: dress
+      objectReference: {fileID: 0}
     - target: {fileID: 6638470814456156443, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4609,6 +4617,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1315559771}
+    - target: {fileID: 6638470814518091601, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 183.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470814518091606, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_text
+      value: Put her           on her.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815091567332, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815091567333, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_text
+      value: "       s\u2019itth\u2019ums"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815400356336, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_text
+      value: "tth\u2019ihwum \u2019i\u2019 \u2018utth\u2019emustuhw tthu qeq.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815400356336, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815400356336, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638470815534996651, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
+      propertyPath: m_text
+      value: "hukwumustuhw \n   \u2019u tthu                ."
+      objectReference: {fileID: 0}
     - target: {fileID: 6638470815561840092, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4699,7 +4739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6638470815561840095, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f52a2b6bc0649c89f85ea998ddbb1d, type: 3}

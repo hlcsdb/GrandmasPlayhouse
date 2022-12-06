@@ -53,10 +53,10 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.SetSiblingIndex(7);
-        if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
+        if (currSceneController.draggingAllowed)
         {
             rectTransform = GetComponent<RectTransform>();
-            Debug.Log("begin dragging");
+            //Debug.Log("begin dragging");
             // canvasGroup.blocksRaycasts = false;
             StartCoroutine(Grow(1.2f));
         }
@@ -64,7 +64,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!currSceneController.inSelection && !draggable.dragged && !audioSource.isPlaying && !currSceneController.inInstruction)
+        if (currSceneController.draggingAllowed)
         {
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
@@ -72,14 +72,15 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetSiblingIndex(siblingIndex);
-        if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
+       
+        //if (RecognizeHoverInPlay(false))
+        if(currSceneController.draggingAllowed)
         {
-            Debug.Log("end dragging");
+            //Debug.Log("end dragging");
 
             if (!draggableUI.OverlappingDropZone())
             {
-                Debug.Log(" not overlapping");
+                //Debug.Log(" not overlapping");
                 transform.localPosition = draggableUI.ThisRandomPos();
                 StartCoroutine(Shrink(1f));
             }
@@ -87,18 +88,18 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
             else
             {
-                Debug.Log("overlapping");
-                Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
+                //Debug.Log("overlapping");
+                //Debug.Log("thisrandindex: " + draggable.thisRandIndex + ", cur item: " + currSceneController.curItem);
                 if (draggable.thisRandIndex == currSceneController.curItem)
                 {
-                    Debug.Log("correct item dragged");
+                    //Debug.Log("correct item dragged");
                     canvasGroup.blocksRaycasts = true;
                     CorrectItemDropped();
                 }
 
                 else
                 {
-                    Debug.Log("incorrect item dragged");
+                    //Debug.Log("incorrect item dragged");
                     StartCoroutine(IncorrectItemDropped());
                     currSceneController.CountItemsLayered(false);
                 }
@@ -115,6 +116,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         audioSource.PlayOneShot(draggable.audioClip);
         draggable.Dragged(true);
         HideTile();
+        transform.SetSiblingIndex(siblingIndex);
         //little particle effect
     }
 
@@ -125,12 +127,12 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.localPosition = draggableUI.ThisRandomPos();
         draggableUI.ColourTileOutline(idleState);
         StartCoroutine(Shrink(1f));
-
+        transform.SetSiblingIndex(siblingIndex);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!currSceneController.inInstruction)
+        if (currSceneController.draggingAllowed)
         {
             draggableUI.ColourTileOutline(activeState);
         }
@@ -242,7 +244,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             {
                 if (!audioSource.isPlaying)
             {
-                    Debug.Log("audio will start");
+                    //Debug.Log("audio will start");
                     audioSource.PlayOneShot(draggable.audioClip);
                     mobileClicked = true;
                 }
@@ -258,5 +260,20 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 mobileClicked = false;
             }
         }
+    }
+
+    public bool RecognizeHoverInPlay(bool andAudio)
+    {
+        if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
+        {
+            if (andAudio)
+            {
+                if (!audioSource.isPlaying) { return true; }
+                else { return false; }
+            }
+            return true;
+        }
+        return false;
+         
     }
 }

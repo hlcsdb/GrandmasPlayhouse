@@ -47,10 +47,8 @@ MonoBehaviour:
   - 'Thank you, grandchild. '
   - "aaa hay ch q\u2019a\u2019, \u2019imiye\u2019."
   completionPhrase:
-  - "I\u2019m all fixed up. I\u2019m very decked out. Grandchild, I\u2019m glad you
-    visited. "
-  - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2018ul\u2019 \u2018iyas. Ooo
-    \u2019im, \u2019uystuhw tsun kwuns nets\u2019uw\u2019t-hwum."
+  - "I\u2019m all fixed up. I\u2019m very decked out."
+  - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2018ul\u2019 \u2018iyas."
   sceneDescriptionAud: {fileID: 0}
   openerPhraseAud: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
   repeaterPhraseAud: {fileID: 8300000, guid: 8361984133caf4db1a48616d03da6225, type: 3}

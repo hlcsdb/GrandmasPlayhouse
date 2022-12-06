@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IyusSplash.unity
     guid: b7f799f16c3724607b2949bc6e5cb9e8
   - enabled: 1
