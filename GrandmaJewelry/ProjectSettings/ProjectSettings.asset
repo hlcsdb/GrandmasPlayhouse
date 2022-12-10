@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: "Hul\u2019q\u2019umi\u2019num\u2019 Language and Culture Society"
-  productName: "Gorgeous Granny|| thu they\u2019uw\u2019sum\u2019 sisul\u2019u"
+  productName: "Gorgeous Granny  thu they\u2019uw\u2019sum\u2019 sisul\u2019u"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.8745098, g: 0.9254902, b: 0.9411765, a: 1}
@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 2.1
+  bundleVersion: 5.4
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

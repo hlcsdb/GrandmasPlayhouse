@@ -34,6 +34,7 @@ public class ChallengeController : MonoBehaviour
     int numErrors = 0;
     public Button sceneAudButton;
     internal bool inInstruction = true;
+    internal bool HighlightCorrectItem = false;
     internal bool draggingAllowed = false;
 
     

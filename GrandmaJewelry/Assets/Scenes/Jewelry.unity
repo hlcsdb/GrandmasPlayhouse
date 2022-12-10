@@ -625,11 +625,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5417390952288381090, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5417390952288381090, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5417390952288381090, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
       propertyPath: m_enableAutoSizing
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8d5341dfefd414bb68fa0aa68c2c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOnActive: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
+  audioOnActive: {fileID: 8300000, guid: 729fae86bfb9c4b93933f28e6e45fd69, type: 3}
 --- !u!1 &759036234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fa136a9b0a5e44fc4831e9bd55177b0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4fb758c57c6f4016af2a4eb0ed92d22, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

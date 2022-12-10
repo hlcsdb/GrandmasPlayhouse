@@ -18,12 +18,15 @@ public class DisplayDraggable : MonoBehaviour
     public Vector2[] dzB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180)};
     public int randI;
     public GameObject textBackground;
+    internal int siblingIndex;
+    int backgroundColorState;
 
     public void Start()
     {
         draggableArtwork.sprite = draggable.GetImage(0);
         draggable.startPos = transform.localPosition;
         randI = draggable.thisRandIndex;
+        siblingIndex = transform.GetSiblingIndex();
     }
 
     public void SetRandPos(Vector2 rPos)
@@ -34,7 +37,13 @@ public class DisplayDraggable : MonoBehaviour
 
     public void ColourTileOutline(int state)
     {
+        backgroundColorState = state;
         tile.transform.GetChild(0).GetComponent<Image>().color = draggable.tileStateOutlineColors[state];
+    }
+
+    public int BackgroundColorState()
+    {
+        return backgroundColorState;
     }
 
     public void SetWord()
@@ -46,7 +55,6 @@ public class DisplayDraggable : MonoBehaviour
     public void ShowHideTile()
     {
         ColourTileOutline(0);
-        //tile.SetActive(false);
 
         if (tile.activeSelf)
         {
@@ -65,11 +73,24 @@ public class DisplayDraggable : MonoBehaviour
         wordString.text = "";
     }
 
-    public void DroppedDraggableImage()
+    public void DroppedDraggable()
     {
         draggableArtwork.sprite = draggable.GetImage(1);
+        transform.localScale = draggable.dropSize;
+        transform.localPosition = draggable.dropPos;
+        draggable.Dragged(true);
+        ColourTileOutline(0);
+        ShowHideTile();
+        transform.SetSiblingIndex(siblingIndex);
     }
 
+    public void ReturnDraggable()
+    {
+        ColourTileOutline(0);
+        transform.localPosition = ThisRandomPos();
+        transform.SetSiblingIndex(siblingIndex);
+
+    }
     public void ResetDraggableDisplay()
     {
         ColourTileOutline(0);
@@ -84,17 +105,6 @@ public class DisplayDraggable : MonoBehaviour
         return randPos;
     }
 
-    //public Vector2[] GetBounds(Vector2 tp)
-    //{
-    //    float halfSize = 50.09f;
-
-    //    Vector2[] b = new Vector2[4];
-    //    b[0] = new Vector2(tp.x - halfSize, tp.y - halfSize);
-    //    b[1] = new Vector2(tp.x - halfSize, tp.y + halfSize);
-    //    b[2] = new Vector2(tp.x + halfSize, tp.y + halfSize);
-    //    b[3] = new Vector2(tp.x + halfSize, tp.y - halfSize);
-    //    return b;
-    //}
 
     public bool OverlappingDropZone()
     {
@@ -105,13 +115,10 @@ public class DisplayDraggable : MonoBehaviour
         //Debug.Log("tp.y: " + transform.localPosition.y + " < dzb[1].y: " + dzB[1].y);
         //Vector2[] db = GetBounds(transform.localPosition);
         //Vector2 tp = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        //for (int i = 0; i < 4; i++)
-        //{
             if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
             {
                 return true;
             }
-        //}
         return false;
     }
 }
