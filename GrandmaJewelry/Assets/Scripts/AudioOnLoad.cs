@@ -15,10 +15,10 @@ public class AudioOnLoad : MonoBehaviour
 
     public void PlayAudio()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
+        //if (audioSource.isPlaying)
+        //{
+        //    audioSource.Stop();
+        //}
         GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(audioOnActive);
     }
 }

@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8489417200806865773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -389,11 +389,6 @@ MonoBehaviour:
   tile: {fileID: 2659297900644353203}
   startPos: {x: 0, y: 0}
   rectTransform: {x: 0, y: 0}
-  dzB:
-  - {x: -290, y: -80}
-  - {x: -290, y: 210}
-  - {x: 300, y: 210}
-  - {x: 300, y: -80}
   randI: 0
   textBackground: {fileID: 3864467231792617272}
 --- !u!114 &7575541668552708065

@@ -34,10 +34,8 @@ public class ChallengeController : MonoBehaviour
     int numErrors = 0;
     public Button sceneAudButton;
     internal bool inInstruction = true;
+    internal bool HighlightCorrectItem = false;
     internal bool draggingAllowed = false;
-
-    
-    //public AudioClip incorrectSelectionAudio;
 
 
     private void Start()
@@ -162,22 +160,16 @@ public class ChallengeController : MonoBehaviour
             {
                 draggableObjects[curItem].GetComponent<DragItem>().HighlightCorrectItem();
             }
-            StartCoroutine(WaitToAllowDrag());
-            IEnumerator WaitToAllowDrag()
+            else if (correct)
             {
-                yield return new WaitUntil(() => !audioSource.isPlaying);
-                draggingAllowed = true;
+                numErrors = 0;
+                numItemsDropped++;
+                curItem++;
+
+                StartCoroutine(AudAfterCorrDrop());
             }
         }
 
-        else if (correct)
-        {
-            numErrors = 0;
-            numItemsDropped++;
-            curItem++;
-
-            StartCoroutine(AudAfterCorrDrop());
-        }
     }
 
     public IEnumerator AudAfterCorrDrop()
@@ -239,8 +231,8 @@ public class ChallengeController : MonoBehaviour
     }
 
     public void ResetAllDraggableObjects()
-    { 
-        foreach(GameObject draggableObject in draggableObjects)
+    {
+        foreach (GameObject draggableObject in draggableObjects)
         {
             draggableObject.GetComponent<DisplayDraggable>().ResetDraggableDisplay();
         }

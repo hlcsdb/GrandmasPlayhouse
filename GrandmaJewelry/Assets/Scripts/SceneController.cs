@@ -28,7 +28,7 @@ public class SceneController : MonoBehaviour
 
     public void GotoHomeScene()
     {
-        Debug.Log("go home");
+        //Debug.Log("go home");
         SceneManager.LoadScene("Home");
     }
 

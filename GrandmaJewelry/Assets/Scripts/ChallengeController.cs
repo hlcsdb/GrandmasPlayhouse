@@ -24,7 +24,7 @@ public class ChallengeController : MonoBehaviour
     //private CarouselSlider carouselSliderScript;
 
     //UI
-    internal SettingsPanelController settingsController;
+    //internal SettingsPanelController settingsController;
     internal AudioSource audioSource;
     public GameObject gameOverScreen;
     //Gameplay
@@ -32,14 +32,11 @@ public class ChallengeController : MonoBehaviour
     private int numItemsDropped;
     internal int curItem = 0;
     int numErrors = 0;
-    public Button sceneAudButton;
+    public GameObject sceneAudButton;
     internal bool inInstruction = true;
     internal bool HighlightCorrectItem = false;
     internal bool draggingAllowed = false;
-
-    
-    //public AudioClip incorrectSelectionAudio;
-
+    public GameObject stars;
 
     private void Start()
     {
@@ -55,7 +52,6 @@ public class ChallengeController : MonoBehaviour
     {
         
         inSelection = false;
-        sceneAudButton.interactable = false;
 
         //selectedScenarioObj = GameObject.Find("Scenarios").transform.GetChild(selectedScenarioIndex).gameObject;
         numObjects = selectedScenarioObj.transform.GetChild(0).gameObject.transform.childCount;
@@ -117,7 +113,12 @@ public class ChallengeController : MonoBehaviour
 
     public IEnumerator InstructDragging(int curItem)
     {
+        FadeAllTiles(true);
         yield return new WaitUntil(() => !audioSource.isPlaying);
+        //sceneAudButton.GetComponent<Image>().color = new Color(0.6226415, 0.6226415, 0.6226415, 0.3411765);
+
+        sceneAudButton.SetActive(false);
+
         yield return new WaitForSeconds(2f);
         if (draggables[curItem].IsInstructionCustom())
         {
@@ -127,19 +128,29 @@ public class ChallengeController : MonoBehaviour
         {
             selectedScenarioUI.ShowRepeater(draggables[curItem].WordString());
         }
-
+        
         PlayInstructionAud();
+        sceneAudButton.SetActive(true);
         Debug.Log(draggables[curItem].name);
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        sceneAudButton.interactable = true;
+        sceneAudButton.SetActive(true);
         inInstruction = false;
+        FadeAllTiles(false);
+    }
+
+    internal void FadeAllTiles(bool fade)
+    {
+        foreach (GameObject tile in draggableObjects)
+        {
+            tile.GetComponent<DisplayDraggable>().FadeTileImage(fade);
+        }
     }
 
     public void PlayInstructionAud()
     {
+        if (audioSource.isPlaying) { audioSource.Stop(); Debug.Log("was playing"); }
         if (!inSelection)
         {
-            if (audioSource.isPlaying) { audioSource.Stop(); }
             StartCoroutine(PairInstruction());
             IEnumerator PairInstruction()
             {
@@ -155,6 +166,7 @@ public class ChallengeController : MonoBehaviour
     public void CountItemsLayered(bool correct)
     {
         draggingAllowed = false;
+        FadeAllTiles(true);
         if (!correct)
         {
             audioSource.PlayOneShot(selectedScenarioSO.incorrectSelectionAud);
@@ -163,15 +175,35 @@ public class ChallengeController : MonoBehaviour
             {
                 draggableObjects[curItem].GetComponent<DragItem>().HighlightCorrectItem();
             }
+            draggingAllowed = true;
+            FadeAllTiles(false);
         }
 
         else if (correct)
         {
             numErrors = 0;
             numItemsDropped++;
-            curItem++;
 
+            Debug.Log(draggableObjects[curItem].transform.position);
+            InstantiateStars(draggableObjects[curItem].transform.position, 0.3f);
+
+            curItem++;
             StartCoroutine(AudAfterCorrDrop());
+        }
+    }
+
+    public void TriggerStar()
+    {
+        InstantiateStars(new Vector2(300,300), 0);
+    }
+
+    public void InstantiateStars(Vector2 starPosition, float delaySeconds)
+    {
+        StartCoroutine(InstantiateOnDelay());
+        IEnumerator InstantiateOnDelay()
+        {
+            yield return new WaitForSeconds(delaySeconds);
+            Instantiate(stars, starPosition, Quaternion.identity);
         }
     }
 
@@ -179,7 +211,6 @@ public class ChallengeController : MonoBehaviour
     {
         //inInstruction = true;
         yield return new WaitForSeconds(1);
-        sceneAudButton.interactable = false;
         yield return new WaitUntil(() => !audioSource.isPlaying);
         //if (selectedScenarioSO.repeaterPhraseAud)
         //{
@@ -187,8 +218,7 @@ public class ChallengeController : MonoBehaviour
         //    yield return new WaitUntil(() => !audioSource.isPlaying);
             audioSource.PlayOneShot(selectedScenarioSO.correctPhraseAud);
         //}
-        
-
+        yield return new WaitUntil(() => !audioSource.isPlaying);
         if (numItemsDropped == draggables.Count)
         {
             yield return new WaitForSeconds(1);

@@ -21,7 +21,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     int activeState = 1;
     int wrongState = 2;
     bool mobileClicked = false;
-
+    bool attemptedDrag = false;
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (RecognizeHoverInPlay(true))
         {
+            attemptedDrag = true;
             transform.SetSiblingIndex(7);
             rectTransform = GetComponent<RectTransform>();
             canvasGroup.blocksRaycasts = false;
@@ -48,11 +49,12 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (RecognizeHoverInPlay(true)){ rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;}
+        if (attemptedDrag && RecognizeHoverInPlay(true)){ rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;}
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        attemptedDrag = false;
         if (RecognizeHoverInPlay(false))
         {
             StartCoroutine(ImmediatePostDrag());
@@ -81,9 +83,10 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void CorrectItemDropped()
     {
+        draggableUI.DroppedDraggable();
         currSceneController.CountItemsLayered(true);
         audioSource.PlayOneShot(draggable.audioClip);
-        draggableUI.DroppedDraggable();
+
     }
 
     public IEnumerator IncorrectItemDropped()
@@ -95,7 +98,10 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (currSceneController.draggingAllowed){ draggableUI.ColourTileOutline(activeState); }
+        if (draggableUI.BackgroundColorState() != wrongState)
+        {
+            if (currSceneController.draggingAllowed) { draggableUI.ColourTileOutline(activeState); }
+        }
         if (currSceneController.inSelection){ draggableUI.ColourTileOutline(activeState); draggableUI.SetWord();}
     }
 
@@ -137,6 +143,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             timer += Time.deltaTime;
             yield return null;
         }
+
         while (timer < scaleDur);
         timer = 0;
     }

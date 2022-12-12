@@ -15,16 +15,20 @@ public class DisplayDraggable : MonoBehaviour
     //internal Vector2 startRandPos;
     public Vector2 rectTransform;
     internal Vector2 randPos;
-    internal Vector2[] dzB = new Vector2[] { new Vector2(-260, -173), new Vector2(210,70) }; //BL, TR 
+    public Vector2[] dzB = new Vector2[] { new Vector2(-290, -80), new Vector2(-290, 210), new Vector2(300, 210), new Vector2(300, -80) };
     public int randI;
     public GameObject textBackground;
+    internal int siblingIndex;
+    int backgroundColorState;
 
     public void Start()
     {
         draggableArtwork.sprite = draggable.GetImage(0);
         draggable.startPos = transform.localPosition;
         randI = draggable.thisRandIndex;
-        HideWord();
+        //HideWord();
+        siblingIndex = transform.GetSiblingIndex();
+
     }
 
     public void SetRandPos(Vector2 rPos)
@@ -35,7 +39,13 @@ public class DisplayDraggable : MonoBehaviour
 
     public void ColourTileOutline(int state)
     {
+        backgroundColorState = state;
         tile.transform.GetChild(0).GetComponent<Image>().color = draggable.tileStateOutlineColors[state];
+    }
+
+    public int BackgroundColorState()
+    {
+        return backgroundColorState;
     }
 
     public void SetWord()
@@ -47,7 +57,6 @@ public class DisplayDraggable : MonoBehaviour
     public void ShowHideTile()
     {
         ColourTileOutline(0);
-        //tile.SetActive(false);
 
         if (tile.activeSelf)
         {
@@ -66,11 +75,36 @@ public class DisplayDraggable : MonoBehaviour
         wordString.text = "";
     }
 
-    public void DroppedDraggableImage()
+
+    public void DroppedDraggable()
     {
         draggableArtwork.sprite = draggable.GetImage(1);
+        transform.localScale = draggable.dropSize;
+        transform.localPosition = draggable.dropPos;
+        draggable.Dragged(true);
+        ColourTileOutline(0);
+        ShowHideTile();
+        transform.SetSiblingIndex(siblingIndex);
     }
 
+    //public void ResetDraggableDisplay()
+    //{
+    //    draggableArtwork.sprite = draggable.GetImage(1);
+    //    transform.localScale = draggable.dropSize;
+    //    transform.localPosition = draggable.dropPos;
+    //    draggable.Dragged(true);
+    //    ColourTileOutline(0);
+    //    ShowHideTile();
+    //    transform.SetSiblingIndex(siblingIndex);
+    //}
+
+    public void ReturnDraggable()
+    {
+        ColourTileOutline(0);
+        transform.localPosition = ThisRandomPos();
+        transform.SetSiblingIndex(siblingIndex);
+
+    }
     public void ResetDraggableDisplay()
     {
         ColourTileOutline(0);
@@ -108,13 +142,19 @@ public class DisplayDraggable : MonoBehaviour
         //Vector2 tp = new Vector2(transform.localPosition.x, transform.localPosition.y);
         //for (int i = 0; i < 4; i++)
         //{
-        if (dzB[0].x < transform.localPosition.x && transform.localPosition.x < dzB[1].x && dzB[0].y < transform.localPosition.y && transform.localPosition.y < dzB[1].y)
+        //if (dzB[0].x < transform.localPosition.x && transform.localPosition.x < dzB[1].x && dzB[0].y < transform.localPosition.y && transform.localPosition.y < dzB[1].y)
+        //{
+        //    Debug.Log("worked:::: x: " + transform.localPosition.x + " ; y: " + transform.localPosition.y);
+        //    return true;
+
+        //}
+        //}
+
+        if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
         {
             Debug.Log("worked:::: x: " + transform.localPosition.x + " ; y: " + transform.localPosition.y);
             return true;
-            
         }
-        //}
         //transform.localScale = new Vector2(1, 1);
         Debug.Log("failed:::: x: " + transform.localPosition.x + " ; y: " + transform.localPosition.y);
         return false;

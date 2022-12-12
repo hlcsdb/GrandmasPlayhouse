@@ -38,7 +38,24 @@ public class DisplayDraggable : MonoBehaviour
     public void ColourTileOutline(int state)
     {
         backgroundColorState = state;
+
         tile.transform.GetChild(0).GetComponent<Image>().color = draggable.tileStateOutlineColors[state];
+    }
+
+    public void FadeTileImage(bool fade)
+    {
+        if (!draggable.IsItDragged())
+        {
+            if (fade)
+            {
+                draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 0.4f);
+            }
+            else
+            {
+                draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            }
+        }
+        else { draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 1); }
     }
 
     public int BackgroundColorState()
@@ -86,10 +103,11 @@ public class DisplayDraggable : MonoBehaviour
 
     public void ReturnDraggable()
     {
-        ColourTileOutline(0);
+        Debug.Log(BackgroundColorState());
+        
         transform.localPosition = ThisRandomPos();
         transform.SetSiblingIndex(siblingIndex);
-
+        ColourTileOutline(0);
     }
     public void ResetDraggableDisplay()
     {
@@ -108,17 +126,10 @@ public class DisplayDraggable : MonoBehaviour
 
     public bool OverlappingDropZone()
     {
-        //Debug.Log("x: " + transform.localPosition.x + " y: " + transform.localPosition.y);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " > dzb[0].x: " + dzB[0].x);
-        //Debug.Log("tp.x: " + transform.localPosition.x + " < dzb[2].x: " + dzB[2].x);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " > dzb[0].y: " + dzB[0].y);
-        //Debug.Log("tp.y: " + transform.localPosition.y + " < dzb[1].y: " + dzB[1].y);
-        //Vector2[] db = GetBounds(transform.localPosition);
-        //Vector2 tp = new Vector2(transform.localPosition.x, transform.localPosition.y);
-            if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
-            {
-                return true;
-            }
+        if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
+        {
+            return true;
+        }
         return false;
     }
 }

@@ -8,23 +8,15 @@ using UnityEngine.UI;
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler
 {
     private RectTransform rectTransform;
-    private RectTransform startRectTransform;
-    //private float timeCount = 0.0f;
-
     [SerializeField] private Canvas canvas;
     private CanvasGroup canvasGroup;
     private DraggableItem draggable;
     private ChallengeController currSceneController;
-    //private FreeplayController currSceneController;
     private AudioSource audioSource;
     private float timer = 0.0f;
-    private float scaleDur = 0.1f;
+    private float scaleDur = 0.3f;
     private GameObject hovertext;
     internal DisplayDraggable draggableUI;
-    int siblingIndex;
-    // private float rotateAmount = 10.0f; //Amount to rotate in degrees
-
-    //outline colours
     int idleState = 0;
     int activeState = 1;
     int wrongState = 2;
@@ -33,18 +25,14 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void Awake()
     {
-        draggable = GetComponent<DisplayDraggable>().draggable;
-        audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
-        //if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Challenge"))
-        //{
-            currSceneController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
-        //}
-        rectTransform = GetComponent<RectTransform>();
-        startRectTransform = rectTransform;
-        canvasGroup = GetComponent<CanvasGroup>();
         draggableUI = GetComponent<DisplayDraggable>();
+        draggable = draggableUI.draggable;
+
+        audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        currSceneController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        siblingIndex = transform.GetSiblingIndex();
     }
 
     public void Update(){
@@ -52,13 +40,12 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.SetSiblingIndex(7);
-        if (currSceneController.draggingAllowed)
+        if (RecognizeHoverInPlay(true))
         {
+            transform.SetSiblingIndex(7);
             rectTransform = GetComponent<RectTransform>();
-            //Debug.Log("begin dragging");
-            // canvasGroup.blocksRaycasts = false;
-            //StartCoroutine(Grow(1.2f));
+            canvasGroup.blocksRaycasts = false;
+            StartCoroutine(Grow(1.2f));
         }
     }
 
@@ -66,78 +53,65 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (currSceneController.draggingAllowed)
         {
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+            if (RecognizeHoverInPlay(true)) { rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor; }
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //transform.localScale = new Vector2(1,1);
-        //if (RecognizeHoverInPlay(false))
-        if (currSceneController.draggingAllowed && draggableUI.OverlappingDropZone() && draggable.thisRandIndex == currSceneController.curItem)
+        if (RecognizeHoverInPlay(false))
         {
-            Debug.Log("correct item dragged");
+            StartCoroutine(ImmediatePostDrag());
             canvasGroup.blocksRaycasts = true;
-            CorrectItemDropped();
-        }
 
-        else if (currSceneController.draggingAllowed && draggableUI.OverlappingDropZone() && draggable.thisRandIndex != currSceneController.curItem)
-        {
-            Debug.Log("incorrect item dragged");
-            StartCoroutine(IncorrectItemDropped());
-            currSceneController.CountItemsLayered(false);
-        }
+            IEnumerator ImmediatePostDrag()
+            {
+                if (draggableUI.OverlappingDropZone())
+                {
+                    if (draggable.thisRandIndex == currSceneController.curItem) { CorrectItemDropped(); }
 
-        else if (!draggableUI.OverlappingDropZone())
-        {
-            Debug.Log(" not overlapping");
-            transform.localPosition = draggableUI.ThisRandomPos();
-            //transform.localScale = new Vector2(1,1);
+                    else
+                    {
+                        StartCoroutine(IncorrectItemDropped());
+                        currSceneController.CountItemsLayered(false);
+                    }
+                }
+
+                else { draggableUI.ReturnDraggable(); }
+
+                yield return new WaitForSeconds(0.3f);
+                if (!draggable.dragged) { StartCoroutine(Shrink(1f)); }
+            }
         }
-        else { Debug.Log("what"); }
-        //transform.localScale = new Vector2(1, 1);
     }
 
     public void CorrectItemDropped()
     {
-        audioSource.PlayOneShot(draggable.audioClip);
         currSceneController.CountItemsLayered(true);
-        draggable.Dragged(true);
-        transform.localScale = draggable.dropSize;
-        transform.localPosition = draggable.dropPos;
-        draggableUI.DroppedDraggableImage();
-        HideTile();
-        transform.SetSiblingIndex(siblingIndex);
-        //little particle effect
+        audioSource.PlayOneShot(draggable.audioClip);
+        draggableUI.DroppedDraggable();
     }
 
     public IEnumerator IncorrectItemDropped()
     {
         draggableUI.ColourTileOutline(wrongState);
         yield return new WaitForSeconds(2.5f);
-        transform.localPosition = draggableUI.ThisRandomPos();
-        draggableUI.ColourTileOutline(idleState);
-        //StartCoroutine(Shrink(1f));
-        transform.SetSiblingIndex(siblingIndex);
+        draggableUI.ReturnDraggable();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (currSceneController.draggingAllowed)
-        {
-            draggableUI.ColourTileOutline(activeState);
-        }
-        if (currSceneController.inSelection)
-        {
-            draggableUI.ColourTileOutline(activeState);
-            draggableUI.SetWord();
-            //hovertext.SetActive(true);
-        }
+        if (currSceneController.draggingAllowed) { draggableUI.ColourTileOutline(activeState); }
+        if (currSceneController.inSelection) { draggableUI.ColourTileOutline(activeState); draggableUI.SetWord(); }
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        draggableUI.ColourTileOutline(idleState);
+        if (draggableUI.BackgroundColorState() != wrongState)
+        {
+            draggableUI.ColourTileOutline(idleState);
+        }
 
         if (currSceneController.inSelection)
         {
@@ -148,10 +122,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private IEnumerator Grow(float maxSize)
     {
-        Debug.Log("grow");
         Vector2 startScale = transform.localScale;
         Vector2 maxScale = new Vector2(maxSize, maxSize);
-        Debug.Log("start scale: " + startScale + " max scale: " + maxSize);
 
         do
         {
@@ -165,10 +137,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private IEnumerator Shrink(float minSize)
     {
-        Debug.Log("shrunk: " + minSize);
         Vector2 startScale = transform.localScale;
         Vector2 minScale = new Vector2(minSize, minSize);
-        Debug.Log("start scale: " + startScale + " min scale: " + minSize);
         do
         {
             transform.localScale = Vector3.Lerp(startScale, minScale, timer / scaleDur);
@@ -181,28 +151,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void HighlightCorrectItem()
     {
-        //StartCoroutine(TwistDraggable());
         StartCoroutine(GrowShrinkLoop());
     }
-
-    // public IEnumerator TwistDraggable()
-    // {
-    //     Debug.Log("twisting");
-    //     transform.Rotate(0.0f, 0.0f, rotateAmount / 2);
-    //     for (int i = 0; i < 2; i++)
-    //     {
-    //         if (transform.rotation.z > 0)
-    //         {
-    //             transform.Rotate(0.0f, 0.0f, -rotateAmount);
-    //         }
-    //         else if (transform.rotation.z < 0)
-    //         {
-    //             transform.Rotate(0.0f, 0.0f, rotateAmount);
-    //         }
-    //         yield return new WaitForSeconds(0.07f);
-    //     }
-    //     transform.Rotate(0.0f, 0.0f, -(rotateAmount / 2));
-    // }
 
     public IEnumerator GrowShrinkLoop()
     {
@@ -227,25 +177,25 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     //Detect if clicks are no longer registering
     public void OnPointerUp(PointerEventData pointerEventData)
     {
-        if (currSceneController.draggingAllowed))
+        if (currSceneController.draggingAllowed)
         {
             transform.localScale = new Vector2(1,1);
         }
     }
 
-    public IEnumerator ShowLabelForSeconds(int seconds)
-    {
-        hovertext = gameObject.transform.GetChild(0).gameObject;
-        hovertext.SetActive(true);
-        yield return new WaitForSeconds(4);
-        hovertext.SetActive(false);
-    }
+    //public IEnumerator ShowLabelForSeconds(int seconds)
+    //{
+    //    hovertext = gameObject.transform.GetChild(0).gameObject;
+    //    hovertext.SetActive(true);
+    //    yield return new WaitForSeconds(seconds);
+    //    hovertext.SetActive(false);
+    //}
 
-    public void HideTile()
-    {
-        draggable.Dragged(true);
-        draggableUI.ShowHideTile();
-    }
+    //public void HideTile()
+    //{
+    //    draggable.Dragged(true);
+    //    draggableUI.ShowHideTile();
+    //}
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -254,7 +204,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (!mobileClicked)
             {
                 if (!audioSource.isPlaying)
-            {
+                {
                     //Debug.Log("audio will start");
                     audioSource.PlayOneShot(draggable.audioClip);
                     mobileClicked = true;
@@ -265,7 +215,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                     audioSource.PlayOneShot(draggable.audioClip);
                 }
             }
-              
+
             else
             {
                 mobileClicked = false;
@@ -275,7 +225,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public bool RecognizeHoverInPlay(bool andAudio)
     {
-        if (!currSceneController.inSelection && !draggable.dragged && !currSceneController.inInstruction)
+        if (!currSceneController.inSelection && !draggable.dragged && currSceneController.draggingAllowed)
         {
             if (andAudio)
             {
