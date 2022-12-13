@@ -40,10 +40,6 @@ public class ChallengeController : MonoBehaviour
 
     private void Start()
     {
-        /// IF USING MULTIPLE SCENARIOS / CAROUSEL
-        //carouselSliderScript = carousel.GetComponent<CarouselSlider>();
-
-        //settingsController = GameObject.Find("Settings").GetComponent<SettingsPanelController>();
         audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 
@@ -57,14 +53,20 @@ public class ChallengeController : MonoBehaviour
         numObjects = selectedScenarioObj.transform.GetChild(0).gameObject.transform.childCount;
         selectedScenarioSO = allScenarios[0];
         selectedScenarioUI = selectedScenarioObj.GetComponent<DisplayScenario>();
-        /// IF USING MULTIPLE SCENARIOS / CAROUSEL -- will need to reorder when carousel is used
-        /// 
-        //      selectedScenario = allScenarios[carouselSliderScript.slideNum];
-        //      StartCoroutine(WaitToResetCarousel(0.5f));
-        //      HideInactiveScenarios(carouselSliderScript.slideNum);
         selectedScenarioUI.EmptyScenarioText();
+
         SetDraggableOrder();
         RandomizeDraggablePos();
+        SetObjectsScenarioParam();
+    }
+
+    void SetObjectsScenarioParam()
+    {
+        foreach (DraggableItem draggableSO in draggables)
+        {
+            //Debug.Log("setting DZB: " + selectedScenarioSO.DZB[0].x);
+            draggableSO.dzB = selectedScenarioSO.DZB;
+        }
     }
 
     public List<int> IndicesArray(int length)
@@ -115,7 +117,6 @@ public class ChallengeController : MonoBehaviour
     {
         FadeAllTiles(true);
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        //sceneAudButton.GetComponent<Image>().color = new Color(0.6226415, 0.6226415, 0.6226415, 0.3411765);
 
         sceneAudButton.SetActive(false);
 
@@ -287,27 +288,4 @@ public class ChallengeController : MonoBehaviour
         numItemsDropped = 0;
         curItem = 0;
     }
-
-
-    //ONLY USED WITH CAROUSEL
-    //IEnumerator WaitToResetCarousel(float secondsToWait)
-    //{
-    //    carouselSliderScript.ResetSlider();
-    //    yield return new WaitForSeconds(secondsToWait);
-    //    //selectionScreen.SetActive(false);
-    //}
-
-    ////ONLY USED WITH CAROUSEL
-    //public void HideInactiveScenarios(int scenarioIndex)
-    //{
-    //    for(int i = 0; i < allScenarios.Length; i++)
-    //    {
-    //        if(i != scenarioIndex)
-    //        {
-    //            allScenarios[i].HideScenarioObject();
-    //        }
-    //    }
-    //}
-
-   
 }

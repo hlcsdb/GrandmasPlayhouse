@@ -40,6 +40,11 @@ MonoBehaviour:
   - Oh grandchild, I am glad you are here. You can help me get pretty.
   - "n. ts\u2019ewutham\u2019sh \u2019i\u2019 nuwu theyuwstham\u2019sh.sh \u2019i\u2019
     nuwu theyuwstham\u2019sh."
+  DZB:
+  - {x: 80, y: -180}
+  - {x: 80, y: 95}
+  - {x: 300, y: 95}
+  - {x: 300, y: -180}
   repeaterPhrase:
   - 'Please bring me my '
   - "tth\u2019ihwum \u2019i\u2019 m\u2019ewustuhw tthunu "

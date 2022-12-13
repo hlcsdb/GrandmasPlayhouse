@@ -107,7 +107,7 @@ public class ChallengeController : MonoBehaviour
             iArr2.RemoveAt(iRand);
             
         }
-Debug.Log(draggableObjects.Count);
+        Debug.Log(draggableObjects.Count);
         List<int> iArr3 = IndicesArray(5, 3);
         for (i = 5; i < 8; i++)
         {

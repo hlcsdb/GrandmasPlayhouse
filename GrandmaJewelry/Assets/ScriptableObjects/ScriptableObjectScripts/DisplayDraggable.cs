@@ -15,7 +15,6 @@ public class DisplayDraggable : MonoBehaviour
     //internal Vector2 startRandPos;
     public Vector2 rectTransform;
     internal Vector2 randPos;
-    public Vector2[] dzB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180)};
     public int randI;
     public GameObject textBackground;
     internal int siblingIndex;
@@ -126,6 +125,8 @@ public class DisplayDraggable : MonoBehaviour
 
     public bool OverlappingDropZone()
     {
+        Vector2[] dzB = draggable.dzB; //Set in SceneSO and declared to all draggableitems in scene at start.
+        //Debug.Log(dzB[0].x);
         if (transform.localPosition.x > dzB[0].x && transform.localPosition.x < dzB[2].x && transform.localPosition.y > dzB[0].y && transform.localPosition.y < dzB[1].y)
         {
             return true;

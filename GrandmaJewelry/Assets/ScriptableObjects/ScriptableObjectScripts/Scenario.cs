@@ -22,6 +22,8 @@ public class Scenario : ScriptableObject
     public List<DraggableItem> scenarioDraggableItems;
     public string[] sceneDescription;
     public string[] openerPhrase;
+    //public Vector2[] DZB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180) };
+    public Vector2[] DZB;
 
     public string[] repeaterPhrase; //instructions that proceed the word of every item, eg. LAY DOWN THE plate // if this is different for different objects in the scenario, leave it blank and specify in DisplayDraggable
     public string[] successPhrase;
@@ -31,7 +33,7 @@ public class Scenario : ScriptableObject
     //public AudioSource audioS;
     public AudioClip sceneDescriptionAud;
     public AudioClip openerPhraseAud;
-    public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
+    public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate - IF CUSTOM TO A TILE.
     public AudioClip successPhraseAud;
     public AudioClip completionPhraseAud;
     public AudioClip correctPhraseAud;
@@ -41,14 +43,16 @@ public class Scenario : ScriptableObject
     public Sprite backgroundImage;
     public int dialect;
 
-    public List<Vector2> randSlots = new List<Vector2>();
+    //set in scenario scriptable object and clear list here.
+    //public List<Vector2> randSlots = new List<Vector2> { new Vector2(-400, 118), new Vector2(-400, 3), new Vector2(-400, -112), new Vector2(-400, -227), new Vector2(-273, 118), new Vector2(-273, 3), new Vector2(-273, -112), new Vector2(-273, -227) };
+    public List<Vector2> randSlots;
 
     public void Awake()
     {
         numDraggables = scenarioDraggableItems.Count;
-        randSlots = new List<Vector2> { new Vector2(-400, 118), new Vector2(-400, 3), new Vector2(-400, -112), new Vector2(-400, -227), new Vector2(-273, 118), new Vector2(-273, 3), new Vector2(-273, -112), new Vector2(-273, -227) };
         //PopulateStartSlots(numDraggables);
     }
+
     public void SetDialect(int currDialect)
     {
         dialect = currDialect;
