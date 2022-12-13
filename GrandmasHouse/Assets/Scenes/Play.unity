@@ -611,11 +611,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2437451153986775668, guid: 9b40754726ce146a99a09be1fee7b338, type: 3}
   m_PrefabInstance: {fileID: 65118236}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &65118238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2437451153986775669, guid: 9b40754726ce146a99a09be1fee7b338, type: 3}
-  m_PrefabInstance: {fileID: 65118236}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &187697812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,11 +759,6 @@ PrefabInstance:
 --- !u!224 &187697813 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5417390952940900463, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
-  m_PrefabInstance: {fileID: 187697812}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &187697814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5417390952940900462, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
   m_PrefabInstance: {fileID: 187697812}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &218869959
@@ -1304,7 +1294,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352355477}
-  - component: {fileID: 352355478}
   m_Layer: 5
   m_Name: Jewelry
   m_TagString: Untagged
@@ -1333,40 +1322,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &352355478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352355476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34fa215066566497f857ba3f7284dcca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scenario: {fileID: 11400000, guid: dac6715063e0a4d2f8b3422753b67984, type: 2}
-  scenarioObject: {fileID: 352355476}
-  scenarioDraggableObjects:
-  - {fileID: 2006458447}
-  - {fileID: 427004690}
-  - {fileID: 2101382617}
-  - {fileID: 999054410}
-  - {fileID: 65118238}
-  - {fileID: 187697814}
-  - {fileID: 2060513065}
-  - {fileID: 1417495633}
-  sceneText: {fileID: 1839593256}
-  scenarioName: {fileID: 1839593256}
-  successText: {fileID: 887645515}
-  successTextEngl: {fileID: 608531202}
-  sceneDescriptionAud: {fileID: 0}
-  openerPhraseAud: {fileID: 0}
-  repeaterPhraseAud: {fileID: 0}
-  successPhraseAud: {fileID: 0}
-  correctPhraseAud: {fileID: 0}
-  completionPhraseAud: {fileID: 0}
-  backgroundImage: {fileID: 984881646}
 --- !u!1 &374976656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1469,7 @@ GameObject:
   - component: {fileID: 407275943}
   - component: {fileID: 407275942}
   m_Layer: 5
-  m_Name: Granny to dress
+  m_Name: DZ Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,11 +1609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414286951}
   m_CullTransparentMesh: 1
---- !u!1 &427004690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6890099715164765251, guid: 3c412003fcc1c4fb988309997ebe8bc4, type: 3}
-  m_PrefabInstance: {fileID: 835278753}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &427004691 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6890099715164765250, guid: 3c412003fcc1c4fb988309997ebe8bc4, type: 3}
@@ -2779,7 +2729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8d5341dfefd414bb68fa0aa68c2c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOnActive: {fileID: 8300000, guid: 729fae86bfb9c4b93933f28e6e45fd69, type: 3}
 --- !u!114 &686174168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3468,13 +3417,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1218944969}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 924929758}
+        m_TargetAssemblyTypeName: AudioButtonUI, Assembly-CSharp
+        m_MethodName: PlayOtherAud
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: a16fa841641c1456589ae3f02f1d34f3, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3762,11 +3711,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985920125}
   m_CullTransparentMesh: 1
---- !u!1 &999054410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 734374297941014652, guid: 142cf79d8c4c84e118c77410822a9277, type: 3}
-  m_PrefabInstance: {fileID: 438114107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &999054411 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 734374297941014653, guid: 142cf79d8c4c84e118c77410822a9277, type: 3}
@@ -3979,6 +3923,7 @@ GameObject:
   - component: {fileID: 1120496603}
   - component: {fileID: 1120496602}
   - component: {fileID: 1120496601}
+  - component: {fileID: 1120496605}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4072,6 +4017,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1120496605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120496600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fa215066566497f857ba3f7284dcca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
+  scenario: {fileID: 11400000, guid: dac6715063e0a4d2f8b3422753b67984, type: 2}
+  scenarioObject: {fileID: 352355476}
+  sceneText: {fileID: 1839593256}
+  scenarioName: {fileID: 1839593256}
+  successText: {fileID: 887645515}
+  successTextEngl: {fileID: 608531202}
+  backgroundImage: {fileID: 984881646}
+  HTPexampleButton: {fileID: 924929758}
+  openerPhraseButton: {fileID: 686174167}
+  completionPhraseButton: {fileID: 1349146808}
 --- !u!1 &1147238833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4392,7 +4360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8d5341dfefd414bb68fa0aa68c2c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOnActive: {fileID: 8300000, guid: 34edf01023e2540a0bd5026f9b803c52, type: 3}
 --- !u!114 &1237812774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4439,8 +4406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3a5edc41c0149bfad198c0458d9dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allScenarios:
-  - {fileID: 11400000, guid: dac6715063e0a4d2f8b3422753b67984, type: 2}
+  scenarioSetter: {fileID: 0}
   dialect: 0
   selectedScenarioSO: {fileID: 0}
   selectedScenarioObj: {fileID: 352355476}
@@ -4625,7 +4591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8d5341dfefd414bb68fa0aa68c2c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioOnActive: {fileID: 8300000, guid: e93117c345c6a4f7fb5ee644a948f85a, type: 3}
 --- !u!114 &1349146809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5141,11 +5106,6 @@ PrefabInstance:
 --- !u!224 &1417495632 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4217507043975988651, guid: 9631aaa1d067c4fce999b13516d9006a, type: 3}
-  m_PrefabInstance: {fileID: 1417495631}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1417495633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4217507043975988650, guid: 9631aaa1d067c4fce999b13516d9006a, type: 3}
   m_PrefabInstance: {fileID: 1417495631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455509979
@@ -5871,11 +5831,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839593254}
   m_CullTransparentMesh: 1
---- !u!1 &2006458447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 474618543307513468, guid: d9ff8b78553a447809507d032f25341b, type: 3}
-  m_PrefabInstance: {fileID: 1398826446}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2006458448 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 474618543307513469, guid: d9ff8b78553a447809507d032f25341b, type: 3}
@@ -6109,11 +6064,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1278759256118155217, guid: 6b1469ed53cb2452d89ba659f15d96da, type: 3}
   m_PrefabInstance: {fileID: 2060513063}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2060513065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1278759256118155216, guid: 6b1469ed53cb2452d89ba659f15d96da, type: 3}
-  m_PrefabInstance: {fileID: 2060513063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095748791
 GameObject:
   m_ObjectHideFlags: 0
@@ -6295,11 +6245,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095748791}
   m_CullTransparentMesh: 1
---- !u!1 &2101382617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7575541668552708066, guid: d8c52dc8c15ca445387a43712514e460, type: 3}
-  m_PrefabInstance: {fileID: 1573422083}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2101382618 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7575541668552708067, guid: d8c52dc8c15ca445387a43712514e460, type: 3}

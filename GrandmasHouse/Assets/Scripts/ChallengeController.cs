@@ -6,13 +6,9 @@ using UnityEngine.UI;
 public class ChallengeController : MonoBehaviour
 {
     //Selection
-    public Scenario[] allScenarios;
-    //public GameObject selectionScreen;
-    //public GameObject carousel;
+    public ScenarioSetter scenarioSetter;
     public int dialect = 1;
 
-    //Scenario
-    //private int selectedScenarioIndex = 0;
     public Scenario selectedScenarioSO;
     public GameObject selectedScenarioObj;
     private DisplayScenario selectedScenarioUI;
@@ -21,10 +17,6 @@ public class ChallengeController : MonoBehaviour
     public List<GameObject> draggableObjects = new List<GameObject>();
     public int numObjects;
 
-    //private CarouselSlider carouselSliderScript;
-
-    //UI
-    //internal SettingsPanelController settingsController;
     internal AudioSource audioSource;
     public GameObject gameOverScreen;
     //Gameplay
@@ -43,16 +35,17 @@ public class ChallengeController : MonoBehaviour
         audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 
-
     public void SetSelectedStart()
     {
-        
         inSelection = false;
-
-        //selectedScenarioObj = GameObject.Find("Scenarios").transform.GetChild(selectedScenarioIndex).gameObject;
-        numObjects = selectedScenarioObj.transform.GetChild(0).gameObject.transform.childCount;
-        selectedScenarioSO = allScenarios[0];
+        selectedScenarioSO = scenarioSetter.currentScenario;
+        selectedScenarioObj = GameObject.Find("Scenarios").transform.GetChild(scenarioSetter.currentScenarioIndex).gameObject;
         selectedScenarioUI = selectedScenarioObj.GetComponent<DisplayScenario>();
+
+        selectedScenarioUI.SetScenarioDraggableObjects(selectedScenarioObj);
+
+        numObjects = selectedScenarioUI.scenarioDraggableObjects.Length;
+
         selectedScenarioUI.EmptyScenarioText();
 
         SetDraggableOrder();

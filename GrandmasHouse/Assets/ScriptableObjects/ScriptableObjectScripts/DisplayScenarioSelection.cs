@@ -66,6 +66,6 @@ public class DisplayScenarioSelection : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
 
-        scenarioSetter.currentScenario = scenarios[m_DropdownValue];
+        scenarioSetter.ChangeScenario(m_DropdownValue);
     }
 }

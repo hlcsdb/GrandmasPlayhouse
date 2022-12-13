@@ -66,9 +66,12 @@ MonoBehaviour:
   incorrectSelectionAud: {fileID: 8300000, guid: 2f62ee7d1577f4120a9ed1f36458df75, type: 3}
   homeImage: {fileID: 21300000, guid: 63037394ad79e4295ae44b6684509c2d, type: 3}
   numDraggables: 8
-  backgroundImage: {fileID: 21300000, guid: 32bcbd76940624ab7bd8955056ba8709, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 79d3eda44d9c14c7a943f1e4bff3306f, type: 3}
   dialect: 1
   playSceneName: STT
+  dzImage: {fileID: 0}
+  dzPos: {x: 0, y: 0}
+  dzRectDimensions: {x: 0, y: 0}
   randSlots:
   - {x: -400, y: 118}
   - {x: -400, y: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioOnLoad : MonoBehaviour
 {
-    public AudioClip audioOnActive;
+    internal AudioClip audioOnActive;
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Awake()
@@ -15,10 +15,11 @@ public class AudioOnLoad : MonoBehaviour
 
     public void PlayAudio()
     {
-        //if (audioSource.isPlaying)
-        //{
-        //    audioSource.Stop();
-        //}
-        GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(audioOnActive);
+        StartCoroutine(PlayOnDelay());
+        IEnumerator PlayOnDelay()
+        {
+            yield return new WaitUntil(() => audioOnActive != null);
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(audioOnActive);
+        }
     }
 }

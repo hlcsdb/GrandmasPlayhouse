@@ -65,6 +65,9 @@ MonoBehaviour:
   backgroundImage: {fileID: 21300000, guid: 46d6751d9fe234758be6d4ceb376ab59, type: 3}
   dialect: 1
   playSceneName: Jewelry
+  dzImage: {fileID: 21300000, guid: 5139ee9d717894ded8701957aeac079e, type: 3}
+  dzPos: {x: 225.7, y: -5.8}
+  dzRectDimensions: {x: 660, y: 660}
   randSlots:
   - {x: -400, y: 118}
   - {x: -400, y: 3}

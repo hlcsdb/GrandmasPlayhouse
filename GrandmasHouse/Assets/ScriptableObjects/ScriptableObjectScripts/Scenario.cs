@@ -43,6 +43,11 @@ public class Scenario : ScriptableObject
     public Sprite backgroundImage;
     public int dialect;
     public string playSceneName;
+    public Sprite dzImage;
+    public Vector2 dzPos;
+    public Vector2 dzRectDimensions;
+
+
 
     //set in scenario scriptable object and clear list here.
     public List<Vector2> randSlots = new List<Vector2> { new Vector2(-400, 118), new Vector2(-400, 3), new Vector2(-400, -112), new Vector2(-400, -227), new Vector2(-273, 118), new Vector2(-273, 3), new Vector2(-273, -112), new Vector2(-273, -227) };

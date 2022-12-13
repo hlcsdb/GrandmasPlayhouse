@@ -10,26 +10,36 @@ public class DisplayScenario : MonoBehaviour
     public Scenario scenario;
     public GameObject scenarioObject;
     //public DraggableItem[] scenarioDraggables;
-    public GameObject[] scenarioDraggableObjects;
+    internal GameObject[] scenarioDraggableObjects;
     public TextMeshProUGUI sceneText;
     public TextMeshProUGUI scenarioName;
     public TextMeshProUGUI successText;
     public TextMeshProUGUI successTextEngl;
-    public AudioClip sceneDescriptionAud;
-    public AudioClip openerPhraseAud;
-    public AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
-    public AudioClip successPhraseAud;
-    public AudioClip correctPhraseAud;
-    public AudioClip completionPhraseAud;
+
     public Image backgroundImage;
     internal ChallengeController challengeController;
     private List<Vector2> startSlots;
+    private GameObject dzGO;
 
+    //AUDIO
+    internal AudioClip sceneDescriptionAud;
+    internal AudioClip HTPexampleAud;
+    internal AudioClip openerPhraseAud;
+    internal AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
+    internal AudioClip successPhraseAud;
+    internal AudioClip incorrectPhraseAud;
+    internal AudioClip correctPhraseAud;
+    internal AudioClip completionPhraseAud;
+
+    public AudioButtonUI HTPexampleButton;
+    public AudioOnLoad openerPhraseButton;
+    public AudioOnLoad completionPhraseButton;
 
     // Start is called before the first frame update
     void Start()
     {
         scenario = scenarioSetter.currentScenario;
+        SetScenario();
     }
 
     void SetScenario()
@@ -42,10 +52,40 @@ public class DisplayScenario : MonoBehaviour
         successPhraseAud = scenario.successPhraseAud;
         completionPhraseAud = scenario.completionPhraseAud;
         correctPhraseAud = scenario.correctPhraseAud;
+        SetAudioButtons();
+
         challengeController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
+        SetDZImage();
+        
     }
 
-    public void PopulateStartSlots()
+    void SetAudioButtons()
+    {
+        openerPhraseButton.audioOnActive = openerPhraseAud;
+        completionPhraseButton.audioOnActive = completionPhraseAud;
+        HTPexampleButton.customAudClip = HTPexampleAud;
+    }
+
+    void SetDZImage()
+    {
+        dzGO = GameObject.Find("DZ Obj");
+        var dzImageRectTransform = dzGO.transform as RectTransform;
+
+        dzImageRectTransform.sizeDelta = scenario.dzRectDimensions;
+        dzGO.transform.position = scenario.dzPos;
+        dzGO.GetComponent<Image>().sprite = scenario.dzImage;
+    }
+
+    internal void SetScenarioDraggableObjects(GameObject scenarioDraggables)
+    {
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            scenarioDraggableObjects[i] = scenarioDraggables.transform.GetChild(i).gameObject;
+        }
+    }
+
+        public void PopulateStartSlots()
     {
         foreach(GameObject draggable in scenario.scenarioDraggableObjects)
         {
