@@ -3,6 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// Simultaneously rotates, changes color, and scales
+// when duration == 4s
+// from 0:00 to 1:20 -- transitions from color (1, 1, 1, 0.3f) to (1, 0.94f, 0, 1)
+// from 1:20 to 2:40 --  transitions from color (1, 0.94f, 0, 1) to (1, 0.94f, 0, 0.5f)
+// from 2:40 to 3:00 -- transitions from colour (1, 0.94f, 0, 0.5f) to (1, 1, 1, 0.3f)
+
+// from  0:00 to 2:48 -- scales from x1 to x2
+// from  2:48 to 3:40 -- scales from x2 to x0
+
+// from  0:00 to 2:42 -- rotates from 0deg to 180deg
+// from  2:42 to 3:40 -- rotates from 180deg to 0deg
+
+
 public class StarFeedback : MonoBehaviour
 {
     GameObject star;

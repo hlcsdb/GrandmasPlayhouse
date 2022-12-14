@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioOnLoad : MonoBehaviour
 {
-    internal AudioClip audioOnActive;
+    public AudioClip audioOnActive;
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Awake()

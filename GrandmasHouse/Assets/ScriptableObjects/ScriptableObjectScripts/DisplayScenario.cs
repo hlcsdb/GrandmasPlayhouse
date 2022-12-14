@@ -8,18 +8,21 @@ public class DisplayScenario : MonoBehaviour
 {
     public ScenarioSetter scenarioSetter;
     public Scenario scenario;
+    public Transform draggableContainer;
+
+    //public GameObject scenariosInHierarchy;
+
     public GameObject scenarioObject;
-    //public DraggableItem[] scenarioDraggables;
-    internal GameObject[] scenarioDraggableObjects;
+
     public TextMeshProUGUI sceneText;
     public TextMeshProUGUI scenarioName;
     public TextMeshProUGUI successText;
     public TextMeshProUGUI successTextEngl;
 
-    public Image backgroundImage;
+    public GameObject backgroundImage;
     internal ChallengeController challengeController;
     private List<Vector2> startSlots;
-    private GameObject dzGO;
+    public GameObject dzGO;
 
     //AUDIO
     internal AudioClip sceneDescriptionAud;
@@ -35,6 +38,7 @@ public class DisplayScenario : MonoBehaviour
     public AudioOnLoad openerPhraseButton;
     public AudioOnLoad completionPhraseButton;
 
+    public List<Vector2> vocabPositions = new List<Vector2>() { new Vector2(-220,46), new Vector2(-60,46), new Vector2(100,46), new Vector2(260,46), new Vector2(-220, -74), new Vector2( -60, - 74), new Vector2(100,-74), new Vector2(260,-74) };
     // Start is called before the first frame update
     void Start()
     {
@@ -44,23 +48,37 @@ public class DisplayScenario : MonoBehaviour
 
     void SetScenario()
     {
-        backgroundImage.sprite = scenario.backgroundImage;
-        //scenarioName.text = scenario.scenarioName;
-        //sceneDescriptionAud = scenario.sceneDescriptionAud;
+        backgroundImage.GetComponent<Image>().sprite = scenario.backgroundImage;
         openerPhraseAud = scenario.openerPhraseAud;
         repeaterPhraseAud = scenario.repeaterPhraseAud;
         successPhraseAud = scenario.successPhraseAud;
         completionPhraseAud = scenario.completionPhraseAud;
         correctPhraseAud = scenario.correctPhraseAud;
         SetAudioButtons();
+        SpawnDraggables();
 
         challengeController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
-        SetDZImage();
         
+        SetDZImage();
+    }
+
+    void SpawnDraggables()
+    {
+        Vector2 scale = new Vector2(1, 1);
+        int i = 0;
+        foreach(GameObject draggable in scenario.scenarioDraggableObjects)
+        {
+            GameObject ourDraggable = Instantiate(draggable);
+            ourDraggable.transform.SetParent(draggableContainer);
+            ourDraggable.transform.localPosition = vocabPositions[i];
+            ourDraggable.transform.localScale = scale;
+            i++;
+        }
     }
 
     void SetAudioButtons()
     {
+        //Debug.Log("setting aud buttons");
         openerPhraseButton.audioOnActive = openerPhraseAud;
         completionPhraseButton.audioOnActive = completionPhraseAud;
         HTPexampleButton.customAudClip = HTPexampleAud;
@@ -68,31 +86,14 @@ public class DisplayScenario : MonoBehaviour
 
     void SetDZImage()
     {
-        dzGO = GameObject.Find("DZ Obj");
         var dzImageRectTransform = dzGO.transform as RectTransform;
 
         dzImageRectTransform.sizeDelta = scenario.dzRectDimensions;
-        dzGO.transform.position = scenario.dzPos;
+        dzGO.transform.localPosition = scenario.dzPos;
         dzGO.GetComponent<Image>().sprite = scenario.dzImage;
     }
 
-    internal void SetScenarioDraggableObjects(GameObject scenarioDraggables)
-    {
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            scenarioDraggableObjects[i] = scenarioDraggables.transform.GetChild(i).gameObject;
-        }
-    }
-
-        public void PopulateStartSlots()
-    {
-        foreach(GameObject draggable in scenario.scenarioDraggableObjects)
-        {
-            startSlots.Add(draggable.transform.localPosition);
-        }
-    }
-
+ 
     public void ShowRepeater(string wordText)
     {
         sceneText.text = ""+ scenario.repeaterPhrase[1] + wordText + ".";
@@ -135,7 +136,7 @@ public class DisplayScenario : MonoBehaviour
     public void BackToSelection()
     {
         ShowScenarioName();
-        backgroundImage.sprite = scenario.backgroundImage;
+        //backgroundImage.sprite = scenario.backgroundImage;
         EmptyScenarioText();
     }
 }

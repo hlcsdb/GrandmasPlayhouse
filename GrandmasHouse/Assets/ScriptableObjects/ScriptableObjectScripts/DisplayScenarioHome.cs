@@ -13,7 +13,7 @@ public class DisplayScenarioHome : MonoBehaviour
     public TextMeshProUGUI titleTextHulq;
     public TextMeshProUGUI titleTextEngl;
     public GameObject homeScreenBackground;
-    internal AudioSource audSource;
+    public AudioSource audSource;
 
     // Start is called before the first frame update
     void Start()
@@ -26,17 +26,17 @@ public class DisplayScenarioHome : MonoBehaviour
         titleTextHulq.text = scenario.titleName[1];
         titleTextEngl.text = scenario.titleName[0];
         homeScreenBackground.GetComponent<Image>().sprite = scenario.homeImage;
-        audSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 
     public void PlayTitleAudio()
     {
+        Debug.Log(scenario.GetTitleAudioClip().name);
         audSource.PlayOneShot(scenario.GetTitleAudioClip());
     }
 
     public void GoToScene()
     {
-        SceneManager.LoadScene(scenario.playSceneName);
+        SceneManager.LoadScene("Play");
     }
 
     public void GotoSelectionScene()

@@ -3556,11 +3556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39051c678ae8f4739ada4d43a3de90df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenarioSetter: {fileID: 0}
+  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
   scenario: {fileID: 0}
-  titleTextHulq: {fileID: 0}
-  titleTextEngl: {fileID: 0}
-  homeScreenBackground: {fileID: 0}
+  titleTextHulq: {fileID: 2116269632}
+  titleTextEngl: {fileID: 619220987}
+  homeScreenBackground: {fileID: 1536941588}
+  audSource: {fileID: 0}
 --- !u!1 &1509254074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,6 +3774,7 @@ MonoBehaviour:
   titleTextHulq: {fileID: 2116269632}
   titleTextEngl: {fileID: 619220987}
   homeScreenBackground: {fileID: 1536941588}
+  audSource: {fileID: 1943474367}
 --- !u!1 &1664493016
 GameObject:
   m_ObjectHideFlags: 0

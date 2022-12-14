@@ -22,7 +22,7 @@ public class Scenario : ScriptableObject
     public List<DraggableItem> scenarioDraggableItems;
     public string[] titleName = new string[2];
     public string[] openerPhrase = new string[2];
-    public Vector2[] DZB = new Vector2[] { new Vector2(80, -180), new Vector2(80, 95), new Vector2(300, 95), new Vector2(300, -180) };
+    public Vector2[] DZB;
 
     public string[] repeaterPhrase; //instructions that proceed the word of every item, eg. LAY DOWN THE plate // if this is different for different objects in the scenario, leave it blank and specify in DisplayDraggable
     public string[] successPhrase;
@@ -50,7 +50,8 @@ public class Scenario : ScriptableObject
 
 
     //set in scenario scriptable object and clear list here.
-    public List<Vector2> randSlots = new List<Vector2> { new Vector2(-400, 118), new Vector2(-400, 3), new Vector2(-400, -112), new Vector2(-400, -227), new Vector2(-273, 118), new Vector2(-273, 3), new Vector2(-273, -112), new Vector2(-273, -227) };
+    public List<Vector2> randSlots;
+    
 
     public void Awake()
     {

@@ -16,14 +16,14 @@ MonoBehaviour:
   scenarioType: 5
   scenarioName: Jewlery
   scenarioDraggableObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7834248728024719822, guid: 23effcc33bcac465fb331567ba46f9ec, type: 3}
+  - {fileID: 5671144742975285198, guid: 266bc70d42e97415e83f1bcfbc4eb04a, type: 3}
+  - {fileID: 45263728326698580, guid: 5afeb88b37469400d87a8c1b7e7923b7, type: 3}
+  - {fileID: 7419362380013774726, guid: 56fdcb790d8124359b915218ffffff6b, type: 3}
+  - {fileID: 6035667171560775175, guid: 5441948792cc746069670de922474bcf, type: 3}
+  - {fileID: 1234434187116480846, guid: f46b8c48a6dff4353a0b4be84efc7b83, type: 3}
+  - {fileID: 173345767940876292, guid: cccd3b01a364242d0814cf8120d0ad33, type: 3}
+  - {fileID: 2097855394095258560, guid: f880cdc444fe84b56a63f79445689618, type: 3}
   scenarioDraggableItems:
   - {fileID: 11400000, guid: 9f17f3e2c93784bfaab274e62a5bc8bc, type: 2}
   - {fileID: 11400000, guid: 06e7a696fe9e9466596f1df0d6a62782, type: 2}
@@ -54,7 +54,7 @@ MonoBehaviour:
   - "I\u2019m all fixed up. I\u2019m very decked out."
   - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2018ul\u2019 \u2018iyas."
   titleAud: {fileID: 8300000, guid: ef51304bb916a4737bd20501cb73e01a, type: 3}
-  openerPhraseAud: {fileID: 8300000, guid: b1d3e6552c68e4d909e2dfc391e3cbd5, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 729fae86bfb9c4b93933f28e6e45fd69, type: 3}
   repeaterPhraseAud: {fileID: 8300000, guid: 8361984133caf4db1a48616d03da6225, type: 3}
   successPhraseAud: {fileID: 8300000, guid: fa1efe2d81c154db8bf378d052ef4b86, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: e93117c345c6a4f7fb5ee644a948f85a, type: 3}

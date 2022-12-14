@@ -8,11 +8,10 @@ public class ChallengeController : MonoBehaviour
     //Selection
     public ScenarioSetter scenarioSetter;
     public int dialect = 1;
-
     public Scenario selectedScenarioSO;
     public GameObject selectedScenarioObj;
     private DisplayScenario selectedScenarioUI;
-   
+    public Transform draggableContainer;
     public List<DraggableItem> draggables;
     public List<GameObject> draggableObjects = new List<GameObject>();
     public int numObjects;
@@ -39,13 +38,11 @@ public class ChallengeController : MonoBehaviour
     {
         inSelection = false;
         selectedScenarioSO = scenarioSetter.currentScenario;
-        selectedScenarioObj = GameObject.Find("Scenarios").transform.GetChild(scenarioSetter.currentScenarioIndex).gameObject;
-        selectedScenarioUI = selectedScenarioObj.GetComponent<DisplayScenario>();
+        selectedScenarioUI = GameObject.Find("Canvas").GetComponent<DisplayScenario>();
 
-        selectedScenarioUI.SetScenarioDraggableObjects(selectedScenarioObj);
+        numObjects = selectedScenarioUI.transform.childCount;
 
-        numObjects = selectedScenarioUI.scenarioDraggableObjects.Length;
-
+        Debug.Log(numObjects);
         selectedScenarioUI.EmptyScenarioText();
 
         SetDraggableOrder();
@@ -63,8 +60,8 @@ public class ChallengeController : MonoBehaviour
     }
 
      public void SetDraggableOrder()
-    {
-        List<DraggableItem> tempDraggables = selectedScenarioSO.scenarioDraggableItems;
+     {
+        List<DraggableItem> tempDraggables = new List<DraggableItem>(selectedScenarioSO.scenarioDraggableItems);
         List<int> iArr = IndicesArray(numObjects);
 
         int iRand;
@@ -85,11 +82,12 @@ public class ChallengeController : MonoBehaviour
     {
         List<int> iArr = IndicesArray(numObjects);
         int iRand;
-
+        Debug.Log("randomizing pos");
         foreach (GameObject draggable in draggableObjects)
         {
             iRand = Random.Range(0, iArr.Count);
             int randSlot = iArr[iRand];
+            
             draggable.GetComponent<DisplayDraggable>().SetRandPos(selectedScenarioSO.randSlots[randSlot]);
             iArr.RemoveAt(iRand);
         }

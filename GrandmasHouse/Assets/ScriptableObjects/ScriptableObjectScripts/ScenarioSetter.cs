@@ -11,8 +11,9 @@ public class ScenarioSetter : ScriptableObject
 
     void Start()
     {
-        currentScenario = scenarios[0];
-        currentScenarioIndex = scenarios.FindIndex(x => x.Equals(currentScenario));
+        currentScenarioIndex = 2; //3 is only because I'm working with jewelry right now, which is index 2;
+        currentScenario = scenarios[currentScenarioIndex];
+        //currentScenarioIndex = scenarios.FindIndex(x => x.Equals(currentScenario));
     }
 
     internal void ChangeScenario(int scenarioIndex)
