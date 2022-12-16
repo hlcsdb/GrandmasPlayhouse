@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gorgeous Granny!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
   m_sharedMaterial: {fileID: 827127699022072792, guid: fb0197ceb532941ecb6e84af451f95c7, type: 2}
@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
+  m_fontSize: 30.9
   m_fontSizeBase: 30.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1520,6 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262aecf30f0f645439e0807e971d1538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customAudClip: {fileID: 0}
 --- !u!114 &652881626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,6 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262aecf30f0f645439e0807e971d1538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customAudClip: {fileID: 0}
 --- !u!222 &652881629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3434,7 +3436,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451443603}
-  - component: {fileID: 1451443604}
   - component: {fileID: 1451443602}
   - component: {fileID: 1451443601}
   - component: {fileID: 1451443600}
@@ -3544,24 +3545,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1451443604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451443598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39051c678ae8f4739ada4d43a3de90df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
-  scenario: {fileID: 0}
-  titleTextHulq: {fileID: 2116269632}
-  titleTextEngl: {fileID: 619220987}
-  homeScreenBackground: {fileID: 1536941588}
-  audSource: {fileID: 0}
 --- !u!1 &1509254074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,7 +3753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
-  scenario: {fileID: 11400000, guid: a966625e325ff464fb11f1e87e21aae7, type: 2}
+  scenario: {fileID: 0}
   titleTextHulq: {fileID: 2116269632}
   titleTextEngl: {fileID: 619220987}
   homeScreenBackground: {fileID: 1536941588}
@@ -4695,7 +4678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "tth\u2019ihwum \u2019i\u2019 nem\u2019 ch t\u2019unaalhum."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b347354a409fc45878783b6f162807c8, type: 2}
   m_sharedMaterial: {fileID: 8675405919740107325, guid: b347354a409fc45878783b6f162807c8, type: 2}

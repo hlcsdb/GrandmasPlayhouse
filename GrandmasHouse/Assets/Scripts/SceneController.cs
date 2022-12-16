@@ -5,26 +5,6 @@ using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
-    //public int gotoScene;
-    //public Button playButton;
-    //public GameObject endlessFly;
-    //public GameObject challengeFly;
-
-    //public void SetSceneNum(int sceneNum)
-    //{
-    //    gotoScene = sceneNum;
-    //    playButton.interactable = true;
-    //    if (gotoScene == 1)
-    //    {
-    //        endlessFly.SetActive(true);
-    //        challengeFly.SetActive(false);
-    //    }
-    //    if (gotoScene == 2)
-    //    {
-    //        challengeFly.SetActive(true);
-    //        endlessFly.SetActive(false);
-    //    }
-    //}
 
     public void GotoHomeScene()
     {
@@ -35,19 +15,11 @@ public class SceneController : MonoBehaviour
     public void GotoPlayScene()
     {
         SceneManager.LoadScene("Play");
-        //if (gotoScene == 1)
-        //{
-        //    SceneManager.LoadScene("Freeplay");
-        //}
-        //else if (gotoScene == 2)
-        //{
-        //    SceneManager.LoadScene("Challenge");
-        //}
     }
 
     public void GotoSelectionScene()
     {
-        //Debug.Log("go home");
+        //Debug.Log("go to scenario selection");
         SceneManager.LoadScene("ScenarioSelection");
     }
 }

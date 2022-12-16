@@ -30,6 +30,7 @@ public class DisplayDraggable : MonoBehaviour
 
     public void SetRandPos(Vector2 rPos)
     {
+        HideWord();
         randPos = rPos;
         transform.localPosition = randPos;
     }

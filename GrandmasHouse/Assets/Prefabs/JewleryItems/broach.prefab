@@ -65,7 +65,7 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   rectTransform: {x: 0, y: 0}
   randI: 0
-  textBackground: {fileID: 0}
+  textBackground: {fileID: 3959790852402659237}
 --- !u!225 &173345767940876294
 CanvasGroup:
   m_ObjectHideFlags: 0

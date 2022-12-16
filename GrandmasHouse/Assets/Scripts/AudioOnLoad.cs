@@ -12,6 +12,11 @@ public class AudioOnLoad : MonoBehaviour
         audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioOnActive);
     }
+    
+    internal void SetAudioclip(AudioClip custom)
+    {
+        audioOnActive = custom;
+    }
 
     public void PlayAudio()
     {

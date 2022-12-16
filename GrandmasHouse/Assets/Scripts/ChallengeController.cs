@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +10,12 @@ public class ChallengeController : MonoBehaviour
     public ScenarioSetter scenarioSetter;
     public int dialect = 1;
     public Scenario selectedScenarioSO;
-    public GameObject selectedScenarioObj;
     private DisplayScenario selectedScenarioUI;
     public Transform draggableContainer;
     public List<DraggableItem> draggables;
     public List<GameObject> draggableObjects = new List<GameObject>();
     public int numObjects;
-
+    internal DraggableItem activeSO;
     internal AudioSource audioSource;
     public GameObject gameOverScreen;
     //Gameplay
@@ -40,7 +40,7 @@ public class ChallengeController : MonoBehaviour
         selectedScenarioSO = scenarioSetter.currentScenario;
         selectedScenarioUI = GameObject.Find("Canvas").GetComponent<DisplayScenario>();
 
-        numObjects = selectedScenarioUI.transform.childCount;
+        numObjects = selectedScenarioSO.scenarioDraggableObjects.Count;
 
         Debug.Log(numObjects);
         selectedScenarioUI.EmptyScenarioText();
@@ -64,16 +64,19 @@ public class ChallengeController : MonoBehaviour
         List<DraggableItem> tempDraggables = new List<DraggableItem>(selectedScenarioSO.scenarioDraggableItems);
         List<int> iArr = IndicesArray(numObjects);
 
+        if (draggables.Count > 0 || draggables != null)
+        {
+            draggables.Clear();
+        }
+
         int iRand;
         for (int i = 0; i < numObjects; i++)
         {
             iRand = Random.Range(0, iArr.Count);
 
             draggables.Add(tempDraggables[iArr[iRand]]);
-            draggableObjects.Add(selectedScenarioObj.transform.GetChild(0).gameObject.transform.GetChild(iArr[iRand]).gameObject);
             draggables[i].ThisItemIndex(i);
             draggables[i].ResetSO();
-            draggableObjects[i].GetComponent<DisplayDraggable>().HideWord();
             iArr.RemoveAt(iRand);
         }
     }
@@ -82,13 +85,15 @@ public class ChallengeController : MonoBehaviour
     {
         List<int> iArr = IndicesArray(numObjects);
         int iRand;
-        Debug.Log("randomizing pos");
+
+        
+        Debug.Log("num objects randomizing pos: " + draggableObjects.Count);
         foreach (GameObject draggable in draggableObjects)
         {
             iRand = Random.Range(0, iArr.Count);
-            int randSlot = iArr[iRand];
-            
-            draggable.GetComponent<DisplayDraggable>().SetRandPos(selectedScenarioSO.randSlots[randSlot]);
+            Vector2 randSlot = selectedScenarioSO.randSlots[iArr[iRand]];
+            Debug.Log(randSlot.x);
+            draggable.GetComponent<DisplayDraggable>().SetRandPos(randSlot);
             iArr.RemoveAt(iRand);
         }
         StartCoroutine(InstructDragging(curItem));
@@ -166,14 +171,15 @@ public class ChallengeController : MonoBehaviour
             numErrors = 0;
             numItemsDropped++;
 
-            Debug.Log(draggableObjects[curItem].transform.position);
-            InstantiateStars(draggableObjects[curItem].transform.position, 0.3f);
+            Debug.Log(draggableObjects[curItem].transform.localPosition);
+            InstantiateStars(draggables[curItem].dropPos, 0.3f);
 
             curItem++;
             StartCoroutine(AudAfterCorrDrop());
         }
     }
 
+    //only used for testing purposes
     public void TriggerStar()
     {
         InstantiateStars(new Vector2(300,300), 0);
@@ -181,11 +187,13 @@ public class ChallengeController : MonoBehaviour
 
     public void InstantiateStars(Vector2 starPosition, float delaySeconds)
     {
+        activeSO = draggables[curItem];
         StartCoroutine(InstantiateOnDelay());
         IEnumerator InstantiateOnDelay()
         {
             yield return new WaitForSeconds(delaySeconds);
-            Instantiate(stars, starPosition, Quaternion.identity);
+            //Instantiate(stars, starPosition, Quaternion.identity);
+            Instantiate(stars);
         }
     }
 
@@ -229,11 +237,29 @@ public class ChallengeController : MonoBehaviour
     {
         //selectedScenarioUI.ShowCompletionText();
         gameOverScreen.SetActive(true);
-        selectedScenarioObj.transform.parent.gameObject.SetActive(false);
+        DestroyDraggables();
         yield return new WaitWhile(() => audioSource.isPlaying);
         //audioSource.PlayOneShot(selectedScenarioSO.completionPhraseAud);
-        ResetAllDraggableObjects();
     }
+
+    void DestroyDraggables()
+    {
+        foreach(GameObject draggable in draggableObjects)
+        {
+            Destroy(draggable);
+        }
+        draggableObjects.Clear();
+    }
+
+    void DestroyFeedback() {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Feedback");
+
+        for (var i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
+    }
+
 
     public void SetDialect(int currDialect)
     {
@@ -245,51 +271,22 @@ public class ChallengeController : MonoBehaviour
         }
     }
 
-    public void ResetAllDraggableObjects()
-    { 
-        foreach(GameObject draggableObject in draggableObjects)
-        {
-            draggableObject.GetComponent<DisplayDraggable>().ResetDraggableDisplay();
-        }
 
-        foreach (DraggableItem draggable in draggables)
-        {
-            draggable.ResetSO();
-        }
-
-        draggables.Clear();
-        draggableObjects.Clear();
-    }
-
-
-    public void BackToSelection()
+    public void Replay()
     {
-        ResetAllDraggableObjects();
-        inSelection = true;
+        StopAllCoroutines();
+        DestroyFeedback();
+        DestroyDraggables();
         numItemsDropped = 0;
         curItem = 0;
+        selectedScenarioUI.SpawnDraggables();
+        StartCoroutine(PositionNewDraggables());
+
+        IEnumerator PositionNewDraggables()
+        {
+            yield return new WaitUntil(()=>draggableContainer.transform.childCount == 0);
+            SetSelectedStart();
+        }
+        
     }
-
-
-    //ONLY USED WITH CAROUSEL
-    //IEnumerator WaitToResetCarousel(float secondsToWait)
-    //{
-    //    carouselSliderScript.ResetSlider();
-    //    yield return new WaitForSeconds(secondsToWait);
-    //    //selectionScreen.SetActive(false);
-    //}
-
-    ////ONLY USED WITH CAROUSEL
-    //public void HideInactiveScenarios(int scenarioIndex)
-    //{
-    //    for(int i = 0; i < allScenarios.Length; i++)
-    //    {
-    //        if(i != scenarioIndex)
-    //        {
-    //            allScenarios[i].HideScenarioObject();
-    //        }
-    //    }
-    //}
-
-   
 }

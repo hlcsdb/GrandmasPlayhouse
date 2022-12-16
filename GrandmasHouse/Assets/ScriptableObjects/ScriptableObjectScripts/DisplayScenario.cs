@@ -12,21 +12,18 @@ public class DisplayScenario : MonoBehaviour
 
     //public GameObject scenariosInHierarchy;
 
-    public GameObject scenarioObject;
-
     public TextMeshProUGUI sceneText;
     public TextMeshProUGUI scenarioName;
     public TextMeshProUGUI successText;
     public TextMeshProUGUI successTextEngl;
 
-    public GameObject backgroundImage;
+    public Image backgroundImage;
     internal ChallengeController challengeController;
     private List<Vector2> startSlots;
     public GameObject dzGO;
 
     //AUDIO
     internal AudioClip sceneDescriptionAud;
-    internal AudioClip HTPexampleAud;
     internal AudioClip openerPhraseAud;
     internal AudioClip repeaterPhraseAud; //instructions that proceed the word of every item, eg. LAY DOWN THE plate
     internal AudioClip successPhraseAud;
@@ -46,29 +43,30 @@ public class DisplayScenario : MonoBehaviour
         SetScenario();
     }
 
-    void SetScenario()
+    internal void SetScenario()
     {
-        backgroundImage.GetComponent<Image>().sprite = scenario.backgroundImage;
+        
+        challengeController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
         openerPhraseAud = scenario.openerPhraseAud;
         repeaterPhraseAud = scenario.repeaterPhraseAud;
         successPhraseAud = scenario.successPhraseAud;
         completionPhraseAud = scenario.completionPhraseAud;
         correctPhraseAud = scenario.correctPhraseAud;
+        backgroundImage.sprite = scenario.backgroundImage;
         SetAudioButtons();
         SpawnDraggables();
-
-        challengeController = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>();
-        
         SetDZImage();
     }
 
-    void SpawnDraggables()
+    internal void SpawnDraggables()
     {
+        ResetDraggableSOs();
         Vector2 scale = new Vector2(1, 1);
         int i = 0;
         foreach(GameObject draggable in scenario.scenarioDraggableObjects)
         {
             GameObject ourDraggable = Instantiate(draggable);
+            challengeController.draggableObjects.Add(ourDraggable);
             ourDraggable.transform.SetParent(draggableContainer);
             ourDraggable.transform.localPosition = vocabPositions[i];
             ourDraggable.transform.localScale = scale;
@@ -76,12 +74,20 @@ public class DisplayScenario : MonoBehaviour
         }
     }
 
+    internal void ResetDraggableSOs()
+    {
+        foreach (DraggableItem draggable in scenario.scenarioDraggableItems)
+        {
+            draggable.ResetSO();
+        }
+    }
+
     void SetAudioButtons()
     {
         //Debug.Log("setting aud buttons");
-        openerPhraseButton.audioOnActive = openerPhraseAud;
+        openerPhraseButton.SetAudioclip(openerPhraseAud);
         completionPhraseButton.audioOnActive = completionPhraseAud;
-        HTPexampleButton.customAudClip = HTPexampleAud;
+        HTPexampleButton.SetAudioClip(scenario.htpExampleAud);
     }
 
     void SetDZImage()
@@ -120,7 +126,6 @@ public class DisplayScenario : MonoBehaviour
             successTextEngl.text = scenario.successPhrase[1];
         }
         else {successTextEngl.text = scenario.successPhrase[0]; }
-        
     }
 
     public void ShowCompletionText()
@@ -136,7 +141,6 @@ public class DisplayScenario : MonoBehaviour
     public void BackToSelection()
     {
         ShowScenarioName();
-        //backgroundImage.sprite = scenario.backgroundImage;
         EmptyScenarioText();
     }
 }

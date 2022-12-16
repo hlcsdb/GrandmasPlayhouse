@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScenarioSetter : ScriptableObject
 {
     public List<Scenario> scenarios;
-    internal Scenario currentScenario;
+    public Scenario currentScenario; //change to internal if using scenariosetterscene
     internal int currentScenarioIndex;
 
     void Start()

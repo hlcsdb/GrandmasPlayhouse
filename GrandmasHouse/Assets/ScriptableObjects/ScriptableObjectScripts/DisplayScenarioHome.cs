@@ -19,6 +19,8 @@ public class DisplayScenarioHome : MonoBehaviour
     void Start()
     {
         scenario = scenarioSetter.currentScenario;
+        SetScenario();
+        audSource.PlayOneShot(scenario.GetTitleAudioClip());
     }
 
     public void SetScenario()

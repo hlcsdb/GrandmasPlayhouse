@@ -15,7 +15,6 @@ public enum ScenarioType
 
 public class Scenario : ScriptableObject
 {
-    public GameObject scenarioObject;
     public ScenarioType scenarioType;
     public string scenarioName;
     public List<GameObject> scenarioDraggableObjects = new List<GameObject>();
@@ -37,6 +36,7 @@ public class Scenario : ScriptableObject
     public AudioClip completionPhraseAud;
     public AudioClip correctPhraseAud;
     public AudioClip incorrectSelectionAud;
+    public AudioClip htpExampleAud;
 
     public Sprite homeImage;
     public int numDraggables;
@@ -46,8 +46,6 @@ public class Scenario : ScriptableObject
     public Sprite dzImage;
     public Vector2 dzPos;
     public Vector2 dzRectDimensions;
-
-
 
     //set in scenario scriptable object and clear list here.
     public List<Vector2> randSlots;
@@ -87,15 +85,6 @@ public class Scenario : ScriptableObject
         //}
     }
 
-    public void HideScenarioObject()
-    {
-        scenarioObject.SetActive(false);
-    }
-
-    public void ShowScenarioObject()
-    {
-        scenarioObject.SetActive(true);
-    }
 
     public AudioClip GetRepeaterAudio()
     {

@@ -29,7 +29,10 @@ public class StarFeedback : MonoBehaviour
     void Start()
     {
         star = gameObject;
-        transform.SetParent(GameObject.Find("Scenarios").transform);
+        //Transform parent = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>().activeDraggableObject.transform;
+        transform.SetParent(GameObject.Find("Play UI").transform);
+        //transform.SetParent(parent);
+        transform.localPosition = GameObject.Find("Challenge Manager").GetComponent<ChallengeController>().activeSO.dropPos;
         starImage = star.GetComponent<Image>();
         StartCoroutine(LerpStars());
     }

@@ -7,7 +7,7 @@ public class AudioButtonUI : MonoBehaviour
 {
     AudioSource audSource;
     Button audButton;
-    internal AudioClip customAudClip;
+    public AudioClip customAudClip;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,10 @@ public class AudioButtonUI : MonoBehaviour
         audSource.Stop();
     }
 
+    internal void SetAudioClip(AudioClip custom)
+    {
+        customAudClip = custom;
+    }
     public void PlayOtherAud()
     {
         audSource.PlayOneShot(customAudClip);
