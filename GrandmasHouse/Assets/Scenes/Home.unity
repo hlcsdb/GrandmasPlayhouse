@@ -3754,7 +3754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
   scenario: {fileID: 0}
-  titleTextHulq: {fileID: 2116269632}
+  titleText: {fileID: 2116269632}
   titleTextEngl: {fileID: 619220987}
   homeScreenBackground: {fileID: 1536941588}
   audSource: {fileID: 1943474367}

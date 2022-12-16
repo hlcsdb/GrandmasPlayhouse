@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: salt
+  m_EditorClassIdentifier: 
+  type: 1
+  description: 
+  wordString:
+  - salt
+  - "tl\u2019elhum"
+  customInstructionText:
+  - Now add a little salt.
+  - "hwi\u2019 q\u2019a\u2019t tuw\u2019 \u2019uhwiin\u2019 \u2019ul\u2019 tl\u2019elhum."
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 42b4836158fe04a5c8c238063ea871e9, type: 3}
+  - {fileID: 21300000, guid: 35b25bfd1853f4900ab4349058e3af04, type: 3}
+  thisRandIndex: 0
+  dragged: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: e4c645ecbe5cd42c5b3262ec60c5d9f8, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 39303a316b9de4585bf03878335d1510, type: 3}
+  dropPos: {x: 108.5, y: -49.8}
+  dropSize: {x: 2.05, y: 2.1}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 260, y: -74}
+  dzB:
+  - {x: 80, y: -180}
+  - {x: 80, y: 95}
+  - {x: 300, y: 95}
+  - {x: 300, y: -180}
+  batch: 2

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: potato
+  m_EditorClassIdentifier: 
+  type: 1
+  description: 
+  wordString:
+  - potato
+  - sqewth
+  customInstructionText:
+  - 'Chop up the potato and put it in the pot. '
+  - "lhe\u2019lhuts\u2019ut tthu sqewth \u2019un\u2019suw\u2019 nuw\u2019ush \u2019u
+    tthu shqwal\u2019s."
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: a44990fc447c34903a4b1b4dcee4a261, type: 3}
+  - {fileID: 21300000, guid: abc0e63c641044491a1beb3cddaba601, type: 3}
+  thisRandIndex: 1
+  dragged: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 3f863121e84fb41248fbd4171260e60e, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 72a74cd28cff64004b3a3500fbed0002, type: 3}
+  dropPos: {x: 108.5, y: -49.8}
+  dropSize: {x: 0.8, y: 0.8}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 260, y: 46}
+  dzB:
+  - {x: 80, y: -180}
+  - {x: 80, y: 95}
+  - {x: 300, y: 95}
+  - {x: 300, y: -180}
+  batch: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
   m_Name: Jewelry
   m_EditorClassIdentifier: 
-  scenarioType: 5
+  scenarioType: 3
   scenarioName: Jewlery
   scenarioDraggableObjects:
   - {fileID: 7834248728024719822, guid: 23effcc33bcac465fb331567ba46f9ec, type: 3}
@@ -43,6 +43,8 @@ MonoBehaviour:
   - {x: 80, y: 95}
   - {x: 300, y: 95}
   - {x: 300, y: -180}
+  dialect: 1
+  playSceneName: Jewelry
   repeaterPhrase:
   - 'Please bring me my '
   - "tth\u2019ihwum \u2019i\u2019 m\u2019ewustuhw tthunu "
@@ -52,22 +54,29 @@ MonoBehaviour:
   completionPhrase:
   - "I\u2019m all fixed up. I\u2019m very decked out."
   - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2018ul\u2019 \u2018iyas."
+  numDraggables: 8
   titleAud: {fileID: 8300000, guid: ef51304bb916a4737bd20501cb73e01a, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 729fae86bfb9c4b93933f28e6e45fd69, type: 3}
   repeaterPhraseAud: {fileID: 8300000, guid: 8361984133caf4db1a48616d03da6225, type: 3}
   successPhraseAud: {fileID: 8300000, guid: fa1efe2d81c154db8bf378d052ef4b86, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: e93117c345c6a4f7fb5ee644a948f85a, type: 3}
-  correctPhraseAud: {fileID: 8300000, guid: ac3b43295e321495aade6e9b766dd79f, type: 3}
-  incorrectSelectionAud: {fileID: 8300000, guid: cc3aa8f0f9608445a82763894dff46b6, type: 3}
   htpExampleAud: {fileID: 8300000, guid: a16fa841641c1456589ae3f02f1d34f3, type: 3}
   homeImage: {fileID: 21300000, guid: 51a5366fcf3484648a2c6cecddc51c88, type: 3}
-  numDraggables: 8
   backgroundImage: {fileID: 21300000, guid: 46d6751d9fe234758be6d4ceb376ab59, type: 3}
-  dialect: 1
-  playSceneName: Jewelry
+  HTPSprite: {fileID: 21300000, guid: 6f1c47772bd684a589735f963630da64, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: 46d6751d9fe234758be6d4ceb376ab59, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 0602299436d034bab83578a324d52f8f, type: 3}
   dzImage: {fileID: 21300000, guid: 5139ee9d717894ded8701957aeac079e, type: 3}
   dzPos: {x: 223, y: -2.5}
   dzRectDimensions: {x: 660, y: 660}
+  correctPhraseAud:
+  - {fileID: 8300000, guid: acd39756b8a4845f1b43a3b2a71df978, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 2f62ee7d1577f4120a9ed1f36458df75, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 5139ee9d717894ded8701957aeac079e, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 5139ee9d717894ded8701957aeac079e, type: 3}
   randSlots:
   - {x: -400, y: 118}
   - {x: -400, y: 3}

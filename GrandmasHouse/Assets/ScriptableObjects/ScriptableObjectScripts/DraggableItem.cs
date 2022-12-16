@@ -34,7 +34,8 @@ public class DraggableItem : ScriptableObject
     public Vector2 selectionPos;
     public Vector2 startSize = new Vector3(1, 1, 1);
     public Vector2 startPos;
-    internal Vector2[] dzB;
+    public Vector2[] dzB;
+    public int batch = 0;
 
     public void SetCurrDialect(int currDialect)
     {
@@ -53,7 +54,7 @@ public class DraggableItem : ScriptableObject
 
     public string InstructionString()
     {
-        string instruction = customInstructionText[dialect] + " " + wordString[dialect];
+        string instruction = customInstructionText[dialect];
         return instruction;
     }
 
@@ -62,11 +63,21 @@ public class DraggableItem : ScriptableObject
         return customInstructionText[dialect] != ""; 
     }
 
-    public Sprite GetImage(int draggableStatus)
+    public string GetItemInstruction()
+    {
+        string instruction = IsInstructionCustom() ? InstructionString() : WordString();
+        return instruction;
+    }
+
+public Sprite GetImage(int draggableStatus)
     {
         return draggableImage[draggableStatus];
     }
 
+    public int GetBatchNum()
+    {
+        return batch;
+    }
     public void SetIfCorrect(bool yes)
     {
         correct = yes;
@@ -96,6 +107,11 @@ public class DraggableItem : ScriptableObject
 
     public AudioClip GetAudio(){
         return audioClip;
+    }
+
+    public AudioClip GetInstructionAudio()
+    {
+        return draggableInstruction;
     }
 
     public void ThisItemIndex(int thisIndex)

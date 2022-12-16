@@ -12,18 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
   m_Name: STT
   m_EditorClassIdentifier: 
-  scenarioObject: {fileID: 0}
   scenarioType: 1
   scenarioName: "tth\u2019ihwum \u2019i\u2019 nem\u2019 ch t\u2019unaalhum."
   scenarioDraggableObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 474618543307513468, guid: d9ff8b78553a447809507d032f25341b, type: 3}
+  - {fileID: 6890099715164765251, guid: 3c412003fcc1c4fb988309997ebe8bc4, type: 3}
+  - {fileID: 7575541668552708066, guid: d8c52dc8c15ca445387a43712514e460, type: 3}
+  - {fileID: 734374297941014652, guid: 142cf79d8c4c84e118c77410822a9277, type: 3}
+  - {fileID: 2437451153986775669, guid: 9b40754726ce146a99a09be1fee7b338, type: 3}
+  - {fileID: 5417390952940900462, guid: c7b5b33f2697b42b1bd6061ca8dbc6eb, type: 3}
+  - {fileID: 1278759256118155216, guid: 6b1469ed53cb2452d89ba659f15d96da, type: 3}
+  - {fileID: 4217507043975988650, guid: 9631aaa1d067c4fce999b13516d9006a, type: 3}
   scenarioDraggableItems:
   - {fileID: 11400000, guid: 18b2ae091e9374e8c974b3188b6737d9, type: 2}
   - {fileID: 11400000, guid: 92d657655da6b479a82ce4d2899aecdf, type: 2}
@@ -41,10 +40,12 @@ MonoBehaviour:
   - "hey\u2019 kwu\u2019elh! \u2019ilhe nem\u2019 t\u2019un\u2019aalhum\u2019."
   - 
   DZB:
-  - {x: 80, y: -180}
-  - {x: 80, y: 95}
-  - {x: 300, y: 95}
-  - {x: 300, y: -180}
+  - {x: -212, y: -160}
+  - {x: 80, y: 75}
+  - {x: 230, y: 75}
+  - {x: 300, y: -160}
+  dialect: 1
+  playSceneName: STT
   repeaterPhrase:
   - 'lay down the '
   - "lheq\u2019ut tthu "
@@ -57,27 +58,35 @@ MonoBehaviour:
   - Thank you. The table is ready!
   - "hay ch q\u2019a\u2019. hwu saay\u2019 tthu lutem!"
   - 
+  numDraggables: 8
   titleAud: {fileID: 8300000, guid: 8fa5e6707954c4f30af69ded4794acd6, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 3c3868534378e4922891bcf2b3871f60, type: 3}
   repeaterPhraseAud: {fileID: 8300000, guid: c260982c1a73b4f55be6bd785b012c20, type: 3}
   successPhraseAud: {fileID: 8300000, guid: aa755537d2f414166acf4dc569ba66b4, type: 3}
   completionPhraseAud: {fileID: 8300000, guid: 2934ef6e2aaa446cb9f5883746c06988, type: 3}
-  correctPhraseAud: {fileID: 8300000, guid: 187cca6b3eb234ee08bb7782f4560cb8, type: 3}
-  incorrectSelectionAud: {fileID: 8300000, guid: 2f62ee7d1577f4120a9ed1f36458df75, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: fa475f975be594d0896cfe891d61f25c, type: 3}
   homeImage: {fileID: 21300000, guid: 63037394ad79e4295ae44b6684509c2d, type: 3}
-  numDraggables: 8
   backgroundImage: {fileID: 21300000, guid: 79d3eda44d9c14c7a943f1e4bff3306f, type: 3}
-  dialect: 1
-  playSceneName: STT
-  dzImage: {fileID: 0}
-  dzPos: {x: 0, y: 0}
-  dzRectDimensions: {x: 0, y: 0}
+  HTPSprite: {fileID: 21300000, guid: 45490133fba57478aac92c5c23e93b33, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: 79d3eda44d9c14c7a943f1e4bff3306f, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 8ef44568c08d84ba0be59673f6b41d43, type: 3}
+  dzImage: {fileID: 21300000, guid: 56ac42e938df741988e0487cf441f3bd, type: 3}
+  dzPos: {x: -9, y: -129}
+  dzRectDimensions: {x: 610, y: 485}
+  correctPhraseAud:
+  - {fileID: 8300000, guid: acd39756b8a4845f1b43a3b2a71df978, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 2f62ee7d1577f4120a9ed1f36458df75, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 56ac42e938df741988e0487cf441f3bd, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 56ac42e938df741988e0487cf441f3bd, type: 3}
   randSlots:
-  - {x: -400, y: 118}
-  - {x: -400, y: 3}
-  - {x: -400, y: -112}
-  - {x: -400, y: -227}
-  - {x: 400, y: 118}
-  - {x: 400, y: 3}
-  - {x: 400, y: -112}
-  - {x: 400, y: -227}
+  - {x: -400, y: 100}
+  - {x: -400, y: -15}
+  - {x: -400, y: -130}
+  - {x: -400, y: -245}
+  - {x: 400, y: 100}
+  - {x: 400, y: -15}
+  - {x: 400, y: -130}
+  - {x: 400, y: -245}

@@ -24,7 +24,7 @@ MonoBehaviour:
   draggableImage:
   - {fileID: 21300000, guid: 4b0feab8af81e44088db6357c422fe58, type: 3}
   - {fileID: 21300000, guid: 4d9b413b561084bfdb23ed47a23f1d5f, type: 3}
-  thisRandIndex: 2
+  thisRandIndex: 4
   dragged: 0
   correct: 0
   dialect: 1
@@ -38,4 +38,5 @@ MonoBehaviour:
   dropSize: {x: 2.1, y: 2.1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 99.99994, y: 45.999996}
+  startPos: {x: -60, y: 46}
+  batch: 0

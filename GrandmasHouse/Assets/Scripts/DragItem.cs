@@ -57,6 +57,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         attemptedDrag = false;
         if (RecognizeHoverInPlay(false))
         {
+            //Debug.Log("x: " + gameObject.transform.localPosition.x + "y: " + gameObject.transform.localPosition.y);
             StartCoroutine(ImmediatePostDrag());
             canvasGroup.blocksRaycasts = true;
 
@@ -85,8 +86,6 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         draggableUI.DroppedDraggable();
         currSceneController.CountItemsLayered(true);
-        audioSource.PlayOneShot(draggable.audioClip);
-
     }
 
     public IEnumerator IncorrectItemDropped()

@@ -10,7 +10,7 @@ public class DisplayScenarioHome : MonoBehaviour
     public ScenarioSetter scenarioSetter;
 
     public Scenario scenario;
-    public TextMeshProUGUI titleTextHulq;
+    public TextMeshProUGUI titleText;
     public TextMeshProUGUI titleTextEngl;
     public GameObject homeScreenBackground;
     public AudioSource audSource;
@@ -25,7 +25,7 @@ public class DisplayScenarioHome : MonoBehaviour
 
     public void SetScenario()
     {
-        titleTextHulq.text = scenario.titleName[1];
+        titleText.text = scenario.titleName[1];
         titleTextEngl.text = scenario.titleName[0];
         homeScreenBackground.GetComponent<Image>().sprite = scenario.homeImage;
     }

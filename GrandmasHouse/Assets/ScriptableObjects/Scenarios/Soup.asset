@@ -12,39 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
   m_Name: Soup
   m_EditorClassIdentifier: 
-  scenarioObject: {fileID: 0}
-  scenarioType: 4
-  scenarioName: 
-  scenarioDraggableObjects: []
-  scenarioDraggableItems: []
+  scenarioType: 1
+  scenarioName: soup
+  scenarioDraggableObjects:
+  - {fileID: 3435835124560428343, guid: 6dac8843db229469b9d583aaef0878a1, type: 3}
+  - {fileID: 3808797705011789369, guid: 3db05438eed4343e3b777b7a7a16002f, type: 3}
+  - {fileID: 8897700121692896590, guid: 7fd105e4113764fcd9b126cd821cf59d, type: 3}
+  - {fileID: 7878143414259984431, guid: 9922d52c839614795b64d150e1494ff1, type: 3}
+  - {fileID: 3099729393248254551, guid: f394ece484dc74751ae7569b710d16c0, type: 3}
+  - {fileID: 3303894634172499445, guid: 3f49065f958884ffe826494ef0222991, type: 3}
+  - {fileID: 7047870092166363109, guid: 1244368742bd44f8a8beae1d7fa6b7b0, type: 3}
+  - {fileID: 8633543745859383065, guid: f0bdf6644e76a43d0970e44f749009a1, type: 3}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: b4694dc7e73a04e64b5653bfa368aa9f, type: 2}
+  - {fileID: 11400000, guid: ca79317ef32ae400b86249a37f707bc7, type: 2}
+  - {fileID: 11400000, guid: c51e9606ef359465da1e9b9a419d2427, type: 2}
+  - {fileID: 11400000, guid: fc2105aac6cac464a82d3eb6cfdeca7a, type: 2}
+  - {fileID: 11400000, guid: 16022527a455d45b3972ead0d1afcc41, type: 2}
+  - {fileID: 11400000, guid: 87944e0bff8fa4673bf4cdd18473d503, type: 2}
+  - {fileID: 11400000, guid: bc06b190bbda845e987099fe0f09570d, type: 2}
+  - {fileID: 11400000, guid: e66225cb17c5e4c47859e4b9f5fb8138, type: 2}
   titleName:
   - "Let\u2019s make some soup!"
   - "\u2019ilhe xte\u2019um\u2019 \u2019ukw\u2019 slhap\u2019!"
   openerPhrase:
   - "oooo grandchild! I\u2019m a little hungry. Lets make some soup."
   - "ooo, \u2019imiye\u2019! \u2019i tsun wulh kw\u2019ey\u2019. \u2019ilhe xte\u2019um\u2019
-    \u2019ukw\u2019 slhap\u2019"
+    \u2019ukw\u2019 slhap\u2019."
   DZB:
   - {x: 80, y: -180}
   - {x: 80, y: 95}
   - {x: 300, y: 95}
   - {x: 300, y: -180}
+  dialect: 0
+  playSceneName: Soup
   repeaterPhrase: []
   successPhrase:
   - Thank you for your help.
   - "ooo hay ch q\u2019a\u2019 \u2019u tthun\u2019 sts\u2019ewulhtun."
-  completionPhrase: []
-  titleAud: {fileID: 0}
-  openerPhraseAud: {fileID: 0}
+  completionPhrase:
+  - Oh, our soup smells good!
+  - "ooo. \u2019uy\u2019eluqup tthu slhap\u2019 tst!"
+  numDraggables: 8
+  titleAud: {fileID: 8300000, guid: 693d02834d05c41de97095cd81fd7530, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 42f4c2604122f482081633169de3886c, type: 3}
   repeaterPhraseAud: {fileID: 0}
-  successPhraseAud: {fileID: 0}
-  completionPhraseAud: {fileID: 0}
-  correctPhraseAud: {fileID: 0}
-  incorrectSelectionAud: {fileID: 0}
-  homeImage: {fileID: 0}
-  numDraggables: 0
-  backgroundImage: {fileID: 21300000, guid: 3b7defd4f66624c3d983aba0e4813ffa, type: 3}
-  dialect: 0
+  successPhraseAud: {fileID: 8300000, guid: 093ab776e580f431ba92314633d8e42c, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: b6743d71b335e45f99e55065e431743e, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: 9000de9df7c4844bdb23803b1b0478b2, type: 3}
+  homeImage: {fileID: 21300000, guid: f4c8a0ee0e36f49998e2777b74168d16, type: 3}
+  backgroundImage: {fileID: 21300000, guid: bffdc2a2b574a44358312ff8c8f0ed08, type: 3}
+  HTPSprite: {fileID: 21300000, guid: e6978f71c4a8043b2b268490b9f7debe, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: 013472823e2164c6db6dd3202037de6d, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 1258212894d5a4c33a02191ffdba12de, type: 3}
+  dzImage: {fileID: 21300000, guid: 02f29f7e887d7494c95b8c5745315634, type: 3}
+  dzPos: {x: 108.8, y: -65.2}
+  dzRectDimensions: {x: 200.2, y: 177.2}
+  correctPhraseAud:
+  - {fileID: 8300000, guid: acd39756b8a4845f1b43a3b2a71df978, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 02f29f7e887d7494c95b8c5745315634, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 02f29f7e887d7494c95b8c5745315634, type: 3}
   randSlots:
   - {x: -400, y: 118}
   - {x: -400, y: 3}

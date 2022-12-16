@@ -38,4 +38,5 @@ MonoBehaviour:
   dropSize: {x: 2.1, y: 2.1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: -220.00003, y: 46}
+  startPos: {x: -220, y: -74}
+  batch: 0

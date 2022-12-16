@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4848130f778134021aa6258377ab34d0, type: 3}
   - {fileID: 0}
   thisRandIndex: 1
-  dragged: 1
+  dragged: 0
   correct: 0
   dialect: 1
   tileStateOutlineColors:
@@ -40,4 +40,5 @@ MonoBehaviour:
   dropSize: {x: 2.1, y: 2.1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: -220.00003, y: -74}
+  startPos: {x: -220, y: 46}
+  batch: 0
