@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: mashedPotato
+  m_EditorClassIdentifier: 
+  type: 1
+  description: 
+  wordString:
+  - mashed potato
+  - "smi\u2019mutth\u2019 sqewth"
+  customInstructionText:
+  - 
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 8239698ec90a84e96a1c0152e65a532e, type: 3}
+  - {fileID: 21300000, guid: 55f4a352a0333480bb5c042398800fac, type: 3}
+  thisRandIndex: 0
+  dragged: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 4182dd2d407134e3cb72fee4f214b9d8, type: 3}
+  draggableInstruction: {fileID: 0}
+  dropPos: {x: -218, y: -55}
+  dropSize: {x: 0.9, y: 1}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 0, y: 0}
+  dzB: []
+  batch: 0

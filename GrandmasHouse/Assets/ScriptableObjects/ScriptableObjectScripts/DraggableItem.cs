@@ -36,6 +36,8 @@ public class DraggableItem : ScriptableObject
     public Vector2 startPos;
     public Vector2[] dzB;
     public int batch = 0;
+    internal int siblingIndex;
+    
 
     public void SetCurrDialect(int currDialect)
     {
@@ -69,7 +71,7 @@ public class DraggableItem : ScriptableObject
         return instruction;
     }
 
-public Sprite GetImage(int draggableStatus)
+    public Sprite GetImage(int draggableStatus)
     {
         return draggableImage[draggableStatus];
     }
@@ -118,4 +120,11 @@ public Sprite GetImage(int draggableStatus)
     {
         thisRandIndex = thisIndex;
     }
+
+    public void SetSiblingIndex(int index)
+    {
+        siblingIndex = index;
+    }
+
+    
 }

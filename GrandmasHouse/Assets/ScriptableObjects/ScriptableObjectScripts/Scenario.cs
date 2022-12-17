@@ -21,6 +21,7 @@ public class Scenario : ScriptableObject
     public string[] titleName = new string[2];
     public string[] openerPhrase = new string[2];
     public Vector2[] DZB;
+    public bool replaceAsDropped;
 
     public int dialect;
     public string playSceneName;
@@ -62,8 +63,7 @@ public class Scenario : ScriptableObject
 
     public void Awake()
     {
-        numDraggables = scenarioDraggableItems.Count;
-        SetObjectsScenarioParam();
+        
         //PopulateStartSlots(numDraggables);
     }
 
@@ -72,7 +72,7 @@ public class Scenario : ScriptableObject
         return titleAud;
     }
 
-    void SetObjectsScenarioParam()
+    internal void SetObjectsScenarioParam()
     {
         foreach(DraggableItem draggableSO in scenarioDraggableItems)
         {

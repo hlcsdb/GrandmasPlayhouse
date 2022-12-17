@@ -82,8 +82,9 @@ public class DisplayScenario : MonoBehaviour
         backgroundImage.sprite = scenario.backgroundImage;
         SetDzImage();
         repeaterPhraseAud = scenario.repeaterPhraseAud;
+        scenario.SetObjectsScenarioParam();
         //successPhraseAud = scenario.successPhraseAud;
-}
+    }
 
     internal void SetGameOverScreen()
     {
@@ -112,7 +113,6 @@ public class DisplayScenario : MonoBehaviour
     internal void ResetDraggableSOs()
     {
         scenario.scenarioDraggableItems.ForEach(x => x.ResetSO());
-
         //foreach (DraggableItem draggable in scenario.scenarioDraggableItems)
         //{
         //    draggable.ResetSO();

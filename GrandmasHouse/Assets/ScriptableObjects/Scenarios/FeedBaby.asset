@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: FeedBaby
+  m_EditorClassIdentifier: 
+  scenarioType: 1
+  scenarioName: FeedBaby
+  scenarioDraggableObjects:
+  - {fileID: 3435835124560428343, guid: 006e9c27c5ca34d9aaa49c11d91f1643, type: 3}
+  - {fileID: 3435835124560428343, guid: 944942d16757644d9b2b70e0072e1109, type: 3}
+  - {fileID: 3435835124560428343, guid: 0edf6450181cb40b0a17201cedb43187, type: 3}
+  - {fileID: 3435835124560428343, guid: a5d3a50748c2e46d88419b8c57e6efbe, type: 3}
+  - {fileID: 3435835124560428343, guid: add240ceb56f14e67ba808f9444b31e7, type: 3}
+  - {fileID: 3435835124560428343, guid: 6e5022feb74b347599ab28f4ed187392, type: 3}
+  - {fileID: 3435835124560428343, guid: 45b90d035e10943749ee57ed08e40a4a, type: 3}
+  - {fileID: 3435835124560428343, guid: 3c5cf610cf26f449caf39347f6fca37d, type: 3}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: 5965a4a66da094a11abb472dbcc9fa77, type: 2}
+  - {fileID: 11400000, guid: dacbd14bb3f36473e8971e5b07f9555c, type: 2}
+  - {fileID: 11400000, guid: 0c112c95cac9748b891c121207b1f0ee, type: 2}
+  - {fileID: 11400000, guid: 56012b1ea513c4b4db851cd439470a3d, type: 2}
+  - {fileID: 11400000, guid: 20ff7ba888e77420c80987b827127db4, type: 2}
+  - {fileID: 11400000, guid: 6697694595945414bad9a7ec77cb1ce8, type: 2}
+  - {fileID: 11400000, guid: f522fa22ce762427898a3725f1320244, type: 2}
+  - {fileID: 11400000, guid: 7fdcdcb72fdcf4b44900db2cee8a17ba, type: 2}
+  titleName:
+  - Feed the baby!
+  - xlhast thu qeq!
+  openerPhrase:
+  - Which will she like best?
+  - "nilh tse\u2019 tu\u2019untsu \u2019uy\u2019st-hwus?"
+  DZB:
+  - {x: -450, y: -300}
+  - {x: -450, y: 100}
+  - {x: 150, y: 100}
+  - {x: 150, y: -300}
+  replaceAsDropped: 1
+  dialect: 0
+  playSceneName: FeedBaby
+  repeaterPhrase:
+  - Feed the baby
+  - "tt\u2019e\u2019stuhw \u2019u tthu"
+  successPhrase:
+  - "She liked the food and now she\u2019s sleepy."
+  - "\u2019uy\u2019st-hwus tthu sxlhas na\u2019ut \u2019itutum."
+  completionPhrase:
+  - Oh grandchild... thank you
+  - "\u2019aa, \u2019imiye\u2019. na\u2019uth tl\u2019umlhenum thu qeq. hay ch q\u2019a\u2019."
+  numDraggables: 0
+  titleAud: {fileID: 8300000, guid: e22aafe6644cc4e0ba638fa97e66d02a, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: b38711f77123a4d1da32f0af7e79aa24, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 20a9e5b6acaca45b9acdb4bf4cc64a3a, type: 3}
+  successPhraseAud: {fileID: 0}
+  completionPhraseAud: {fileID: 8300000, guid: f0bc2bad5700f4ee88c9f31dadeb19d4, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: 9523cc7b65caf4ac296b66efa41edd89, type: 3}
+  homeImage: {fileID: 21300000, guid: 794771984dfb84ce8bd797a790da6c0a, type: 3}
+  backgroundImage: {fileID: 21300000, guid: bf3642d4b7b1147b2a944addbd44735d, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 164ed5726490d40d0911cfffadca41a6, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: bf3642d4b7b1147b2a944addbd44735d, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 794771984dfb84ce8bd797a790da6c0a, type: 3}
+  dzImage: {fileID: 21300000, guid: 62575d8d2141f438f8214fbcf1df923a, type: 3}
+  dzPos: {x: -154, y: -84}
+  dzRectDimensions: {x: 651, y: 432}
+  correctPhraseAud:
+  - {fileID: 8300000, guid: 85d2d56c568e3426288922d75be3cf7e, type: 3}
+  - {fileID: 8300000, guid: 296b804532b134cff916610f4295b228, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: a900a67e776df4b8f8d812de8cf8bacf, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 60f167adc6c5d4f61be344edf10d5a6e, type: 3}
+  - {fileID: 21300000, guid: a900a67e776df4b8f8d812de8cf8bacf, type: 3}
+  randSlots:
+  - {x: 245, y: 100}
+  - {x: 245, y: -15}
+  - {x: 245, y: -130}
+  - {x: 245, y: -245}
+  - {x: 400, y: 100}
+  - {x: 400, y: -15}
+  - {x: 400, y: -130}
+  - {x: 400, y: -245}

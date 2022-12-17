@@ -122,7 +122,6 @@ public class ChallengeController : MonoBehaviour
         FadeAllTiles(true);
         yield return new WaitUntil(() => !audioSource.isPlaying);
         sceneAudButton.SetActive(false);
-        Debug.Log(draggableObjects[curItem].name);
         yield return new WaitForSeconds(2f);
         if (draggables[curItem].IsInstructionCustom())
             {selectedScenarioUI.ShowCustomInstruction(draggables[curItem].GetItemInstruction());}
@@ -130,7 +129,7 @@ public class ChallengeController : MonoBehaviour
         
         PlayInstructionAud();
         sceneAudButton.SetActive(true);
-        //Debug.Log(draggables[curItem].name);
+        Debug.Log(draggables[curItem].name);
         yield return new WaitUntil(() => !audioSource.isPlaying);
         sceneAudButton.SetActive(true);
         inInstruction = false;
@@ -228,7 +227,7 @@ public class ChallengeController : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => !audioSource.isPlaying);
         selectedScenarioUI.DoFeedbackMedia(true);
-        curItem++;
+        
         yield return new WaitUntil(() => !audioSource.isPlaying);
         if (numItemsDropped == draggables.Count)
         {
@@ -239,7 +238,10 @@ public class ChallengeController : MonoBehaviour
 
         else
         {
+            //if (selectedScenarioSO.replaceAsDropped) { RemoveImageComponent(draggableObjects[curItem]); }
+            curItem++;
             StartCoroutine(InstructDragging(curItem));
+            
         }
     }
 
@@ -283,6 +285,11 @@ public class ChallengeController : MonoBehaviour
         //{
         //    Destroy(gameObjects[i]);
         //}
+    }
+    public void RemoveImageComponent(GameObject removeImageFrom)
+    {
+        Debug.Log(removeImageFrom.name);
+        removeImageFrom.GetComponent<Image>().enabled = false;
     }
 
     public void SetDialect(int currDialect)
