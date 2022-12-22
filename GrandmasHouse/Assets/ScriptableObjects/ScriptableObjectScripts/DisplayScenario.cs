@@ -136,7 +136,7 @@ public class DisplayScenario : MonoBehaviour
 
     public void ShowRepeater(string wordText)
     {
-        sceneText.text = ""+ scenario.repeaterPhrase[1] + wordText + ".";
+        sceneText.text = ""+ scenario.repeaterPhrase[1] + " " + wordText + ".";
     }
 
     public void ShowCustomInstruction(string customInstructionText)

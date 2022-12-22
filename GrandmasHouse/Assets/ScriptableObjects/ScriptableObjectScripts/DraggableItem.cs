@@ -7,7 +7,9 @@ public enum ItemType
     Utensil,
     Fabric,
     Dishware,
-    Jewlery
+    Jewlery,
+    Clothing,
+    Toy
 }
 
 [CreateAssetMenu(fileName = "New Draggable Item", menuName = "Draggable/DraggableItem")]
@@ -125,6 +127,4 @@ public class DraggableItem : ScriptableObject
     {
         siblingIndex = index;
     }
-
-    
 }

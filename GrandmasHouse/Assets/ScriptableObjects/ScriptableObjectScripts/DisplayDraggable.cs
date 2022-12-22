@@ -44,16 +44,9 @@ public class DisplayDraggable : MonoBehaviour
 
     public void FadeTileImage(bool fade)
     {
-        if (!draggable.IsItDragged())
+        if (!draggable.IsItDragged() && fade)
         {
-            if (fade)
-            {
-                draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 0.4f);
-            }
-            else
-            {
-                draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            }
+            draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 0.4f);
         }
         else { draggableArtwork.GetComponent<Image>().color = new Color(1, 1, 1, 1); }
     }
@@ -109,11 +102,20 @@ public class DisplayDraggable : MonoBehaviour
         transform.SetSiblingIndex(siblingIndex);
         ColourTileOutline(0);
     }
+
+
+    internal void ShowLayerImage(bool show)
+    {
+        Debug.Log(transform.GetChild(1).gameObject.name);
+        transform.GetChild(1).gameObject.SetActive(show);
+    }
+
     public void ResetDraggableDisplay()
     {
         ColourTileOutline(0);
         draggableArtwork.sprite = draggable.GetImage(0);
         transform.localPosition = draggable.startPos;
+        ShowLayerImage(true);
         tile.SetActive(true);
         transform.localScale = draggable.startSize;
     }

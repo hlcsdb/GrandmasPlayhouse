@@ -48,6 +48,7 @@ public class ChallengeController : MonoBehaviour
         RandomizeDraggablePos();
     }
 
+    //triggers rearranging of DraggableItems.  
     public void SetDraggableOrder()
     {
         if (draggables?.Any() ?? false) { draggables.Clear(); }
@@ -65,6 +66,7 @@ public class ChallengeController : MonoBehaviour
         }
     }
 
+    //This will be run if there is no set ordering of the draggables as indicated by int batch in DraggableItem
     internal void OrderedDraggablesUnbatched(List<DraggableItem> draggablesCopy)
     {
         List<int> randInts = RandomIntsOfLength(numObjects);
@@ -74,8 +76,10 @@ public class ChallengeController : MonoBehaviour
             draggables.Add(draggablesCopy[randInts[i]]);
             draggables[i].ThisItemIndex(i);
         }
+        SetDraggableItemIndex();
     }
 
+    //This will be run if there is any set ordering of the draggables as indicated by int batch in DraggableItem
     internal void OrderedDraggablesBatched(List<DraggableItem> draggablesCopy, int numBatches)
     {
         //Debug.Log("num batches: " +numBatches);
@@ -94,12 +98,14 @@ public class ChallengeController : MonoBehaviour
         SetDraggableItemIndex();
     }
 
+
     void SetDraggableItemIndex()
     {
         for (int i = 0; i < numObjects; i++)
         {
             draggables[i].ThisItemIndex(i);
         }
+        ReorderDraggableObjectsList();
     }
 
     public void RandomizeDraggablePos()
@@ -113,11 +119,20 @@ public class ChallengeController : MonoBehaviour
             //Debug.Log(randSlot.x);
             draggableObjects[i].GetComponent<DisplayDraggable>().SetRandPos(randSlot);
         }
-
-        StartCoroutine(InstructDragging(curItem));
+        StartCoroutine(InstructDragging());
     }
 
-    public IEnumerator InstructDragging(int curItem)
+    public void ReorderDraggableObjectsList()
+    {
+        List<GameObject> tempObjs = new List<GameObject>();
+        foreach(DraggableItem draggable in draggables)
+        {
+            tempObjs.Add(draggableObjects.Single(v => v.name.Contains(draggable.name)));
+        }
+        draggableObjects = new List<GameObject>(tempObjs);
+    }
+
+    public IEnumerator InstructDragging()
     {
         FadeAllTiles(true);
         yield return new WaitUntil(() => !audioSource.isPlaying);
@@ -139,11 +154,6 @@ public class ChallengeController : MonoBehaviour
     internal void FadeAllTiles(bool fade)
     {
         draggableObjects.ForEach(x => x.GetComponent<DisplayDraggable>().FadeTileImage(fade));
-
-        //foreach (GameObject tile in draggableObjects)
-        //{
-        //    tile.GetComponent<DisplayDraggable>().FadeTileImage(fade);
-        //}
     }
 
     public void PlayInstructionAud()
@@ -151,10 +161,7 @@ public class ChallengeController : MonoBehaviour
         if (audioSource.isPlaying) { audioSource.Stop();  }
         if (!inSelection)
         {
-            if (draggables[curItem].IsInstructionCustom())
-            {
-                StartCoroutine(InstructionAud());
-            }
+            if (draggables[curItem].IsInstructionCustom()) {  StartCoroutine(InstructionAud()); }
             else { StartCoroutine(PairInstructionAud()); }
 
             IEnumerator InstructionAud()
@@ -194,8 +201,7 @@ public class ChallengeController : MonoBehaviour
 
         else if (correct)
         {
-            numErrors = 0;
-            numItemsDropped++;
+            numErrors = 0; numItemsDropped++;
 
             //Debug.Log(draggableObjects[curItem].transform.localPosition);
             InstantiateStars(draggables[curItem].dropPos, 0.3f);
@@ -216,7 +222,6 @@ public class ChallengeController : MonoBehaviour
         IEnumerator InstantiateOnDelay()
         {
             yield return new WaitForSeconds(delaySeconds);
-            //Instantiate(stars, starPosition, Quaternion.identity);
             Instantiate(stars);
         }
     }
@@ -238,10 +243,9 @@ public class ChallengeController : MonoBehaviour
 
         else
         {
-            //if (selectedScenarioSO.replaceAsDropped) { RemoveImageComponent(draggableObjects[curItem]); }
+            if (selectedScenarioSO.replaceAsDropped) { draggableObjects[curItem].GetComponent<DisplayDraggable>().ShowLayerImage(false); }
             curItem++;
-            StartCoroutine(InstructDragging(curItem));
-            
+            StartCoroutine(InstructDragging());
         }
     }
 
@@ -260,11 +264,9 @@ public class ChallengeController : MonoBehaviour
 
     public IEnumerator ShowCompletionScreen()
     {
-        //selectedScenarioUI.ShowCompletionText();
         gameOverScreen.SetActive(true);
         DestroyDraggables();
         yield return new WaitWhile(() => audioSource.isPlaying);
-        //audioSource.PlayOneShot(selectedScenarioSO.completionPhraseAud);
     }
 
     void DestroyDraggables()

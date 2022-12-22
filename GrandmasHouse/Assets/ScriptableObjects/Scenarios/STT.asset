@@ -44,11 +44,12 @@ MonoBehaviour:
   - {x: 80, y: 75}
   - {x: 230, y: 75}
   - {x: 300, y: -160}
+  replaceAsDropped: 0
   dialect: 1
   playSceneName: STT
   repeaterPhrase:
-  - 'lay down the '
-  - "lheq\u2019ut tthu "
+  - lay down the
+  - "lheq\u2019ut tthu"
   - 
   successPhrase:
   - Good job!
@@ -67,9 +68,9 @@ MonoBehaviour:
   htpExampleAud: {fileID: 8300000, guid: fa475f975be594d0896cfe891d61f25c, type: 3}
   homeImage: {fileID: 21300000, guid: 63037394ad79e4295ae44b6684509c2d, type: 3}
   backgroundImage: {fileID: 21300000, guid: 79d3eda44d9c14c7a943f1e4bff3306f, type: 3}
-  HTPSprite: {fileID: 21300000, guid: 45490133fba57478aac92c5c23e93b33, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 8ef44568c08d84ba0be59673f6b41d43, type: 3}
   vocabBackgroundSprite: {fileID: 21300000, guid: 79d3eda44d9c14c7a943f1e4bff3306f, type: 3}
-  gameOverBackgroundSprite: {fileID: 21300000, guid: 8ef44568c08d84ba0be59673f6b41d43, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 63037394ad79e4295ae44b6684509c2d, type: 3}
   dzImage: {fileID: 21300000, guid: 56ac42e938df741988e0487cf441f3bd, type: 3}
   dzPos: {x: -9, y: -129}
   dzRectDimensions: {x: 610, y: 485}

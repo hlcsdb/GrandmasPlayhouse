@@ -43,11 +43,12 @@ MonoBehaviour:
   - {x: 80, y: 95}
   - {x: 300, y: 95}
   - {x: 300, y: -180}
+  replaceAsDropped: 0
   dialect: 1
   playSceneName: Jewelry
   repeaterPhrase:
-  - 'Please bring me my '
-  - "tth\u2019ihwum \u2019i\u2019 m\u2019ewustuhw tthunu "
+  - Please bring me my
+  - "tth\u2019ihwum \u2019i\u2019 m\u2019ewustuhw tthunu"
   successPhrase:
   - 'Thank you, grandchild. '
   - "aaa hay ch q\u2019a\u2019, \u2019imiye\u2019."

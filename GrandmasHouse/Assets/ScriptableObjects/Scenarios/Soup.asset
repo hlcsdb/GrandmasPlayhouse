@@ -44,7 +44,8 @@ MonoBehaviour:
   - {x: 80, y: 95}
   - {x: 300, y: 95}
   - {x: 300, y: -180}
-  dialect: 0
+  replaceAsDropped: 0
+  dialect: 1
   playSceneName: Soup
   repeaterPhrase: []
   successPhrase:

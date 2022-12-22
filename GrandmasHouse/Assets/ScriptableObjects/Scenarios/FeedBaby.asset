@@ -44,7 +44,7 @@ MonoBehaviour:
   - {x: 150, y: 100}
   - {x: 150, y: -300}
   replaceAsDropped: 1
-  dialect: 0
+  dialect: 1
   playSceneName: FeedBaby
   repeaterPhrase:
   - Feed the baby

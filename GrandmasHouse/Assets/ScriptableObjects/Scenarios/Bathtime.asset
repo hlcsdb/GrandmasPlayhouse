@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: Bathtime
+  m_EditorClassIdentifier: 
+  scenarioType: 2
+  scenarioName: 
+  scenarioDraggableObjects:
+  - {fileID: 4648856261022964884, guid: 9c91035786ffa4443b293b21ead5ca98, type: 3}
+  - {fileID: 4252879351066418640, guid: 63598fb921ec74bafa7efaa3ab06142a, type: 3}
+  - {fileID: 7419362380013774726, guid: 55fa70be0d7fd483f8b703f28e38d9a3, type: 3}
+  - {fileID: 6300812033462215487, guid: 2f882e8fe167649b9aadfd10292473ef, type: 3}
+  - {fileID: 2006116669080478313, guid: f33cc57afd16645febb6934c01752587, type: 3}
+  - {fileID: 718375001214366047, guid: 551324e1bfbea4a88a57febce7e74df5, type: 3}
+  - {fileID: 6437658187144783360, guid: 1984f882fc3ce48dfa16a0c49e004fba, type: 3}
+  - {fileID: 7920039433696604665, guid: 0321c04549f94468cab23bfd4dcba476, type: 3}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: e84d3752853394e428224194dd210710, type: 2}
+  - {fileID: 11400000, guid: 8c1bac45577dc4584aace90b031e6421, type: 2}
+  - {fileID: 11400000, guid: bde46fa6ab2254690b3002b1bcf5ce2f, type: 2}
+  - {fileID: 11400000, guid: 5c2f7d871f7b44422b02d539097f20d5, type: 2}
+  - {fileID: 11400000, guid: e8785c06e8250436f93e6c64c1954a9b, type: 2}
+  - {fileID: 11400000, guid: 5f3d71f874b234332bcb9180a137f06d, type: 2}
+  - {fileID: 11400000, guid: 4334df7f7ef6649219e9c8057abac1e2, type: 2}
+  - {fileID: 11400000, guid: 9d72074b6b5b6407587c29059037849e, type: 2}
+  titleName:
+  - Cute little toys & clean scented bubbles!
+  - "\u2019uli\u2019yas suw\u2019a\u2019lum \u2019i\u2019 tthu \u2019i\u2019eluqup
+    sp\u2019aqw\u2019um!"
+  openerPhrase:
+  - Your water is ready for a bath.
+  - "ni\u2019 wulh hwu saay\u2019 kwun\u2019s nem\u2019 shakw\u2019um."
+  DZB:
+  - {x: 0, y: -150}
+  - {x: 0, y: 30}
+  - {x: 380, y: 30}
+  - {x: 380, y: -150}
+  replaceAsDropped: 0
+  dialect: 0
+  playSceneName: Bathtime
+  repeaterPhrase:
+  - 'You better get your '
+  - "\u2019uy kwuns yu kwun\u2019et kwthun\u2019"
+  successPhrase:
+  - Really good job!
+  - hay 'ul' 'uy' syaays!
+  completionPhrase:
+  - "Oh, grandchild, that\u2019s a lot of little toys. Have a good bath!"
+  - "aaa, \u2019imiye\u2019, nan \u2019uw\u2019 qux tthun\u2019 s\u2019ulisuw\u2019a\u2019lum\u2019.
+    \u2019iyus tse\u2019 tthun\u2019 shakw\u2019um!"
+  numDraggables: 8
+  titleAud: {fileID: 8300000, guid: c2dfe20c9c0684801b8707be8f88d503, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 7689eca67b85a4845825df4b5e99d721, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: de2d2aea661ef42409bd24a8f481d257, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: ce68896601d4b4e50b86364ccb723889, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: 49fa5f64417504cb69699806d5639c2d, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: 4897c80b78e2c48c185ba8f74a8d496c, type: 3}
+  homeImage: {fileID: 21300000, guid: c25e83ab165904e34bf5acd98c03842b, type: 3}
+  backgroundImage: {fileID: 21300000, guid: cec161010cf834d25b208c86f0b035af, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 7814daa127dc7439f83dbe2e97111e36, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: 65a28e490973249d2bb421c738c741ee, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: 1e0c0390c867d4d1598bd0614086a71d, type: 3}
+  dzImage: {fileID: 21300000, guid: 9682052739bb14b92a7fc60b03d68ca4, type: 3}
+  dzPos: {x: 44, y: 6}
+  dzRectDimensions: {x: 930, y: 570}
+  correctPhraseAud:
+  - {fileID: 8300000, guid: 98dc82d08fc6844658b5732e54f61e5d, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 9682052739bb14b92a7fc60b03d68ca4, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 9682052739bb14b92a7fc60b03d68ca4, type: 3}
+  randSlots:
+  - {x: -400, y: 118}
+  - {x: -400, y: 3}
+  - {x: -400, y: -112}
+  - {x: -400, y: -227}
+  - {x: -273, y: 118}
+  - {x: -273, y: 3}
+  - {x: -273, y: -112}
+  - {x: -273, y: -227}

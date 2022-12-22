@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class DisplayScenarioSelection : MonoBehaviour
@@ -11,6 +12,7 @@ public class DisplayScenarioSelection : MonoBehaviour
     //internal Scenario currentScenario;
     public TextMeshProUGUI m_TextA;
     public TextMeshProUGUI m_TextB;
+    public Image gameSneakPeakImage;
 
     int m_DropdownValue;
 
@@ -37,8 +39,9 @@ public class DisplayScenarioSelection : MonoBehaviour
         });
 
         //Initialise the Text to say the first value of the Dropdown
-        m_TextA.text = "Selected Game : " + scenarios[m_Dropdown.value].titleName[1];
+        m_TextA.text = "Selected Game:\n\n" + scenarios[m_Dropdown.value].titleName[1];
         m_TextB.text = scenarios[m_Dropdown.value].titleName[0];
+        gameSneakPeakImage.sprite = scenarios[m_Dropdown.value].gameOverBackgroundSprite;
     }
 
     internal List<string> DropdownOptionList()
@@ -55,9 +58,10 @@ public class DisplayScenarioSelection : MonoBehaviour
     void DropdownValueChanged(TMP_Dropdown change)
     {
         m_DropdownValue = change.value;
-        m_TextA.text = "Selected Game : " + scenarios[m_DropdownValue].titleName[1];
+        m_TextA.text = "Selected Game:\n" + scenarios[m_DropdownValue].titleName[1];
         m_TextB.text = scenarios[m_DropdownValue].titleName[0];
-        
+        gameSneakPeakImage.sprite = scenarios[m_DropdownValue].gameOverBackgroundSprite;
+
     }
 
     public void GoToScene()

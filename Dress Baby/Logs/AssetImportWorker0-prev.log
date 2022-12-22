@@ -2,8 +2,8 @@ Unity Editor version:    2021.2.9f1 (921b45a28ab6)
 Branch:                  2021.2/staging
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 13.0.1 (Build 22A400)
-Darwin version:          22.1.0
+macOS version:           Version 13.1 (Build 22C65)
+Darwin version:          22.2.0
 Architecture:            x86_64
 Running under Rosetta:   YES
 Available memory:        32768 MB
@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57682
+60068
 Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Dress Baby
 /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Dress Baby
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/Gr
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 113.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 109.23 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.9f1 (921b45a28ab6)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,39 +69,39 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56066
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56306
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002567 seconds.
+Registered in 0.000999 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 107.16 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 106.17 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.524 seconds
+- Completed reload, in  1.590 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1525ms)
-		BeginReloadAssembly (128ms)
+	ReloadAssembly (1591ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1254ms)
-			LoadAssemblies (126ms)
+		EndReloadAssembly (1303ms)
+			LoadAssemblies (136ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (127ms)
+			SetupTypeCache (141ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (930ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (953ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (46ms)
+				InitializePlatformSupportModulesInManaged (44ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (107ms)
+				RefreshPlugins (106ms)
 				BeforeProcessingInitializeOnLoad (4ms)
-				ProcessInitializeOnLoadAttributes (575ms)
+				ProcessInitializeOnLoadAttributes (599ms)
 				ProcessInitializeOnLoadMethodAttributes (198ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -109,53 +109,53 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002680 seconds.
+Registered in 0.002431 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Dress Baby/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Dress Baby/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.446 seconds
+- Completed reload, in  2.491 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2448ms)
-		BeginReloadAssembly (234ms)
+	ReloadAssembly (2493ms)
+		BeginReloadAssembly (240ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (39ms)
+			DisableScriptedObjects (40ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (1973ms)
-			LoadAssemblies (124ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (2004ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (298ms)
+			SetupTypeCache (327ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (1305ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (1311ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (36ms)
+				InitializePlatformSupportModulesInManaged (34ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (147ms)
-				ProcessInitializeOnLoadAttributes (1002ms)
-				ProcessInitializeOnLoadMethodAttributes (116ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (1014ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3245 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 26 unused Assets / (83.7 KB). Loaded Objects now: 3704.
-Memory consumption went from 103.4 MB to 103.3 MB.
-Total: 3.680125 ms (FindLiveObjects: 0.220792 ms CreateObjectMapping: 0.091292 ms MarkObjects: 3.245875 ms  DeleteObjects: 0.121208 ms)
+Memory consumption went from 100.7 MB to 100.6 MB.
+Total: 3.453417 ms (FindLiveObjects: 0.198250 ms CreateObjectMapping: 0.090375 ms MarkObjects: 3.027917 ms  DeleteObjects: 0.135958 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -167,3 +167,417 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 79949.686227 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-Baby.png
+  artifactKey: Guid(469c9e39051a64baaae01805c573e21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-Baby.png using Guid(469c9e39051a64baaae01805c573e21b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0291317e53c47668e195001de7505dd3') in 0.321554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-bedroom background.png
+  artifactKey: Guid(6cd903c2d7f1040bcb4bee79ec89fca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-bedroom background.png using Guid(6cd903c2d7f1040bcb4bee79ec89fca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd48fedc34acb8a1865bd8a881103f0a6') in 0.063154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-shirt.png
+  artifactKey: Guid(16e97ac1ea83d44b8ad55fda961faec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-shirt.png using Guid(16e97ac1ea83d44b8ad55fda961faec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90c42dce5d29dd9778fb46c6e6123aaf') in 0.012445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-3.png
+  artifactKey: Guid(eef4aadf5786a405a8f607c9adf4eda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-3.png using Guid(eef4aadf5786a405a8f607c9adf4eda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c2c01692d91348659c7beeb0cd0b91') in 0.027511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Art/Dressup Art/Layer Art
+  artifactKey: Guid(f5cbda85111a64a258374fb07542fd79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art using Guid(f5cbda85111a64a258374fb07542fd79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fb64c2c068be6301aa44d5df114428c') in 0.000563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_shoes.asset
+  artifactKey: Guid(31836073a62684c6fbc1e22012b37f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_shoes.asset using Guid(31836073a62684c6fbc1e22012b37f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a1bb2582747e5c49139d95591baad9') in 0.077062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_pants.asset
+  artifactKey: Guid(b63b1d239e2cb48fa946ffbc8cb3fa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_pants.asset using Guid(b63b1d239e2cb48fa946ffbc8cb3fa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '287d8fc0ecac30e639bf49d66d777813') in 0.003406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio
+  artifactKey: Guid(bd15e9dc0b0f74a32bb013d4adc83f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio using Guid(bd15e9dc0b0f74a32bb013d4adc83f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8572cb42d3c2660d82212173271c360') in 0.000468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/Dressup Art/Tile Art
+  artifactKey: Guid(cb2c36cc5292d4c069c45e9b2ddd8d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art using Guid(cb2c36cc5292d4c069c45e9b2ddd8d91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d40da3e57197eadb150716f442d530') in 0.000414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-underwear.png
+  artifactKey: Guid(e593ed62780fb423eb74257c19ec0694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-underwear.png using Guid(e593ed62780fb423eb74257c19ec0694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e8d8a48cd3953123a15f6c0d21e6d4') in 0.012999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Prefabs/BabyDress Items/little hat.prefab
+  artifactKey: Guid(cfb38c4da122e44098b216cdf5ae3bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/BabyDress Items/little hat.prefab using Guid(cfb38c4da122e44098b216cdf5ae3bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7c2b116863a11a23657350579202a52') in 0.163326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Art
+  artifactKey: Guid(cb5c417da80ea42c096323a5ae5878c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art using Guid(cb5c417da80ea42c096323a5ae5878c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '796accf42215c325601ef380ce315437') in 0.000552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/pants.wav
+  artifactKey: Guid(d2ef13927e8e14513a11244d175291b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/pants.wav using Guid(d2ef13927e8e14513a11244d175291b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efd4feac44e217d67ee5aa7ec31cd0b0') in 0.610506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littledress_DL.wav
+  artifactKey: Guid(1c6e49eb3473d4dcda6d9d61fd0f7b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littledress_DL.wav using Guid(1c6e49eb3473d4dcda6d9d61fd0f7b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72867d16ba3092780670265f2982544') in 0.008747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Prefabs/BabyDress Items/little sweater.prefab
+  artifactKey: Guid(dae94d004257b45f791cead93ff4ac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/BabyDress Items/little sweater.prefab using Guid(dae94d004257b45f791cead93ff4ac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb809bc33205a99e60c59644fde5bc0a') in 0.023364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littleshoe_DL.wav
+  artifactKey: Guid(a7e2c35b39364479fa7468a533d7b157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littleshoe_DL.wav using Guid(a7e2c35b39364479fa7468a533d7b157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8fbe91d4515af81238f5d5511cd0410') in 0.005982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/pamper_DL.wav
+  artifactKey: Guid(9d77c0a42485c4ad09611291c9f86807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/pamper_DL.wav using Guid(9d77c0a42485c4ad09611291c9f86807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288c6596790448c3896f611c82471ceb') in 0.006207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Audio/Dressup Audio/Instructions Audio/repeater_clothing.wav
+  artifactKey: Guid(71ebd0d79270f414984e917c8793e0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Instructions Audio/repeater_clothing.wav using Guid(71ebd0d79270f414984e917c8793e0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '742765428d25c3c22da17d2d22edf792') in 0.006181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/Thebabyisnowdressed_DL.wav
+  artifactKey: Guid(c401bb6b7317f4625b10898d1ce040ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/Thebabyisnowdressed_DL.wav using Guid(c401bb6b7317f4625b10898d1ce040ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70cbc48fd78f3d8a1c4464298264a68b') in 0.006372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-towel.png
+  artifactKey: Guid(7142efd91746f40bba66649882c0666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-towel.png using Guid(7142efd91746f40bba66649882c0666e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14556c14d8428c9d6d174c058e9ccc5b') in 0.036689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/hat_DL.wav
+  artifactKey: Guid(b733d28c7d468470fb4ae64621d4c4ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/hat_DL.wav using Guid(b733d28c7d468470fb4ae64621d4c4ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '105dc6e0eba5a33add8115f2c0981dd8') in 0.006494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-2.png
+  artifactKey: Guid(6a1e449335dc64e63972abf1ecd26c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-2.png using Guid(6a1e449335dc64e63972abf1ecd26c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285f4f9b4658b4f3ee78d841c8b83818') in 0.027322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-sweater.png
+  artifactKey: Guid(cff6ecd0bf94e4c85ac568e9d01c5e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-sweater.png using Guid(cff6ecd0bf94e4c85ac568e9d01c5e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f935c4ed04e5ddc1fc5051dfd7c7e4e6') in 0.012409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-tile-jacket.png
+  artifactKey: Guid(1e8480e0969ee478c958878f726dfe1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-tile-jacket.png using Guid(1e8480e0969ee478c958878f726dfe1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c49e3703165e7053c9441f9d5fb6b1') in 0.012582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Audio/Dressup Audio/Instructions Audio
+  artifactKey: Guid(b56dca224a92443bc9ff6923ee242b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Instructions Audio using Guid(b56dca224a92443bc9ff6923ee242b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5aa6649b12ca4d68cd38ab140ed04c') in 0.000497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littleundershirt_DL.wav
+  artifactKey: Guid(36fb1bdadca6d4ca6b1295f276017c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littleundershirt_DL.wav using Guid(36fb1bdadca6d4ca6b1295f276017c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9b4407434fb05cf103fd13f77899204') in 0.006237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Audio/Dressup Audio
+  artifactKey: Guid(fb7d49700a3d44812b804ad30d16fc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio using Guid(fb7d49700a3d44812b804ad30d16fc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0271c74e442d788e062543d333fde785') in 0.000448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-socks.png
+  artifactKey: Guid(03a1de195dea747cf844497b5140814d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-socks.png using Guid(03a1de195dea747cf844497b5140814d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d49b9dff70fec569ea59f455292ea4') in 0.011994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-1.png
+  artifactKey: Guid(18dbfee931630443ba4e03bafd60bead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-1.png using Guid(18dbfee931630443ba4e03bafd60bead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6553c5e955888775714dacdd8e0a0a25') in 0.028318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littlesweater_DL.wav
+  artifactKey: Guid(f726ed2780b4d42548db511de20d88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littlesweater_DL.wav using Guid(f726ed2780b4d42548db511de20d88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '818e8a5a1d2c366ca91faf8ea8159c35') in 0.006349 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littlepants_DL.wav
+  artifactKey: Guid(ea74789708bd747bcb760469e7e7ac9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littlepants_DL.wav using Guid(ea74789708bd747bcb760469e7e7ac9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd767f393427bb0e67d7edc2508f403cc') in 0.005918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/DL_Dressher_repeater.wav
+  artifactKey: Guid(8b7ca225ac1a143c3a7a07c438c720af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/DL_Dressher_repeater.wav using Guid(8b7ca225ac1a143c3a7a07c438c720af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70163aba94a7d237ca8c9726647250a5') in 0.006157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000702 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1_1.png
+  artifactKey: Guid(64b6ed9e7870240bf9aeb62a681c891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1_1.png using Guid(64b6ed9e7870240bf9aeb62a681c891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07d9030f2d3f90758e0e84446dc0f8c') in 0.293369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Art/Dressup Art
+  artifactKey: Guid(62df1390d7fb04fb6adcb0352c8b02b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art using Guid(62df1390d7fb04fb6adcb0352c8b02b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643c96dd29d9655422eef66d4f1b32ea') in 0.000486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_sweater.asset
+  artifactKey: Guid(b3a312e32195844dca1b9768f210f1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Dressup/BabyClothing/little_sweater.asset using Guid(b3a312e32195844dca1b9768f210f1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4e30523146471f058a0c5e287045fc') in 0.001587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/ScriptableObjects/Items/Dressup/BabyClothing/baby_dress.asset
+  artifactKey: Guid(cc291cc9d47e847bc9b74c8d0e359fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Dressup/BabyClothing/baby_dress.asset using Guid(cc291cc9d47e847bc9b74c8d0e359fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708a0be6a53575ffaefa9d03c5f90353') in 0.002635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio
+  artifactKey: Guid(f19fd404f40e04552af817082275b466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio using Guid(f19fd404f40e04552af817082275b466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898fc0961f5840226d16980ba4568ddc') in 0.000464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littlehat_DL.wav
+  artifactKey: Guid(15f8303c76c4143c49f71a9832d62508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littlehat_DL.wav using Guid(15f8303c76c4143c49f71a9832d62508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37042496694423725da96699a56658e') in 0.007079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-hat.png
+  artifactKey: Guid(40d55114ee3c64d59b428fea5348270a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-hat.png using Guid(40d55114ee3c64d59b428fea5348270a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d89d264ca9fae3f074bfed6372011c') in 0.012379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-shirt.png
+  artifactKey: Guid(72c9091b53d8c45c2a29db4ffefcac31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-shirt.png using Guid(72c9091b53d8c45c2a29db4ffefcac31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767ed4ba635ff302b8a244447b4824b0') in 0.011819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/babydress_DL.wav
+  artifactKey: Guid(aef19c8aa029e47d6bbb0e609d2b436f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/babydress_DL.wav using Guid(aef19c8aa029e47d6bbb0e609d2b436f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404e212258c2a20166bbfadb385c32ad') in 0.006316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-pants.png
+  artifactKey: Guid(8f25a3ea97ba947889a78d9536b2ed2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-pants.png using Guid(8f25a3ea97ba947889a78d9536b2ed2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3580ce6e4fa25ada418e2c80cb136a27') in 0.011224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/nylon_infantsocks_DL.wav
+  artifactKey: Guid(615835f0591d14156b54a1b9bd54428b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/nylon_infantsocks_DL.wav using Guid(615835f0591d14156b54a1b9bd54428b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd55a692fd0dd9e13e466213842c3be5c') in 0.006238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/ScriptableObjects/Items/Dressup/BabyClothing
+  artifactKey: Guid(202259c8fb5b74d418f982cf05b9edd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Dressup/BabyClothing using Guid(202259c8fb5b74d418f982cf05b9edd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67bbb017ccd56b2c4070738d65f050e3') in 0.000473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/ScriptableObjects/Items
+  artifactKey: Guid(94f0769dddedb4483958ce701455233f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items using Guid(94f0769dddedb4483958ce701455233f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920836ae275f7fba3cf1e6dc998aaa03') in 0.000418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1.png
+  artifactKey: Guid(18dfb386434204a42b18aac1a5472c54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1.png using Guid(18dfb386434204a42b18aac1a5472c54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab5f15c038c0c7ea35afa3f97b522653') in 0.183171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-hat.png
+  artifactKey: Guid(efaf8fda8697a4966b163c0b360ae3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-hat.png using Guid(efaf8fda8697a4966b163c0b360ae3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2343d2ba602c37f54af11b90c0103351') in 0.013502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-sweater.png
+  artifactKey: Guid(89a382da454ce455f87e8c3e330937a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-sweater.png using Guid(89a382da454ce455f87e8c3e330937a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1abf23f4c2a64ff5a5fc34c91086e946') in 0.012313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/littleshirt_DL.wav
+  artifactKey: Guid(257a8dcadc5554f34a8752a8239f5be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/littleshirt_DL.wav using Guid(257a8dcadc5554f34a8752a8239f5be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b301f9c1ba8e7edcd945ca2da6e6b08a') in 0.006154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/boysunderwear.wav
+  artifactKey: Guid(2997441f437304b21b657ece30e273f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/boysunderwear.wav using Guid(2997441f437304b21b657ece30e273f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5eda815ffaf36385672b6a0f1265883') in 0.006131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Prefabs/BabyDress Items/baby dress.prefab
+  artifactKey: Guid(cb74e2f56aa57463592d678f2542d0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/BabyDress Items/baby dress.prefab using Guid(cb74e2f56aa57463592d678f2542d0ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c95ba828e82192d1c7af00c8c8825c') in 0.017481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Prefabs/BabyDress Items/diaper.prefab
+  artifactKey: Guid(75c4feffb28be43cfa9749359fe8285d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/BabyDress Items/diaper.prefab using Guid(75c4feffb28be43cfa9749359fe8285d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54bfb80dbd5e46fddc591b861dc99a4e') in 0.017501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/thebabyiscontent_DL.wav
+  artifactKey: Guid(2da95ec2546ba4a51bbf4fa7c649a906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/thebabyiscontent_DL.wav using Guid(2da95ec2546ba4a51bbf4fa7c649a906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a521f17a8d709d154e52013633e4ae9') in 0.006432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-dress.png
+  artifactKey: Guid(94a762374c41b425da9c0add154424fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-dress.png using Guid(94a762374c41b425da9c0add154424fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c085c24c0f596da6a7397ade3a84521') in 0.011415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-layer-jacket.png
+  artifactKey: Guid(50d1eb3db33464a15a408ee33215c93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-layer-jacket.png using Guid(50d1eb3db33464a15a408ee33215c93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a33e6f4e9ab6f719df9a825e8ca2b5') in 0.012296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1_3.png
+  artifactKey: Guid(daacfef1a763e464d8ca87c1b4555f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 1_3.png using Guid(daacfef1a763e464d8ca87c1b4555f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e339984d6f7ff816c50de8aacc1fb84f') in 0.247784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Audio/DL_PleaseAgain.wav
+  artifactKey: Guid(31bdc0061c73f4bac9e6fefdd67d969a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/DL_PleaseAgain.wav using Guid(31bdc0061c73f4bac9e6fefdd67d969a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9ebf8565c11f825977dd7f10eb478e') in 0.008190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-dress.png
+  artifactKey: Guid(602d03eda6aa94e10bc7b48279526eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-dress.png using Guid(602d03eda6aa94e10bc7b48279526eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ef5cdbcf97c56858bf8743a4b02073') in 0.011312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-shoes.png
+  artifactKey: Guid(80c76158a639f4d1490d974f116d7aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-shoes.png using Guid(80c76158a639f4d1490d974f116d7aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6dd4afa7c3fa05bf6abbe6b14ef1d7') in 0.011079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Art/Dressup Art/SceneArt
+  artifactKey: Guid(b9743b099afd045ad92ec9daf33f8b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt using Guid(b9743b099afd045ad92ec9daf33f8b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61a2a5340ce540cf7cd2c9e784dfb653') in 0.000459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-shoes.png
+  artifactKey: Guid(f856aef2a809a4d05a2eb4ba7cbdce79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-shoes.png using Guid(f856aef2a809a4d05a2eb4ba7cbdce79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf889a3105978f3c01f68bec0f4e4031') in 0.011597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-FeedBaby-Grandma.png
+  artifactKey: Guid(e77a99f4b3a114d278a256ce17823a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-FeedBaby-Grandma.png using Guid(e77a99f4b3a114d278a256ce17823a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0291805c09a44b747e05a57141432491') in 0.034730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-4.png
+  artifactKey: Guid(1ce2a5ecdb1034995bf2f451bc011198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-DressBaby-ClothesGuide-4.png using Guid(1ce2a5ecdb1034995bf2f451bc011198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b18fe1acc725ad40805a1a20b17d80') in 0.028138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio
+  artifactKey: Guid(3f827096563064979831e9a03dc4d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio using Guid(3f827096563064979831e9a03dc4d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dbce73a80c8839f3b9fdc4eaae212f') in 0.000670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-underwear.png
+  artifactKey: Guid(be8eae57516814e5fb386434c3172b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-DressBaby-tile-underwear.png using Guid(be8eae57516814e5fb386434c3172b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a1c29c217012442e927a6b642f73abb') in 0.011570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 2.png
+  artifactKey: Guid(4bef980c8daaf43a78fc3cd463346850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-Artboard 2.png using Guid(4bef980c8daaf43a78fc3cd463346850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94111dd2e5acddeaa75485278a8508d') in 0.084234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-pants.png
+  artifactKey: Guid(7164a18ce6b79478d80f66e2af7a2e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-pants.png using Guid(7164a18ce6b79478d80f66e2af7a2e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f0b8af8f3f8ade7095ea09e3b1011c') in 0.011793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-socks.png
+  artifactKey: Guid(7e91680ee68624f5a9886329fc2b3917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-DressBaby-layer-socks.png using Guid(7e91680ee68624f5a9886329fc2b3917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23390a9336ce8d09ac9f5672d587873') in 0.011478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/ScriptableObjects
+  artifactKey: Guid(bb6622d3c4cc1452ab5136e19cd1c273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects using Guid(bb6622d3c4cc1452ab5136e19cd1c273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a469bc754c8d614fa53d7ee6beeb3ef4') in 0.000456 seconds 

@@ -2,8 +2,8 @@ Unity Editor version:    2021.2.9f1 (921b45a28ab6)
 Branch:                  2021.2/staging
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 13.0.1 (Build 22A400)
-Darwin version:          22.1.0
+macOS version:           Version 13.1 (Build 22C65)
+Darwin version:          22.2.0
 Architecture:            x86_64
 Running under Rosetta:   YES
 Available memory:        32768 MB
@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52033
+62221
 Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime
 /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/Gr
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 131.43 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 124.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.9f1 (921b45a28ab6)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,93 +69,93 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56053
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56360
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002864 seconds.
+Registered in 0.000861 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 126.28 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 122.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.622 seconds
+- Completed reload, in  1.569 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1623ms)
-		BeginReloadAssembly (157ms)
+	ReloadAssembly (1570ms)
+		BeginReloadAssembly (122ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1315ms)
-			LoadAssemblies (154ms)
+		EndReloadAssembly (1295ms)
+			LoadAssemblies (118ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (126ms)
+			SetupTypeCache (142ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (968ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (939ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (45ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (126ms)
+				RefreshPlugins (122ms)
 				BeforeProcessingInitializeOnLoad (4ms)
-				ProcessInitializeOnLoadAttributes (597ms)
-				ProcessInitializeOnLoadMethodAttributes (194ms)
+				ProcessInitializeOnLoadAttributes (570ms)
+				ProcessInitializeOnLoadMethodAttributes (198ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008477 seconds.
+Registered in 0.004173 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 123.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 120.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.816 seconds
+- Completed reload, in  5.758 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5819ms)
-		BeginReloadAssembly (244ms)
+	ReloadAssembly (5761ms)
+		BeginReloadAssembly (262ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (42ms)
+			DisableScriptedObjects (38ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (5322ms)
-			LoadAssemblies (136ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (5237ms)
+			LoadAssemblies (143ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (284ms)
+			SetupTypeCache (309ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (4606ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (4484ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (33ms)
+				InitializePlatformSupportModulesInManaged (34ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (123ms)
-				BeforeProcessingInitializeOnLoad (165ms)
-				ProcessInitializeOnLoadAttributes (4119ms)
-				ProcessInitializeOnLoadMethodAttributes (162ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				RefreshPlugins (121ms)
+				BeforeProcessingInitializeOnLoad (162ms)
+				ProcessInitializeOnLoadAttributes (4012ms)
+				ProcessInitializeOnLoadMethodAttributes (154ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3935 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 43 unused Assets / (166.8 KB). Loaded Objects now: 4388.
-Memory consumption went from 141.4 MB to 141.2 MB.
-Total: 3.888000 ms (FindLiveObjects: 0.217750 ms CreateObjectMapping: 0.116541 ms MarkObjects: 3.376042 ms  DeleteObjects: 0.176542 ms)
+Memory consumption went from 138.6 MB to 138.5 MB.
+Total: 3.873750 ms (FindLiveObjects: 0.193792 ms CreateObjectMapping: 0.111375 ms MarkObjects: 3.391708 ms  DeleteObjects: 0.176000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -169,224 +169,254 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 396954.056471 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/BathtimeGameOverScreen.png
-  artifactKey: Guid(668c83077117c41e5b8555f2d24a99bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/BathtimeGameOverScreen.png using Guid(668c83077117c41e5b8555f2d24a99bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9faa0e1a84a0eceea647b20794981fdd') in 0.729098 seconds 
+  Time since last request: 107518.804818 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_towel.png
+  artifactKey: Guid(12351aabfcfda4046beddbd5fd25e9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_towel.png using Guid(12351aabfcfda4046beddbd5fd25e9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda77cb6ce2ac25dabf63b107f22426b') in 0.358658 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.349018 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/BathtimeGameOverScreen.png
-  artifactKey: Guid(668c83077117c41e5b8555f2d24a99bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/BathtimeGameOverScreen.png using Guid(668c83077117c41e5b8555f2d24a99bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4b3549486d52dc707d9332714db7c4') in 0.067784 seconds 
+  Time since last request: 0.000583 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_frog.png
+  artifactKey: Guid(b50aa816f4e524251ad78c467f0f2fac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_frog.png using Guid(b50aa816f4e524251ad78c467f0f2fac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27d93fe76b6bd7cfdd0f9e10b1ce9311') in 0.016335 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1076.213215 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/bathtime_babyface.png
-  artifactKey: Guid(80b6d2ae7a8ea4eeda5c9cbffd75e9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/bathtime_babyface.png using Guid(80b6d2ae7a8ea4eeda5c9cbffd75e9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f6293c975941730b6a37e41462f801') in 0.014786 seconds 
+  Time since last request: 0.000054 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_boat.png
+  artifactKey: Guid(49e100b86ae1a410fac94d585b0c6c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_boat.png using Guid(49e100b86ae1a410fac94d585b0c6c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdbdadd7ac4ffbd33ab5fbfcfddbfe66') in 0.010812 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.070616 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/empty-bathtub.png
-  artifactKey: Guid(2cab5bd8f2f4743d3bcb06fb58d8adb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/empty-bathtub.png using Guid(2cab5bd8f2f4743d3bcb06fb58d8adb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88689c8d04b632abc50f27c4f6734545') in 0.027028 seconds 
+  Time since last request: 0.000052 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_soap.png
+  artifactKey: Guid(414efea0d8f344f8ea7a3f8442e4d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_soap.png using Guid(414efea0d8f344f8ea7a3f8442e4d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '170e1ca18ec536c46e7ed8731c8235ab') in 0.010551 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 74.871774 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/empty-bathtub.png
-  artifactKey: Guid(2cab5bd8f2f4743d3bcb06fb58d8adb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/empty-bathtub.png using Guid(2cab5bd8f2f4743d3bcb06fb58d8adb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '537be9f49785b14e38dcb55c3cbb3db9') in 0.200454 seconds 
+  Time since last request: 0.000051 seconds.
+  path: Assets/ScriptableObjects/Items/Bathtime/toyFrog.asset
+  artifactKey: Guid(4334df7f7ef6649219e9c8057abac1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Bathtime/toyFrog.asset using Guid(4334df7f7ef6649219e9c8057abac1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac2300d8a6dd01f6e207b890becf0758') in 0.072174 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_duck.png
+  artifactKey: Guid(8c28c64cc0c1743948e988181f067120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_duck.png using Guid(8c28c64cc0c1743948e988181f067120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25adc91542fa226e259db252aa46e2d') in 0.012969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_SOAP.wav
+  artifactKey: Guid(07f89b5ef5d6a47818e05fc65532778a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_SOAP.wav using Guid(07f89b5ef5d6a47818e05fc65532778a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc84615cd4bb40aa7807d0305f3b672') in 0.175851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYDOLL.wav
+  artifactKey: Guid(1d3290d0ece1d4b0cb81723724264050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYDOLL.wav using Guid(1d3290d0ece1d4b0cb81723724264050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c150f6b09ef82c90fa1f8a9f5fda71a') in 0.010384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/ScriptableObjects/Items/Bathtime/toyDoll.asset
+  artifactKey: Guid(e8785c06e8250436f93e6c64c1954a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Bathtime/toyDoll.asset using Guid(e8785c06e8250436f93e6c64c1954a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70592d897c645dd1ddfac653be96bbf') in 0.002243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/ScriptableObjects/Items/Bathtime/toyOrca.asset
+  artifactKey: Guid(9d72074b6b5b6407587c29059037849e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Items/Bathtime/toyOrca.asset using Guid(9d72074b6b5b6407587c29059037849e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc33fc13d76c00879e7248f496995d6') in 0.002123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_SHAMPOO.wav
+  artifactKey: Guid(8276f9e38b01b4c35bb764cac46f75d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_SHAMPOO.wav using Guid(8276f9e38b01b4c35bb764cac46f75d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'add4002a541e4a7a221c09aacfd7ddc0') in 0.007080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_doll.png
+  artifactKey: Guid(0ceec4d2530af484c92ea5f23ed38da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_doll.png using Guid(0ceec4d2530af484c92ea5f23ed38da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ee5921f4551dbd71e3376b7d289de3f') in 0.010766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001407 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYBOAT.wav
+  artifactKey: Guid(527cf2b14637d46f0a42314e7cdea47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYBOAT.wav using Guid(527cf2b14637d46f0a42314e7cdea47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2dc210668acdaf6c8b4cf640d609ce7') in 0.007692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_towel.png
+  artifactKey: Guid(ecdcd913c714349e58fffb8c44ddab80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_towel.png using Guid(ecdcd913c714349e58fffb8c44ddab80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e408366325d272130d39fede49d64aa') in 0.010322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYFROG.wav
+  artifactKey: Guid(4c0ffed19f795401f94a5e2089b205b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYFROG.wav using Guid(4c0ffed19f795401f94a5e2089b205b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8352184b988fa43440892843415383') in 0.006680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_shampoo.png
+  artifactKey: Guid(c457238eef99144568145e733bac00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_shampoo.png using Guid(c457238eef99144568145e733bac00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbf33b954c1bc82da9c8a0b54049f81') in 0.009976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_WASHCLOTH.wav
+  artifactKey: Guid(bbd263e650a9f4e5e966f46edb35291e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_WASHCLOTH.wav using Guid(bbd263e650a9f4e5e966f46edb35291e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef3cd175d1ac07695e040b5a97b88a08') in 0.006939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_orca.png
+  artifactKey: Guid(8ad15fe3878db4f119e7539e12786958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_orca.png using Guid(8ad15fe3878db4f119e7539e12786958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9c410ded2ae7fa0635576ed82b2aee') in 0.009956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer-shampoo.png
+  artifactKey: Guid(9e795ddb3015f4d109b10729e027ff85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer-shampoo.png using Guid(9e795ddb3015f4d109b10729e027ff85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e48d8dbc6b7d217ec18eeb1a50b4faf3') in 0.010059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001118 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_doll.png
+  artifactKey: Guid(c3d5ffae0b96d47b992b9f5f0cb3d8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_doll.png using Guid(c3d5ffae0b96d47b992b9f5f0cb3d8de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d35a86290c058f050bc4e2615d1f29') in 0.010169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYorca.wav
+  artifactKey: Guid(5733c61d90b5e4e1a9dc9714b7018ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYorca.wav using Guid(5733c61d90b5e4e1a9dc9714b7018ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f2102539b1d02b57609a71848247049') in 0.006854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_frog.png
+  artifactKey: Guid(879cca79ac2734df583bf6379644cfea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_frog.png using Guid(879cca79ac2734df583bf6379644cfea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6f729b78a87e38c5b4841b08f205cdb') in 0.009948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/BathtimeArt/TileArt/tile_soap.png
+  artifactKey: Guid(e1a40c0c226b644c3acc5469a14f1579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/TileArt/tile_soap.png using Guid(e1a40c0c226b644c3acc5469a14f1579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5e2c57158650d3807d156aa2254632') in 0.010286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYDUCK.wav
+  artifactKey: Guid(eaf5fa88248a54387a96319af161dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Bathtime/ItemAudio/DL_Bathtime_Vocab_TOYDUCK.wav using Guid(eaf5fa88248a54387a96319af161dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8c457b06223fe235cd715c16f86490') in 0.006801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_orca.png
+  artifactKey: Guid(eb4b983d9eab948ae9cb76f901ea33ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_orca.png using Guid(eb4b983d9eab948ae9cb76f901ea33ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48d0e9a7b8f2b8f8e67f30d68447ebd') in 0.010074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/BathtimeArt/LayerArt/layer_boat.png
+  artifactKey: Guid(afb6294685bf949ad9b3e99fa501b66f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/BathtimeArt/LayerArt/layer_boat.png using Guid(afb6294685bf949ad9b3e99fa501b66f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d397796d3b462b87fcfc1b5bb60699') in 0.010385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 241.955777 seconds.
+  path: Assets/Prefabs/Bathtime Items/rubberDuck.prefab
+  artifactKey: Guid(551324e1bfbea4a88a57febce7e74df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/rubberDuck.prefab using Guid(551324e1bfbea4a88a57febce7e74df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb0d92bb402c5e39dbf72b3713b9edc') in 0.170723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.008791 seconds.
+  path: Assets/Prefabs/Bathtime Items/towel.prefab
+  artifactKey: Guid(56fdcb790d8124359b915218ffffff6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/towel.prefab using Guid(56fdcb790d8124359b915218ffffff6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e199f23999cf7dafeb6e16efac33b8') in 0.023290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Prefabs/Bathtime Items/toyFrog.prefab
+  artifactKey: Guid(1984f882fc3ce48dfa16a0c49e004fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/toyFrog.prefab using Guid(1984f882fc3ce48dfa16a0c49e004fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09a6a45fd779f95da7788870ac1fe69d') in 0.017378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Prefabs/Bathtime Items/shampoo.prefab
+  artifactKey: Guid(9c91035786ffa4443b293b21ead5ca98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/shampoo.prefab using Guid(9c91035786ffa4443b293b21ead5ca98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '233882d5a65150c2a66184e2dcfdf24c') in 0.017216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Prefabs/Bathtime Items/soap.prefab
+  artifactKey: Guid(63598fb921ec74bafa7efaa3ab06142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/soap.prefab using Guid(63598fb921ec74bafa7efaa3ab06142a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b4d8362745fc3377dbf0fff7f32243') in 0.017212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Prefabs/Bathtime Items/toyBoat.prefab
+  artifactKey: Guid(2f882e8fe167649b9aadfd10292473ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/toyBoat.prefab using Guid(2f882e8fe167649b9aadfd10292473ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0d8dea84d78e9a78aa71fa4daa3c61') in 0.017343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 66.607047 seconds.
+  path: Assets/Prefabs/Bathtime Items/toyDoll.prefab
+  artifactKey: Guid(f33cc57afd16645febb6934c01752587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/toyDoll.prefab using Guid(f33cc57afd16645febb6934c01752587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1737cdff9db1724889773ffb2e50bc0b') in 0.022068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.888249 seconds.
+  path: Assets/Prefabs/Bathtime Items/toyOrca.prefab
+  artifactKey: Guid(0321c04549f94468cab23bfd4dcba476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bathtime Items/toyOrca.prefab using Guid(0321c04549f94468cab23bfd4dcba476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '656bdf4abc6211819aab8622781bb201') in 0.019362 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003367 seconds.
+Registered in 0.003065 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.921 seconds
+- Completed reload, in  3.363 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2923ms)
-		BeginReloadAssembly (257ms)
+	ReloadAssembly (3365ms)
+		BeginReloadAssembly (329ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (52ms)
+			DisableScriptedObjects (57ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (54ms)
-		EndReloadAssembly (2409ms)
-			LoadAssemblies (118ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (2739ms)
+			LoadAssemblies (141ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (273ms)
+			SetupTypeCache (331ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1693ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (1882ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (40ms)
+				InitializePlatformSupportModulesInManaged (43ms)
 				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (142ms)
-				ProcessInitializeOnLoadAttributes (1341ms)
-				ProcessInitializeOnLoadMethodAttributes (165ms)
+				BeforeProcessingInitializeOnLoad (153ms)
+				ProcessInitializeOnLoadAttributes (1499ms)
+				ProcessInitializeOnLoadMethodAttributes (182ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (44ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3920 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (146.6 KB). Loaded Objects now: 4478.
-Memory consumption went from 233.9 MB to 233.8 MB.
-Total: 3.693625 ms (FindLiveObjects: 0.344167 ms CreateObjectMapping: 0.121667 ms MarkObjects: 3.081250 ms  DeleteObjects: 0.145333 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 226.461038 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/bathroom_bathtubToFill.png
-  artifactKey: Guid(2f9cddd2388924723a4ca27eb77b0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/bathroom_bathtubToFill.png using Guid(2f9cddd2388924723a4ca27eb77b0c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8abebab7ed447a4ebed2fb05183c53e') in 0.177734 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003348 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.891 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2893ms)
-		BeginReloadAssembly (247ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (51ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (53ms)
-		EndReloadAssembly (2391ms)
-			LoadAssemblies (117ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1688ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (38ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (133ms)
-				ProcessInitializeOnLoadAttributes (1341ms)
-				ProcessInitializeOnLoadMethodAttributes (172ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (43ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3918 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (146.9 KB). Loaded Objects now: 4495.
-Memory consumption went from 240.4 MB to 240.3 MB.
-Total: 3.440875 ms (FindLiveObjects: 0.263083 ms CreateObjectMapping: 0.116875 ms MarkObjects: 2.886334 ms  DeleteObjects: 0.173209 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 405.349276 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/1x
-  artifactKey: Guid(9d96fb17908b7488895c0239ff53a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/1x using Guid(9d96fb17908b7488895c0239ff53a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5241b95a659e25a7e6afb5ea4766ff36') in 0.010124 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.001766 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/Artboard 21.png
-  artifactKey: Guid(d9de7bbc6d76349968d15a07f546026e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/Artboard 21.png using Guid(d9de7bbc6d76349968d15a07f546026e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5077a1edea401ec6b8413e4b160719a') in 0.153091 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.481088 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/Artboard 22.png
-  artifactKey: Guid(3b56a474b8baf419183c1d282f5d543d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/Artboard 22.png using Guid(3b56a474b8baf419183c1d282f5d543d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213c2d4fa69ead088bc41c6ddf7af35e') in 0.018470 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.847540 seconds.
-  path: Assets/Art/BathtimeArt/SceneArt/Bathtime-title.png
-  artifactKey: Guid(f193d5ffe5c07419bb1bafb3de92862d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/BathtimeArt/SceneArt/Bathtime-title.png using Guid(f193d5ffe5c07419bb1bafb3de92862d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd62dcf82623117db60d78f2d470a4444') in 0.213036 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003344 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.905 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2907ms)
-		BeginReloadAssembly (250ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (51ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (52ms)
-		EndReloadAssembly (2404ms)
-			LoadAssemblies (116ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (270ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1700ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (37ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (131ms)
-				ProcessInitializeOnLoadAttributes (1360ms)
-				ProcessInitializeOnLoadMethodAttributes (167ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (43ms)
+			AwakeInstancesAfterBackupRestoration (54ms)
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3920 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (146.9 KB). Loaded Objects now: 4549.
-Memory consumption went from 249.8 MB to 249.6 MB.
-Total: 3.696084 ms (FindLiveObjects: 0.282083 ms CreateObjectMapping: 0.122208 ms MarkObjects: 3.117500 ms  DeleteObjects: 0.172500 ms)
+Unloading 3932 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (146.9 KB). Loaded Objects now: 4626.
+Memory consumption went from 467.1 MB to 467.0 MB.
+Total: 3.877750 ms (FindLiveObjects: 0.301708 ms CreateObjectMapping: 0.119000 ms MarkObjects: 3.288833 ms  DeleteObjects: 0.166417 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -401,49 +431,49 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003590 seconds.
+Registered in 0.003013 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Bathtime/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.903 seconds
+- Completed reload, in  3.043 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2905ms)
-		BeginReloadAssembly (245ms)
+	ReloadAssembly (3045ms)
+		BeginReloadAssembly (264ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (51ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (50ms)
-		EndReloadAssembly (2412ms)
-			LoadAssemblies (113ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (2518ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (267ms)
+			SetupTypeCache (310ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1713ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (1754ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (38ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (35ms)
+				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (139ms)
-				ProcessInitializeOnLoadAttributes (1356ms)
+				ProcessInitializeOnLoadAttributes (1401ms)
 				ProcessInitializeOnLoadMethodAttributes (175ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (47ms)
+			AwakeInstancesAfterBackupRestoration (51ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3917 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (146.8 KB). Loaded Objects now: 4551.
-Memory consumption went from 253.3 MB to 253.2 MB.
-Total: 3.888125 ms (FindLiveObjects: 0.292292 ms CreateObjectMapping: 0.124458 ms MarkObjects: 3.288416 ms  DeleteObjects: 0.181166 ms)
+Unloading 32 unused Assets / (146.9 KB). Loaded Objects now: 4628.
+Memory consumption went from 470.2 MB to 470.0 MB.
+Total: 3.547000 ms (FindLiveObjects: 0.276250 ms CreateObjectMapping: 0.116292 ms MarkObjects: 3.018292 ms  DeleteObjects: 0.135375 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -455,9 +485,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 368.475886 seconds.
-  path: Assets/Scenes/Bathtime.unity
-  artifactKey: Guid(5b1986468e5684cb98d182afc11e80ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Bathtime.unity using Guid(5b1986468e5684cb98d182afc11e80ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1a89918c8df5f9e533d377ad3c80c4') in 0.021856 seconds 
