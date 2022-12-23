@@ -49,7 +49,10 @@ public class Scenario : ScriptableObject
     public Sprite dzImage;
     public Vector2 dzPos;
     public Vector2 dzRectDimensions;
-    
+
+    public GameObject dzCover;
+    public Vector2 dzCoverPos;
+    public int hideDzCoverImgAfter = -1;
 
     //Selection Feedback -- There must be the same number of feedback audioclip+sprite pairs. these can differ between correct and incorrect.
     public List<AudioClip> correctPhraseAud;

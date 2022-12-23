@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: boys_coat
+  m_EditorClassIdentifier: 
+  type: 6
+  description: coat
+  wordString:
+  - coat
+  - kupou
+  customInstructionText:
+  - 
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 1e8480e0969ee478c958878f726dfe1b, type: 3}
+  - {fileID: 21300000, guid: 50d1eb3db33464a15a408ee33215c93a, type: 3}
+  thisRandIndex: 7
+  dragged: 1
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 0cc5cea04be8d47e8b2fe9a086d5cc01, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: b32dcfd9ec8a0426690047524b33632d, type: 3}
+  dropPos: {x: 2, y: 5}
+  dropSize: {x: 1.9, y: 1.8}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 260, y: -74}
+  dzB:
+  - {x: -105, y: -235}
+  - {x: -105, y: 150}
+  - {x: 105, y: 150}
+  - {x: 105, y: -235}
+  batch: 4

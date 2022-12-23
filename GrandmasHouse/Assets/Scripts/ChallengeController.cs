@@ -28,6 +28,8 @@ public class ChallengeController : MonoBehaviour
     internal bool HighlightCorrectItem = false;
     internal bool draggingAllowed = false;
     public GameObject stars;
+    internal GameObject dzCover;
+
 
     private void Start()
     {
@@ -46,6 +48,7 @@ public class ChallengeController : MonoBehaviour
         
         SetDraggableOrder();
         RandomizeDraggablePos();
+        if (selectedScenarioSO.hideDzCoverImgAfter != -1) { SpawnDZCover(); }
     }
 
     //triggers rearranging of DraggableItems.  
@@ -205,8 +208,24 @@ public class ChallengeController : MonoBehaviour
 
             //Debug.Log(draggableObjects[curItem].transform.localPosition);
             InstantiateStars(draggables[curItem].dropPos, 0.3f);
-            StartCoroutine(AudAfterCorrDrop());            
+            if(selectedScenarioSO.hideDzCoverImgAfter == curItem) { DestroyDZCover(); }
+
+            StartCoroutine(AudAfterCorrDrop());
         }
+    }
+
+    internal void SpawnDZCover()
+    {
+        Debug.Log("should instantiate cover");
+        dzCover = Instantiate(selectedScenarioSO.dzCover);
+        dzCover.transform.SetParent(GameObject.Find("Draggable Container").transform);
+        dzCover.transform.localScale = new Vector3(1, 1, 1);
+        dzCover.transform.localPosition = selectedScenarioSO.dzCoverPos;
+    }
+
+    internal void DestroyDZCover()
+    {
+        Destroy(dzCover);
     }
 
     //only used for testing purposes

@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: DressSchoolBoy
+  m_EditorClassIdentifier: 
+  scenarioType: 0
+  scenarioName: 
+  scenarioDraggableObjects:
+  - {fileID: 1503749112782865574, guid: 071dce8b5c331455ba738bcbde299f84, type: 3}
+  - {fileID: 8446338841970860802, guid: 84f0004c5bec2443e8ec1c9054d0c4ce, type: 3}
+  - {fileID: 2430359464661512392, guid: d25b78328475b4bd2be9ed62e152e87c, type: 3}
+  - {fileID: 3438636360587771597, guid: f7bf5c05822ec4b198ca7a1494e5f139, type: 3}
+  - {fileID: 2072412850786220241, guid: ea34b60b5b508455d939d3e59c216235, type: 3}
+  - {fileID: 2627287156802914201, guid: a461c2e37880b475092cb66817b1c5e1, type: 3}
+  - {fileID: 4073607000921725908, guid: 6f013616888844a489fc02aacbb67131, type: 3}
+  - {fileID: 6547127918625635238, guid: 2fcb6af5b899a44849852582e95f5d3a, type: 3}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: f9fc44fb7774c4b2d8f6a53c1a731777, type: 2}
+  - {fileID: 11400000, guid: 87909db0e1bce4d03bead37e320ff108, type: 2}
+  - {fileID: 11400000, guid: f87466b6100ea44d28547684df3f7deb, type: 2}
+  - {fileID: 11400000, guid: 78fd084616f7b4ad281f2f92728f4f2d, type: 2}
+  - {fileID: 11400000, guid: 2a4ed2194fbbe4d18a0425256b812cf8, type: 2}
+  - {fileID: 11400000, guid: 886e156587b4d49a6a569c38336a843d, type: 2}
+  - {fileID: 11400000, guid: 82c5cc838175f4eb9a62b5a289f939eb, type: 2}
+  - {fileID: 11400000, guid: b863f923c0a354164941eca7b162b486, type: 2}
+  titleName:
+  - You get dressed for school
+  - "nem\u2019 \u2019utth\u2019e\u2019um! wulh skoul ch!"
+  openerPhrase:
+  - Get dressed and fix yourself up.
+  - "\u2019u tth\u2019e\u2019um \u2019un suw\u2019 they\u2019yuwsum."
+  DZB:
+  - {x: -105, y: -235}
+  - {x: -105, y: 150}
+  - {x: 105, y: 150}
+  - {x: 105, y: -235}
+  replaceAsDropped: 0
+  dialect: 0
+  playSceneName: DressSchoolBoy
+  repeaterPhrase:
+  - Put on your
+  - "hakwush tthun\u2019"
+  successPhrase:
+  - Looking good in what your wear!
+  - "\u2019i \u2019uy\u2019mut tthu hakwushuhw!"
+  completionPhrase:
+  - You are ready to go to school!
+  - "ni\u2019 ch hwusaay\u2019 kw\u2019uns nem\u2019 skoul"
+  numDraggables: 8
+  titleAud: {fileID: 8300000, guid: 406f0cc59c7df4e4cb22fab0654d5df0, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 0d8daaf6d354d48208d0a0fc30414c87, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 5f70231bd99274eb3b20c05fc49b6bf9, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: f64d4812ea3c34fe8a4c59b00d2bae6e, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: 01b67500da4c34a55ac52398c89cad53, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: f96be4330da2b46cb8450ad81fda9831, type: 3}
+  homeImage: {fileID: 21300000, guid: be5366f0f3bdb4c5696c28916ab0b34b, type: 3}
+  backgroundImage: {fileID: 21300000, guid: dffb18ddc2911469d9c1fed0386292a3, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 6ab9466e0fadd416588e4366b14207f3, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: dffb18ddc2911469d9c1fed0386292a3, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: c601649ff370a4db08adbdb549e1a1a5, type: 3}
+  dzImage: {fileID: 21300000, guid: 796f34af2faa94e2ab5e83f7705096d8, type: 3}
+  dzPos: {x: 0.5, y: -59}
+  dzRectDimensions: {x: 250, y: 490}
+  dzCover: {fileID: 7772279510017743817, guid: a4037e6529b8240d9848d68fa55f8c5e, type: 3}
+  dzCoverPos: {x: -2.3, y: -77}
+  hideDzCoverImgAfter: 0
+  correctPhraseAud:
+  - {fileID: 8300000, guid: 71947844a0a1f4a84bea155c7f6515a5, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 44d9122d9a7bf40d48c2fcb46efc87d5, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 796f34af2faa94e2ab5e83f7705096d8, type: 3}
+  randSlots:
+  - {x: -400, y: 100}
+  - {x: -400, y: -15}
+  - {x: -400, y: -130}
+  - {x: -400, y: -245}
+  - {x: 400, y: 100}
+  - {x: 400, y: -15}
+  - {x: 400, y: -130}
+  - {x: 400, y: -245}

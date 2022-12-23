@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: boys_pants
+  m_EditorClassIdentifier: 
+  type: 6
+  description: pants
+  wordString:
+  - pants
+  - suqiws
+  customInstructionText:
+  - 
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: bda8ced29a72440e0a03a9eaa4d285e6, type: 3}
+  - {fileID: 21300000, guid: f2679999152c54abc8c3375fbce12e92, type: 3}
+  thisRandIndex: 4
+  dragged: 1
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 358d8bb37b3884872bcc9c3ecb0b3e04, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 0fbf4d0dc920b4f0f8953758939f6ced, type: 3}
+  dropPos: {x: -4.1, y: -126.9}
+  dropSize: {x: 2.2, y: 2.13}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: 100, y: 46}
+  dzB:
+  - {x: -105, y: -235}
+  - {x: -105, y: 150}
+  - {x: 105, y: 150}
+  - {x: 105, y: -235}
+  batch: 2

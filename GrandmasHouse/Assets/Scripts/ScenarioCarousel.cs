@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScenarioCarousel : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class ScenarioCarousel : MonoBehaviour
     public GameObject draggableContainer;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI titleTextEngl;
-    public Button rightButton;
-    public Button leftButton;
+    public TextMeshProUGUI vocabListText;
+    public TextMeshProUGUI vocabListTextEngl;
+    public Image gameSneakPeakImage;
+
+    public Button upButton;
+    public Button downButton;
     int numScenarios;
     List<Color> navDotColors = new List<Color> { new Color(0.78f, 0.78f, 0.875f, 1), new Color(0.78f, 0.78f, 0.875f, 0.4f) };
     List<GameObject> navDots = new List<GameObject>();
@@ -30,7 +35,10 @@ public class ScenarioCarousel : MonoBehaviour
         scenarios = new List<Scenario>(scenarioSetter.scenarios);
         numScenarios = scenarios.Count;
         SpawnNavDots();
-        SpawnDraggables();
+        //SpawnDraggables();
+        SetVocabList();
+        SetGameTitle();
+        StartCoroutine(SetGameImage());
     }
 
     void SpawnNavDots()
@@ -71,38 +79,52 @@ public class ScenarioCarousel : MonoBehaviour
     }
 
 
-    public void DoLeftButton()
+    public void DoDownButton()
     {
-        activeScenarioIndex--;
-        CheckNavBounaries();
-        DestroyDraggables();
-        SpawnDraggables();
-    }
+        Debug.Log("down");
 
-    public void DoRightButton()
-    {
         activeScenarioIndex++;
         CheckNavBounaries();
-        DestroyDraggables();
-        SpawnDraggables();
+        ChangeNavDotColor();
+        //DestroyDraggables();
+        //SpawnDraggables();
+        SetVocabList();
+
+        SetGameTitle();
+        StartCoroutine(SetGameImage());
+    }
+
+    public void DoUpButton()
+    {
+        Debug.Log("up");
+        activeScenarioIndex--;
+        CheckNavBounaries();
+        ChangeNavDotColor();
+        //DestroyDraggables();
+        //SpawnDraggables();
+        SetVocabList();
+        SetGameTitle();
+        StartCoroutine(SetGameImage());
     }
 
     public void CheckNavBounaries()
     {
         if (activeScenarioIndex == 0)
         {
-            leftButton.interactable = false;
+            upButton.interactable = false;
+            downButton.interactable = true;
         }
 
         else if(activeScenarioIndex == numScenarios - 1)
         {
-            rightButton.interactable = false;
+            upButton.interactable = true;
+            downButton.interactable = false;
         }
 
         else
         {
-            rightButton.interactable = true;
-            leftButton.interactable = true;
+            upButton.interactable = true;
+            downButton.interactable = true;
         }
     }
 
@@ -144,4 +166,68 @@ public class ScenarioCarousel : MonoBehaviour
         }
     }
 
+    private void SetGameTitle()
+    {
+        titleText.text = scenarios[activeScenarioIndex].titleName[1];
+        titleTextEngl.text = scenarios[activeScenarioIndex].titleName[0];
+    }
+
+    private void SetVocabList()
+    {
+        string vocabList = "";
+        //string vocabListEngl = "";
+        foreach(DraggableItem draggable in scenarios[activeScenarioIndex].scenarioDraggableItems)
+        {
+            string draggableString = draggable.wordString[0] + "  \t~\t" + draggable.wordString[1] + "\n";
+            vocabList += draggableString;
+            //string draggableStringEngl = draggable.wordString[0] + " ~\n";
+            //vocabListEngl += draggableStringEngl;
+
+        }
+        vocabListText.text = vocabList;
+        //vocabListTextEngl.text = vocabListEngl;
+    }
+    private IEnumerator SetGameImage()
+    {
+        float fadeDur = 0.15f;
+        StartCoroutine(LerpAlphaDown(fadeDur));
+        yield return new WaitForSeconds(fadeDur);
+        gameSneakPeakImage.sprite = scenarios[activeScenarioIndex].gameOverBackgroundSprite;
+        StartCoroutine(LerpAlphaUp(0.15f));
+    }
+
+    IEnumerator LerpAlphaUp(float duration)
+    {
+        List<Color> colors = new List<Color> { new Color(1, 1, 1, 0), new Color(1, 1, 1, 1) };
+        
+        float timeA = 0;
+        while (timeA < duration)
+        {
+            gameSneakPeakImage.color = Color.Lerp(colors[0], colors[1], timeA / duration);
+            timeA += Time.deltaTime;
+            yield return null;
+        }
+        gameSneakPeakImage.color = colors[1];
+    }
+
+    IEnumerator LerpAlphaDown(float duration)
+    {
+        List<Color> colors = new List<Color> { new Color(1, 1, 1, 1), new Color(1, 1, 1, 0) };
+
+        float timeA = 0;
+        while (timeA < duration)
+        {
+            gameSneakPeakImage.color = Color.Lerp(colors[0], colors[1], timeA / duration);
+            timeA += Time.deltaTime;
+            yield return null;
+        }
+        gameSneakPeakImage.color = colors[1];
+    }
+
+    public void GoToScene()
+    {
+        SceneManager.LoadScene("Home");
+
+        scenarioSetter.ChangeScenario(activeScenarioIndex);
+    }
 }

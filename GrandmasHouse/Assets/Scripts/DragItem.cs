@@ -40,7 +40,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (RecognizeHoverInPlay(true))
         {
             attemptedDrag = true;
-            transform.SetSiblingIndex(7);
+            transform.SetSiblingIndex(transform.parent.childCount);
             rectTransform = GetComponent<RectTransform>();
             canvasGroup.blocksRaycasts = false;
             StartCoroutine(Grow(1.2f));

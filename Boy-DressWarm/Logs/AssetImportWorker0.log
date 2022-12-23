@@ -2,8 +2,8 @@ Unity Editor version:    2021.2.9f1 (921b45a28ab6)
 Branch:                  2021.2/staging
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 13.0.1 (Build 22A400)
-Darwin version:          22.1.0
+macOS version:           Version 13.1 (Build 22C65)
+Darwin version:          22.2.0
 Architecture:            x86_64
 Running under Rosetta:   YES
 Available memory:        32768 MB
@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52613
+63308
 Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm
 /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/chloefarr/Documents/GitHub/Unity/Gr
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 112.30 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 114.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.9f1 (921b45a28ab6)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,93 +69,489 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56227
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56221
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002771 seconds.
+Registered in 0.002489 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 112.65 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 112.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.650 seconds
+- Completed reload, in  1.570 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1651ms)
-		BeginReloadAssembly (148ms)
+	ReloadAssembly (1572ms)
+		BeginReloadAssembly (135ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1346ms)
-			LoadAssemblies (146ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1277ms)
+			LoadAssemblies (133ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (131ms)
+			SetupTypeCache (142ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (1002ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (922ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (47ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (113ms)
-				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (616ms)
-				ProcessInitializeOnLoadMethodAttributes (221ms)
+				BeforeProcessingInitializeOnLoad (4ms)
+				ProcessInitializeOnLoadAttributes (572ms)
+				ProcessInitializeOnLoadMethodAttributes (184ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006765 seconds.
+Registered in 0.006989 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.571 seconds
+- Completed reload, in  2.502 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2573ms)
-		BeginReloadAssembly (264ms)
+	ReloadAssembly (2504ms)
+		BeginReloadAssembly (238ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (46ms)
+			DisableScriptedObjects (39ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (2039ms)
-			LoadAssemblies (139ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (2013ms)
+			LoadAssemblies (112ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (304ms)
+			SetupTypeCache (332ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (1328ms)
+			SetupLoadedEditorAssemblies (1298ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
+				InitializePlatformSupportModulesInManaged (34ms)
 				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (159ms)
-				ProcessInitializeOnLoadAttributes (1012ms)
-				ProcessInitializeOnLoadMethodAttributes (111ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (151ms)
+				ProcessInitializeOnLoadAttributes (997ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.2.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3245 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 26 unused Assets / (83.7 KB). Loaded Objects now: 3702.
-Memory consumption went from 103.3 MB to 103.2 MB.
-Total: 3.349667 ms (FindLiveObjects: 0.200875 ms CreateObjectMapping: 0.087958 ms MarkObjects: 2.925541 ms  DeleteObjects: 0.134125 ms)
+Memory consumption went from 100.6 MB to 100.5 MB.
+Total: 3.431042 ms (FindLiveObjects: 0.194834 ms CreateObjectMapping: 0.090000 ms MarkObjects: 3.017167 ms  DeleteObjects: 0.127750 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 121007.832554 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.009481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 275.352464 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-StartScreen.png
+  artifactKey: Guid(fc1a50ce761b14945a95fc1453700ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-StartScreen.png using Guid(fc1a50ce761b14945a95fc1453700ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff92735c97e6a08d1c4e987f30ea3021') in 0.326432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/grandchildputonwarmclothes_DL.wav
+  artifactKey: Guid(5e97f71a6f0af4b418d202604364509d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/grandchildputonwarmclothes_DL.wav using Guid(5e97f71a6f0af4b418d202604364509d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692507934d4a292d1dccd8d4f572f528') in 0.136429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_hat.png
+  artifactKey: Guid(5a2b36a9e2cc640f38cc1e567382d502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_hat.png using Guid(5a2b36a9e2cc640f38cc1e567382d502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29d59ac18a0ff1976ad59197354cb07') in 0.015327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-boyDressWarm_boyExample_3.png
+  artifactKey: Guid(194690252211e4f16907ebc8539d6036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-boyDressWarm_boyExample_3.png using Guid(194690252211e4f16907ebc8539d6036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fcaa876e577fe87f090efd37a631ef1') in 0.019433 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Prefabs/DressWarm Items/coat.prefab
+  artifactKey: Guid(dead9918b165c414fb5c18e9774bbdae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/coat.prefab using Guid(dead9918b165c414fb5c18e9774bbdae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede89b31de505102490551f98b403f5c') in 0.168559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Audio
+  artifactKey: Guid(bd15e9dc0b0f74a32bb013d4adc83f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio using Guid(bd15e9dc0b0f74a32bb013d4adc83f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8572cb42d3c2660d82212173271c360') in 0.000502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000613 seconds.
+  path: Assets/Prefabs/DressWarm Items/pants.prefab
+  artifactKey: Guid(90a3bf9131a3c4f3ca56719a56afbb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/pants.prefab using Guid(90a3bf9131a3c4f3ca56719a56afbb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b33839918c77889b60ec09061255ed5') in 0.023718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Prefabs/DressWarm Items/socks.prefab
+  artifactKey: Guid(2e4505e1b264b4b18ab656ae6232f2b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/socks.prefab using Guid(2e4505e1b264b4b18ab656ae6232f2b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec92d5f840fb8b94567a315102a5f635') in 0.017626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/ClothingClean_tile-sweater.png
+  artifactKey: Guid(38fda4d882e58417daea90681c55fdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/ClothingClean_tile-sweater.png using Guid(38fda4d882e58417daea90681c55fdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d6922c7eb1a2ee274a86b090cc7ae4a') in 0.059099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/Grandchild_putyourwarmclothingontoplayoutside_DL.wav
+  artifactKey: Guid(17756292c73884c9fb9c17b5b036ead6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/Grandchild_putyourwarmclothingontoplayoutside_DL.wav using Guid(17756292c73884c9fb9c17b5b036ead6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09dbde4fe27d1ee4a933a43c6bbe61f') in 0.008497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_scarf.png
+  artifactKey: Guid(c91471b8415f54ddcbb5c6bfa40c5ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_scarf.png using Guid(c91471b8415f54ddcbb5c6bfa40c5ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f067676464dc61b4bfc33e4d9b7c537') in 0.010069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_gloves.png
+  artifactKey: Guid(d930cd6680c244f6f86845a447de2b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_gloves.png using Guid(d930cd6680c244f6f86845a447de2b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10800eafb97dac40d7667e4f58a289f7') in 0.009425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/gloves_DL.wav
+  artifactKey: Guid(0b85dd1d2ea1d43a5bb38b61bf46656b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/gloves_DL.wav using Guid(0b85dd1d2ea1d43a5bb38b61bf46656b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2072971c5052274d1a64b505d97be8') in 0.006123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Audio/Dressup Audio
+  artifactKey: Guid(fb7d49700a3d44812b804ad30d16fc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio using Guid(fb7d49700a3d44812b804ad30d16fc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0271c74e442d788e062543d333fde785') in 0.000481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-boyDressWarm_boyExample_1.png
+  artifactKey: Guid(7c9041fba4a634fb3b39c7cb98250db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-boyDressWarm_boyExample_1.png using Guid(7c9041fba4a634fb3b39c7cb98250db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db13160fc8bb4c944fa8ddd0655a120a') in 0.018436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Prefabs/Dressup Items/underpants.prefab
+  artifactKey: Guid(071dce8b5c331455ba738bcbde299f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/underpants.prefab using Guid(071dce8b5c331455ba738bcbde299f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e01de6ebfa6e50420488436d13598c6') in 0.022003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_boots.png
+  artifactKey: Guid(4a9817d62ec864fbab1f3d676bbd5354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Tile Art/DressForOutside-Tile_boots.png using Guid(4a9817d62ec864fbab1f3d676bbd5354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69d78606cd63fa44266d5245bee878f4') in 0.011529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio
+  artifactKey: Guid(f19fd404f40e04552af817082275b466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio using Guid(f19fd404f40e04552af817082275b466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898fc0961f5840226d16980ba4568ddc') in 0.000503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-StartScreen_1.png
+  artifactKey: Guid(921e799c885d046fba33b9689c4978be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-StartScreen_1.png using Guid(921e799c885d046fba33b9689c4978be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6830b6aff85ebaeaf5579b1a6f62a4b3') in 0.065618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Prefabs/Dressup Items/vest.prefab
+  artifactKey: Guid(6f013616888844a489fc02aacbb67131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/vest.prefab using Guid(6f013616888844a489fc02aacbb67131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4fa70dce2f7ac76528817001340648') in 0.016868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/gumboots_DL.wav
+  artifactKey: Guid(e3228629f13c848b5b1d003658a05df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/gumboots_DL.wav using Guid(e3228629f13c848b5b1d003658a05df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '719f510de3ba8d1dad2f179ad073f058') in 0.006827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/Youarenowreadytogoplayoutside_DL.wav
+  artifactKey: Guid(ed1d136675840485085932c4e2f0ad3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/Youarenowreadytogoplayoutside_DL.wav using Guid(ed1d136675840485085932c4e2f0ad3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb3fe29df11c4c996cdbf613606da49') in 0.006212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Prefabs/Dressup Items/undershirt.prefab
+  artifactKey: Guid(84f0004c5bec2443e8ec1c9054d0c4ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/undershirt.prefab using Guid(84f0004c5bec2443e8ec1c9054d0c4ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30cbfeb34e542c632b3c76a1a154c357') in 0.017284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Prefabs/DressWarm Items/scarf.prefab
+  artifactKey: Guid(f24b5db24f6414321be296db3c29e5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/scarf.prefab using Guid(f24b5db24f6414321be296db3c29e5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce9269b22fd00bfbc7b69f2debe9706') in 0.018365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Prefabs/DressWarm Items/gloves.prefab
+  artifactKey: Guid(0de8f4a3832134ba8bb378dd4bace687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/gloves.prefab using Guid(0de8f4a3832134ba8bb378dd4bace687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b30ac9b38ee2c82f645d157ea5a5d8') in 0.017278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Prefabs/Dressup Items/shirt.prefab
+  artifactKey: Guid(ea34b60b5b508455d939d3e59c216235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/shirt.prefab using Guid(ea34b60b5b508455d939d3e59c216235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd245ce9a1f46251e8c86ada87a342254') in 0.016471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Prefabs/DressWarm Items/gumboots.prefab
+  artifactKey: Guid(466ba9e2a284545c98314315e12d9c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/gumboots.prefab using Guid(466ba9e2a284545c98314315e12d9c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bb9bae07b3219c282e2560880349a6') in 0.017319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/DressForOutside-FeedBaby-Grandma.png
+  artifactKey: Guid(25c8f2553eb844b00b7d2ca3eb4c4a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/DressForOutside-FeedBaby-Grandma.png using Guid(25c8f2553eb844b00b7d2ca3eb4c4a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1747bb6acfa08cf49aa364a92a43ed24') in 0.035026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/Dressup Art/SceneArt/Dressupwarm_title.png
+  artifactKey: Guid(bdf694161fd9a4eddb8b08986a051107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/SceneArt/Dressupwarm_title.png using Guid(bdf694161fd9a4eddb8b08986a051107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3899026140cc1146bc8af19f540ff175') in 0.216195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Prefabs/Dressup Items/shoes.prefab
+  artifactKey: Guid(a461c2e37880b475092cb66817b1c5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/shoes.prefab using Guid(a461c2e37880b475092cb66817b1c5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8979f816d843a60a11fa8543a723ada5') in 0.017528 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_hat.png
+  artifactKey: Guid(f03e5ff24bc41416abd9d45cedddf1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_hat.png using Guid(f03e5ff24bc41416abd9d45cedddf1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '777855d44786c4b2c953b2007412b5cd') in 0.011488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/scarf_DL.wav
+  artifactKey: Guid(f7c06eafe63b24201849313b11b3b5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/scarf_DL.wav using Guid(f7c06eafe63b24201849313b11b3b5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2358db01b04b8825abc306ce2fd443bf') in 0.006037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_gloves.png
+  artifactKey: Guid(e6b577adb37cf416ab0d2fea88f28616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_gloves.png using Guid(e6b577adb37cf416ab0d2fea88f28616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63e2c5571b0cb150a149912f3febc1a') in 0.008670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/sweater_DL.wav
+  artifactKey: Guid(3bb12663dfaab41dcb564b6109c3f703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/sweater_DL.wav using Guid(3bb12663dfaab41dcb564b6109c3f703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9adc00e07aaa2f301349570fb52f313') in 0.005913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Audio/Dressup Audio/Item Audio/hat_DL.wav
+  artifactKey: Guid(e584f702512f74fdc8fa6977f6aadd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Item Audio/hat_DL.wav using Guid(e584f702512f74fdc8fa6977f6aadd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1b38917acface4e5a6fffa911f4a03') in 0.006429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Prefabs/Dressup Items/coat.prefab
+  artifactKey: Guid(2fcb6af5b899a44849852582e95f5d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/coat.prefab using Guid(2fcb6af5b899a44849852582e95f5d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1137ddbe0e3561e3490b812444aad224') in 0.017630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_boots.png
+  artifactKey: Guid(83d4d4502e6c34bb2ba4721aed0b3708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_boots.png using Guid(83d4d4502e6c34bb2ba4721aed0b3708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76030318d9608303de3214bd8d303877') in 0.009807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/Gooutsideandplay_DL.wav
+  artifactKey: Guid(4f0453b7d41b84bcbbdda670d20c1a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/Gooutsideandplay_DL.wav using Guid(4f0453b7d41b84bcbbdda670d20c1a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1d05f158135a9c3647cddd2c744348') in 0.006110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_scarf.png
+  artifactKey: Guid(a46aab7c68c5d499cbbb3670c7946ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Dressup Art/Layer Art/DressForOutside-Layer_scarf.png using Guid(a46aab7c68c5d499cbbb3670c7946ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e544cb5ca4db5b83ab43ca4705b0c95a') in 0.008973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Audio/DL_PleaseAgain.wav
+  artifactKey: Guid(31bdc0061c73f4bac9e6fefdd67d969a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/DL_PleaseAgain.wav using Guid(31bdc0061c73f4bac9e6fefdd67d969a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdfaa58171846fed0d6c0176c069c831') in 0.006209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio
+  artifactKey: Guid(3f827096563064979831e9a03dc4d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio using Guid(3f827096563064979831e9a03dc4d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dbce73a80c8839f3b9fdc4eaae212f') in 0.000439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Prefabs/Dressup Items/pants.prefab
+  artifactKey: Guid(d25b78328475b4bd2be9ed62e152e87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/pants.prefab using Guid(d25b78328475b4bd2be9ed62e152e87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854da54efa9cf391fd8a102056c286f5') in 0.016512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Prefabs/DressWarm Items/hat.prefab
+  artifactKey: Guid(9b01b2c6b7054470cae7be3c66816d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DressWarm Items/hat.prefab using Guid(9b01b2c6b7054470cae7be3c66816d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47127a4bab29a33369469a3065614801') in 0.017105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Prefabs/Dressup Items/socks.prefab
+  artifactKey: Guid(f7bf5c05822ec4b198ca7a1494e5f139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dressup Items/socks.prefab using Guid(f7bf5c05822ec4b198ca7a1494e5f139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cea7380c1389256194e3c11cf797d06c') in 0.017055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 578.241034 seconds.
+  path: Assets/Audio/Dressup Audio/Scene Audio/boyputonwarmclothes_DL.wav
+  artifactKey: Guid(1a792ef69f2e44e9e9023d07b2a1d51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Dressup Audio/Scene Audio/boyputonwarmclothes_DL.wav using Guid(1a792ef69f2e44e9e9023d07b2a1d51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d7fc9e62001e53798e99279d2b84c4') in 0.008281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 658.637626 seconds.
+  path: Assets/ScriptableObjects/ScriptableObjectScripts/DisplayDraggable.cs
+  artifactKey: Guid(2724dbd564a9348d18ad060a96a481f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/ScriptableObjectScripts/DisplayDraggable.cs using Guid(2724dbd564a9348d18ad060a96a481f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1418af011752a540ac39a1a2cd826f42') in 0.092433 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002723 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.826 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2829ms)
+		BeginReloadAssembly (288ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (47ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (66ms)
+		EndReloadAssembly (2261ms)
+			LoadAssemblies (130ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (357ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (1406ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (131ms)
+				ProcessInitializeOnLoadAttributes (1093ms)
+				ProcessInitializeOnLoadMethodAttributes (138ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (50ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3242 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (63.8 KB). Loaded Objects now: 3956.
+Memory consumption went from 439.5 MB to 439.4 MB.
+Total: 3.213334 ms (FindLiveObjects: 0.276084 ms CreateObjectMapping: 0.093041 ms MarkObjects: 2.741083 ms  DeleteObjects: 0.102000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002546 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/chloefarr/Documents/GitHub/Unity/GrandmasPlayhouse/Boy-DressWarm/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.786 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2788ms)
+		BeginReloadAssembly (292ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (50ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (2212ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (1411ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (136ms)
+				ProcessInitializeOnLoadAttributes (1095ms)
+				ProcessInitializeOnLoadMethodAttributes (136ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (47ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3227 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (63.8 KB). Loaded Objects now: 3958.
+Memory consumption went from 442.0 MB to 442.0 MB.
+Total: 3.153875 ms (FindLiveObjects: 0.221125 ms CreateObjectMapping: 0.092833 ms MarkObjects: 2.734292 ms  DeleteObjects: 0.104583 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: DressWarmBoy
+  m_EditorClassIdentifier: 
+  scenarioType: 4
+  scenarioName: dressing warm
+  scenarioDraggableObjects:
+  - {fileID: 4773424047283584065, guid: 90a3bf9131a3c4f3ca56719a56afbb6b, type: 3}
+  - {fileID: 375308890222689049, guid: 6ba384d6d843045e69c14d9bd1e7fce5, type: 3}
+  - {fileID: 6367460484248141829, guid: 2e4505e1b264b4b18ab656ae6232f2b5, type: 3}
+  - {fileID: 5793130192042792682, guid: dead9918b165c414fb5c18e9774bbdae, type: 3}
+  - {fileID: 2857162287838856610, guid: 0de8f4a3832134ba8bb378dd4bace687, type: 3}
+  - {fileID: 2744266671552226253, guid: 466ba9e2a284545c98314315e12d9c0d, type: 3}
+  - {fileID: 4175761059374242313, guid: 9b01b2c6b7054470cae7be3c66816d84, type: 3}
+  - {fileID: 7758665609465218126, guid: f24b5db24f6414321be296db3c29e5a2, type: 3}
+  scenarioDraggableItems:
+  - {fileID: 11400000, guid: cc15a220f48a94f318a7b434164a8600, type: 2}
+  - {fileID: 11400000, guid: 61a31a991557e4d7d9fd12b34a1a8781, type: 2}
+  - {fileID: 11400000, guid: e6acd05a919424888bfbd37baaa47e18, type: 2}
+  - {fileID: 11400000, guid: 41ca4f4e411e94f11a6cdfff69072bb8, type: 2}
+  - {fileID: 11400000, guid: a0ff40dadb4e047ca9af9acc83d250d1, type: 2}
+  - {fileID: 11400000, guid: 5a03f9fc7607c46539403afc149e9786, type: 2}
+  - {fileID: 11400000, guid: e677e8b313ca9461ab5d6b810a2d5210, type: 2}
+  - {fileID: 11400000, guid: 23d3ff8215ca14a85b1c2d90d97e4a00, type: 2}
+  titleName:
+  - Go put on warm clothing!
+  - "nem\u2019 hakwush tthun\u2019 tl\u2019ehwum s\u2019itth\u2019um!"
+  openerPhrase:
+  - Grandchild, put your warm clothing on to play outside.
+  - "\u2019imuth, hakwush tthun\u2019 tl\u2019ehwum s\u2019itth\u2019um, nem\u2019
+    ch huw\u2019alum\u2019 s\u2019e\u2019tl\u2019q."
+  DZB:
+  - {x: -105, y: -235}
+  - {x: -105, y: 150}
+  - {x: 105, y: 150}
+  - {x: 105, y: -235}
+  replaceAsDropped: 0
+  dialect: 1
+  playSceneName: DressWarmBoy
+  repeaterPhrase:
+  - Put on your
+  - "nem\u2019 hakwush tthun\u2019"
+  successPhrase:
+  - You are now ready to go play outside.
+  - " ni\u2019 ch hwu saay\u2019 kwun\u2019s nem\u2019 \u2019utl\u2019qul huw\u2019alum\u2019."
+  completionPhrase:
+  - Go outside and play.
+  - "nem\u2019 \u2019utl\u2019qul huw\u2019alum\u2019 s\u2019e\u2019tl\u2019q."
+  numDraggables: 8
+  titleAud: {fileID: 8300000, guid: 8d4a97e3ab2134c9693e1cae6d06a737, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: 66439cd8c982847f7bc61755d0a684c4, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 5f70231bd99274eb3b20c05fc49b6bf9, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: ed1d136675840485085932c4e2f0ad3b, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: 4f0453b7d41b84bcbbdda670d20c1a84, type: 3}
+  htpExampleAud: {fileID: 8300000, guid: f96be4330da2b46cb8450ad81fda9831, type: 3}
+  homeImage: {fileID: 21300000, guid: c601649ff370a4db08adbdb549e1a1a5, type: 3}
+  backgroundImage: {fileID: 21300000, guid: dffb18ddc2911469d9c1fed0386292a3, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 6ab9466e0fadd416588e4366b14207f3, type: 3}
+  vocabBackgroundSprite: {fileID: 21300000, guid: dffb18ddc2911469d9c1fed0386292a3, type: 3}
+  gameOverBackgroundSprite: {fileID: 21300000, guid: daac9ef1c7a2243c98453d15ec762a67, type: 3}
+  dzImage: {fileID: 21300000, guid: 26b2cfda6fbdd4fbc89d8241d01fef68, type: 3}
+  dzPos: {x: 0.5, y: -59}
+  dzRectDimensions: {x: 250, y: 490}
+  dzCover: {fileID: 0}
+  dzCoverPos: {x: 0, y: 0}
+  hideDzCoverImgAfter: -1
+  correctPhraseAud:
+  - {fileID: 8300000, guid: ce68896601d4b4e50b86364ccb723889, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites:
+  - {fileID: 21300000, guid: 0023dea5ef07d45618933fb2850d889a, type: 3}
+  correctDzSprites:
+  - {fileID: 21300000, guid: 26b2cfda6fbdd4fbc89d8241d01fef68, type: 3}
+  randSlots:
+  - {x: -400, y: 100}
+  - {x: -400, y: -15}
+  - {x: -400, y: -130}
+  - {x: -400, y: -245}
+  - {x: 400, y: 100}
+  - {x: 400, y: -15}
+  - {x: 400, y: -130}
+  - {x: 400, y: -245}

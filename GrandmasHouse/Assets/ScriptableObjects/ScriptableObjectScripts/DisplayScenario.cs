@@ -43,6 +43,7 @@ public class DisplayScenario : MonoBehaviour
     public AudioOnLoad completionPhraseButton;
 
     public List<Vector2> vocabPositions = new List<Vector2>() { new Vector2(-220,46), new Vector2(-60,46), new Vector2(100,46), new Vector2(260,46), new Vector2(-220, -74), new Vector2( -60, - 74), new Vector2(100,-74), new Vector2(260,-74) };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,23 +114,21 @@ public class DisplayScenario : MonoBehaviour
     internal void ResetDraggableSOs()
     {
         scenario.scenarioDraggableItems.ForEach(x => x.ResetSO());
-        //foreach (DraggableItem draggable in scenario.scenarioDraggableItems)
-        //{
-        //    draggable.ResetSO();
-        //}
+      
     }
 
 
-    void SetDzImage()
+    internal void SetDzImage()
     {
         var dzImageRectTransform = dzGO.transform as RectTransform;
 
         dzImageRectTransform.sizeDelta = scenario.dzRectDimensions;
         dzGO.transform.localPosition = scenario.dzPos;
+
         ChangeDZImage(scenario.dzImage);
     }
 
-    void ChangeDZImage(Sprite imageToSet)
+    internal void ChangeDZImage(Sprite imageToSet)
     {
         dzGO.GetComponent<Image>().sprite = imageToSet;
     }
