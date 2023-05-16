@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HoldAcrossScenes
   - Feedback
+  - Frame
   layers:
   - Default
   - TransparentFX

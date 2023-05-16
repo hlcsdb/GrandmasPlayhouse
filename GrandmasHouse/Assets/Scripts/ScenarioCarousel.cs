@@ -9,13 +9,13 @@ public class ScenarioCarousel : MonoBehaviour
 {
     public ScenarioSetter scenarioSetter;
     internal List<Scenario> scenarios;
-    public GameObject navDotContainer;
     public Sprite navImg;
-    public GameObject draggableContainer;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI titleTextEngl;
     public TextMeshProUGUI vocabListText;
     public TextMeshProUGUI vocabListTextEngl;
+    public TextMeshProUGUI roomName;
+
     public Image gameSneakPeakImage;
 
     public Button upButton;
@@ -41,6 +41,8 @@ public class ScenarioCarousel : MonoBehaviour
         StartCoroutine(SetGameImage());
     }
 
+    public GameObject navDotContainer;
+
     void SpawnNavDots()
     {
         float dotContainerWidth = navDotContainer.GetComponent<RectTransform>().rect.width;
@@ -58,7 +60,7 @@ public class ScenarioCarousel : MonoBehaviour
             dot.AddComponent<Image>().sprite = navImg;
             dot.transform.localScale = new Vector3(1, 1, 1);
             dot.GetComponent<RectTransform>().sizeDelta = new Vector2(dotSize, dotSize);
-            dot.transform.localPosition = new Vector2( x, navDotContainer.transform.localPosition.y);
+            dot.transform.localPosition = new Vector2(x, 0);
             dot.GetComponent<Image>().color = navDotColors[0];
             navDots.Add(dot);
 
@@ -143,6 +145,8 @@ public class ScenarioCarousel : MonoBehaviour
         }
     }
 
+    public GameObject draggableContainer;
+
     internal void SpawnDraggables()
     {
         Vector2 scale = new Vector2(1, 1);
@@ -170,6 +174,7 @@ public class ScenarioCarousel : MonoBehaviour
     {
         titleText.text = scenarios[activeScenarioIndex].titleName[1];
         titleTextEngl.text = scenarios[activeScenarioIndex].titleName[0];
+        roomName.text = scenarios[activeScenarioIndex].scenarioType.ToString();
     }
 
     private void SetVocabList()

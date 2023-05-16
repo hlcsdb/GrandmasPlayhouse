@@ -42,7 +42,7 @@ public class StarFeedback : MonoBehaviour
         StartCoroutine(GrowShrink());
         StartCoroutine(TwistAndBack());
     
-            for (int i = 1; i < starColors.Length; i++)
+        for (int i = 1; i < starColors.Length; i++)
         {
             StartCoroutine(LerpColor(starColors[i-1], starColors[i], activeDuration/starColors.Length));
             yield return new WaitUntil(() => starImage.color == starColors[i]);

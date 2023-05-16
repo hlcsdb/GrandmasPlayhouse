@@ -17,9 +17,23 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Play");
     }
 
+    public void GotoNavScene()
+    {
+        SceneManager.LoadScene("Navigation");
+    }
+
+    public ScenarioSetter scenarioSetter;
+    public void SetScenario(int iScenario)
+    {
+        scenarioSetter.ChangeScenario(iScenario);
+    }
+
     public void GotoSelectionScene()
     {
         //Debug.Log("go to scenario selection");
-        SceneManager.LoadScene("ScenarioSelection");
+        //SceneManager.LoadScene("ScenarioSelection");
+        SceneManager.LoadScene("ScenarioCarousel");
     }
+
+
 }

@@ -16,9 +16,14 @@ public class ScenarioSetter : ScriptableObject
         //currentScenarioIndex = scenarios.FindIndex(x => x.Equals(currentScenario));
     }
 
-    internal void ChangeScenario(int scenarioIndex)
+    public void ChangeScenario(int scenarioIndex)
     {
         currentScenario = scenarios[scenarioIndex];
         currentScenarioIndex = scenarioIndex;
+    }
+
+    public void ChangeScenarioSoup()
+    {
+        ChangeScenario(1);
     }
 }

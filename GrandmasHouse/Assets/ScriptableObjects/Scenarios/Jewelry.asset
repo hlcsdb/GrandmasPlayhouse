@@ -54,7 +54,7 @@ MonoBehaviour:
   - "aaa hay ch q\u2019a\u2019, \u2019imiye\u2019."
   completionPhrase:
   - "I\u2019m all fixed up. I\u2019m very decked out."
-  - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2018ul\u2019 \u2018iyas."
+  - "\u2019i tsun hwu sthu\u2019iw\u2019s. hay tsun \u2019ul\u2019 \u2019iyas."
   numDraggables: 8
   titleAud: {fileID: 8300000, guid: ef51304bb916a4737bd20501cb73e01a, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 729fae86bfb9c4b93933f28e6e45fd69, type: 3}
@@ -70,6 +70,9 @@ MonoBehaviour:
   dzImage: {fileID: 21300000, guid: 5139ee9d717894ded8701957aeac079e, type: 3}
   dzPos: {x: 223, y: -2.5}
   dzRectDimensions: {x: 660, y: 660}
+  dzCover: {fileID: 0}
+  dzCoverPos: {x: 0, y: 0}
+  hideDzCoverImgAfter: -1
   correctPhraseAud:
   - {fileID: 8300000, guid: acd39756b8a4845f1b43a3b2a71df978, type: 3}
   incorrectSelectionAud:

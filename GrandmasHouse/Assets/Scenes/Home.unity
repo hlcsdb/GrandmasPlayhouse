@@ -2965,9 +2965,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1662823210}
-        m_TargetAssemblyTypeName: DisplayScenarioHome, Assembly-CSharp
-        m_MethodName: GotoSelectionScene
+      - m_Target: {fileID: 1662823211}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: GotoNavScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2989,6 +2989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329367448652743cb82736a0227c9864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
 --- !u!114 &1274275299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3459,6 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329367448652743cb82736a0227c9864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
 --- !u!114 &1451443600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3710,6 +3712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662823209}
   - component: {fileID: 1662823210}
+  - component: {fileID: 1662823211}
   m_Layer: 5
   m_Name: Game
   m_TagString: Untagged
@@ -3758,6 +3761,19 @@ MonoBehaviour:
   titleTextEngl: {fileID: 619220987}
   homeScreenBackground: {fileID: 1536941588}
   audSource: {fileID: 1943474367}
+--- !u!114 &1662823211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662823208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329367448652743cb82736a0227c9864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
 --- !u!1 &1664493016
 GameObject:
   m_ObjectHideFlags: 0

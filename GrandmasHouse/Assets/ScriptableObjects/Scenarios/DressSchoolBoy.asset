@@ -33,7 +33,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 82c5cc838175f4eb9a62b5a289f939eb, type: 2}
   - {fileID: 11400000, guid: b863f923c0a354164941eca7b162b486, type: 2}
   titleName:
-  - You get dressed for school
+  - You get dressed for school!
   - "nem\u2019 \u2019utth\u2019e\u2019um! wulh skoul ch!"
   openerPhrase:
   - Get dressed and fix yourself up.
@@ -54,7 +54,7 @@ MonoBehaviour:
   - "\u2019i \u2019uy\u2019mut tthu hakwushuhw!"
   completionPhrase:
   - You are ready to go to school!
-  - "ni\u2019 ch hwusaay\u2019 kw\u2019uns nem\u2019 skoul"
+  - "ni\u2019 ch hwusaay\u2019 kw\u2019uns nem\u2019 skoul!"
   numDraggables: 8
   titleAud: {fileID: 8300000, guid: 406f0cc59c7df4e4cb22fab0654d5df0, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 0d8daaf6d354d48208d0a0fc30414c87, type: 3}

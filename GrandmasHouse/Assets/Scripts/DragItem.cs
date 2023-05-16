@@ -13,9 +13,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private DraggableItem draggable;
     private ChallengeController currSceneController;
     private AudioSource audioSource;
-    private float timer = 0.0f;
-    private float scaleDur = 0.3f;
-    private GameObject hovertext;
+
     internal DisplayDraggable draggableUI;
     int idleState = 0;
     int activeState = 1;
@@ -118,6 +116,10 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         }
     }
 
+
+    private float timer = 0.0f;
+    private float scaleDur = 0.3f;
+
     private IEnumerator Grow(float maxSize)
     {
         Vector2 startScale = transform.localScale;
@@ -165,14 +167,14 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         StartCoroutine(Grow(1f));
     }
 
+
     public IEnumerator ShowLabelForSeconds(int seconds)
     {
-        hovertext = gameObject.transform.GetChild(0).gameObject;
+        GameObject hovertext = gameObject.transform.GetChild(0).gameObject;
         hovertext.SetActive(true);
         yield return new WaitForSeconds(4);
         hovertext.SetActive(false);
     }
-
 
 
     public void OnPointerClick(PointerEventData eventData)

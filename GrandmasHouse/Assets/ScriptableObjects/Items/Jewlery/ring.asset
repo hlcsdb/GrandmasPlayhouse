@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
   m_Name: ring
   m_EditorClassIdentifier: 
-  type: 0
+  type: 5
   description: ring
   wordString:
   - ring
@@ -24,7 +24,7 @@ MonoBehaviour:
   draggableImage:
   - {fileID: 21300000, guid: 8417ca9d941b241e08a3d91a5f35d883, type: 3}
   - {fileID: 21300000, guid: 9d2c58134b8974c45b2998cd7eb7e05a, type: 3}
-  thisRandIndex: 2
+  thisRandIndex: 1
   dragged: 0
   correct: 0
   dialect: 1
@@ -39,4 +39,9 @@ MonoBehaviour:
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
   startPos: {x: -220, y: 46}
+  dzB:
+  - {x: 80, y: -180}
+  - {x: 80, y: 95}
+  - {x: 300, y: 95}
+  - {x: 300, y: -180}
   batch: 0

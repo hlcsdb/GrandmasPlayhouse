@@ -44,6 +44,8 @@ public class DisplayScenarioHome : MonoBehaviour
     public void GotoSelectionScene()
     {
         //Debug.Log("go home");
-        SceneManager.LoadScene("ScenarioSelection");
+        //SceneManager.LoadScene("ScenarioSelection");
+        SceneManager.LoadScene("ScenarioCarousel");
+
     }
 }

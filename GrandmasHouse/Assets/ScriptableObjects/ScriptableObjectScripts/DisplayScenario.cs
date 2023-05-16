@@ -97,6 +97,7 @@ public class DisplayScenario : MonoBehaviour
 
     internal void SpawnDraggables()
     {
+        Debug.Log("exc SpawnDraggables()");
         ResetDraggableSOs();
         Vector2 scale = new Vector2(1, 1);
         int i = 0;

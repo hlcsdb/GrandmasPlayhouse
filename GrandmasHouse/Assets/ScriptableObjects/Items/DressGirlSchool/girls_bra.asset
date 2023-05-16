@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50834db1fa60b4c6c90c3b0bf25b49fb, type: 3}
+  m_Name: girls_bra
+  m_EditorClassIdentifier: 
+  type: 6
+  description: bra
+  wordString:
+  - bra
+  - "squma\u2019ulwut"
+  customInstructionText:
+  - 
+  - 
+  draggableImage:
+  - {fileID: 21300000, guid: 6e48af85c75c9420d90db298cc6368fa, type: 3}
+  - {fileID: 21300000, guid: 001841f20b8324cc09ab093b4878fb22, type: 3}
+  thisRandIndex: 0
+  dragged: 1
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: d2fe7592bd12d4a5ab6eaa912fe2bcee, type: 3}
+  draggableInstruction: {fileID: 8300000, guid: 335d2edd584c8456eba982af6d854c1c, type: 3}
+  dropPos: {x: -218, y: -13}
+  dropSize: {x: 2.3, y: 2.3}
+  selectionPos: {x: 0, y: 0}
+  startSize: {x: 1, y: 1}
+  startPos: {x: -220, y: 46}
+  dzB:
+  - {x: -310, y: -235}
+  - {x: -310, y: 150}
+  - {x: -105, y: 150}
+  - {x: -105, y: -235}
+  batch: 0

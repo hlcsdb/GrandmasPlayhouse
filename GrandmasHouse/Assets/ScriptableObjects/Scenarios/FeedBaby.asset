@@ -48,7 +48,7 @@ MonoBehaviour:
   playSceneName: FeedBaby
   repeaterPhrase:
   - Feed the baby
-  - "tt\u2019e\u2019stuhw \u2019u tthu"
+  - "t\u2019e\u2019stuhw \u2019u tthu"
   successPhrase:
   - "She liked the food and now she\u2019s sleepy."
   - "\u2019uy\u2019st-hwus tthu sxlhas na\u2019ut \u2019itutum."
@@ -70,6 +70,9 @@ MonoBehaviour:
   dzImage: {fileID: 21300000, guid: 62575d8d2141f438f8214fbcf1df923a, type: 3}
   dzPos: {x: -154, y: -84}
   dzRectDimensions: {x: 651, y: 432}
+  dzCover: {fileID: 0}
+  dzCoverPos: {x: 0, y: 0}
+  hideDzCoverImgAfter: -1
   correctPhraseAud:
   - {fileID: 8300000, guid: 85d2d56c568e3426288922d75be3cf7e, type: 3}
   - {fileID: 8300000, guid: 296b804532b134cff916610f4295b228, type: 3}
