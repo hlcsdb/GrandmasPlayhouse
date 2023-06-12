@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   wordString:
   - spoon
-  - tispon
+  - tispoun
   customInstructionText:
   - 
   - 
@@ -39,4 +39,5 @@ MonoBehaviour:
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
   startPos: {x: -220, y: -74}
+  dzB: []
   batch: 0

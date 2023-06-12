@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72621fac1367848879648d383de9f6fa, type: 3}
+  m_Name: GetGrandmaReady
+  m_EditorClassIdentifier: 
+  scenarioType: 3
+  scenarioName: "ni\u2019 tl\u2019qwuthut tthu si\u2019lu."
+  scenarioDraggableObjects: []
+  scenarioDraggableItems: []
+  titleName:
+  - Granny gets ready.
+  - "ni\u2019 tl\u2019qwuthut tthu si\u2019lu."
+  openerPhrase:
+  - Oh grandchild, I am so glad to see you here, please help me.
+  - "oooo \u2019imiye\u2019, \u2019uy\u2019 nu shqwaluwun kwunus \u2019i lumnamu,
+    tth\u2019iixwum \u2019i ts\u2019ewu tham\u2019sh."
+  DZB: []
+  replaceAsDropped: 0
+  dialect: 1
+  playSceneName: grannyGetsReady
+  repeaterPhrase:
+  - Please bring me my
+  - "tth\u2019i\u2019hwum \u2019i\u2019 m\u2019i \u2019ewustuhw tthunu"
+  successPhrase:
+  - "Thank you, grandchild. I\u2019m so happy."
+  - "hay ch q\u2019a\u2019, \u2019imuth. \u2019uy\u2019 nu shqwaluwun."
+  completionPhrase:
+  - "Grandchild, I\u2019m happy you came to visit."
+  - "\u2019imiye\u2019, hay tsun \u2019ul\u2019 \u2019iyus kwun\u2019s \u2019i nets\u2019uw\u2019t-hwum."
+  numDraggables: 0
+  titleAud: {fileID: 8300000, guid: e2b2ffce55f8a4e2587fdab1e900713c, type: 3}
+  openerPhraseAud: {fileID: 8300000, guid: a699d24223c7a437eaf0248abae34d11, type: 3}
+  repeaterPhraseAud: {fileID: 8300000, guid: 3484af0f92761412c83e1522f82312de, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: 03ca06310d159427bb7afd4a85ca4e90, type: 3}
+  completionPhraseAud: {fileID: 8300000, guid: f2d814d413fd34b1ba0701cd97bd9589, type: 3}
+  htpExampleAud: {fileID: 0}
+  homeImage: {fileID: 0}
+  backgroundImage: {fileID: 0}
+  HTPSprite: {fileID: 0}
+  vocabBackgroundSprite: {fileID: 21300000, guid: 46d6751d9fe234758be6d4ceb376ab59, type: 3}
+  gameOverBackgroundSprite: {fileID: 0}
+  dzImage: {fileID: 0}
+  dzPos: {x: 0, y: 0}
+  dzRectDimensions: {x: 0, y: 0}
+  dzCover: {fileID: 0}
+  dzCoverPos: {x: 0, y: 0}
+  hideDzCoverImgAfter: -1
+  correctPhraseAud:
+  - {fileID: 8300000, guid: acd39756b8a4845f1b43a3b2a71df978, type: 3}
+  incorrectSelectionAud:
+  - {fileID: 8300000, guid: 4278cf2cc90da4449b6b0d9377e3a879, type: 3}
+  incorrectDzSprites: []
+  correctDzSprites: []
+  randSlots:
+  - {x: -400, y: 118}
+  - {x: -400, y: 3}
+  - {x: -400, y: -112}
+  - {x: -400, y: -227}
+  - {x: -273, y: 118}
+  - {x: -273, y: 3}
+  - {x: -273, y: -112}
+  - {x: -273, y: -227}

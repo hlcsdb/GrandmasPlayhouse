@@ -64,7 +64,7 @@ MonoBehaviour:
   htpExampleAud: {fileID: 8300000, guid: 9523cc7b65caf4ac296b66efa41edd89, type: 3}
   homeImage: {fileID: 21300000, guid: 794771984dfb84ce8bd797a790da6c0a, type: 3}
   backgroundImage: {fileID: 21300000, guid: bf3642d4b7b1147b2a944addbd44735d, type: 3}
-  HTPSprite: {fileID: 21300000, guid: 164ed5726490d40d0911cfffadca41a6, type: 3}
+  HTPSprite: {fileID: 21300000, guid: 574b271c90e1b4d1ebc74a34827d8eed, type: 3}
   vocabBackgroundSprite: {fileID: 21300000, guid: bf3642d4b7b1147b2a944addbd44735d, type: 3}
   gameOverBackgroundSprite: {fileID: 21300000, guid: 794771984dfb84ce8bd797a790da6c0a, type: 3}
   dzImage: {fileID: 21300000, guid: 62575d8d2141f438f8214fbcf1df923a, type: 3}
