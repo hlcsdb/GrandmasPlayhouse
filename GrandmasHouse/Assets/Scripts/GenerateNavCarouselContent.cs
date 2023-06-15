@@ -11,8 +11,7 @@ public class GenerateNavCarouselContent : MonoBehaviour
     public GameObject pagePositions;
     bool isSliding = false;
     public int carouselPage = 0;
-    public Sprite[] pictureFrameSprites;
-    public GameObject scenarioImagePrefab;
+    public GameObject[] pictureFramePrefabs;
     public ScenarioSetter scenarioSetter;
     public float moduleSpacing = 100f; // Adjust this value based on your desired spacing between modules
 
@@ -30,8 +29,8 @@ public class GenerateNavCarouselContent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pictureframeWidth = scenarioImagePrefab.GetComponent<RectTransform>().rect.width;
-        pictureframeHeight = scenarioImagePrefab.GetComponent<RectTransform>().rect.height;
+        pictureframeWidth = pictureFramePrefabs[0].GetComponent<RectTransform>().rect.width;
+        pictureframeHeight = pictureFramePrefabs[0].GetComponent<RectTransform>().rect.height;
 
         frameXMargin = (featureAreaWidth - (pictureframeWidth * 2)) / 3;
         frameYMargin = (featureAreaHeight - (pictureframeHeight * 2)) / 3; ;
@@ -46,33 +45,7 @@ public class GenerateNavCarouselContent : MonoBehaviour
 
         for (int scenarioIndex = 0; scenarioIndex < scenarioCount; scenarioIndex++)
         {
-            Vector3 offset = CalculateFrameOffsets(scenarioIndex);
-
-            GameObject scenarioFrameGO = Instantiate(scenarioImagePrefab, transform);
-            scenarioFrameGOs[scenarioIndex] =scenarioFrameGO;
-            scenarioFrameGO.transform.localPosition = offset;
-
-            Image scenarioGOImage = scenarioFrameGO.GetComponent<Image>();
-            scenarioGOImage.sprite = scenarioSetter.scenarios[scenarioIndex].homeImage;
-            scenarioGOImage.preserveAspect = true;
-
-            GameObject pictureFrameGO = new GameObject("PictureFrame_"+ scenarioSetter.scenarios[scenarioIndex].name);
-            pictureFrameGO.transform.SetParent(scenarioGOImage.transform, false);
-
-            RectTransform moduleRectTransform = scenarioGOImage.rectTransform;
-            RectTransform pictureFrameRectTransform = pictureFrameGO.AddComponent<RectTransform>();
-            pictureFrameRectTransform.sizeDelta = moduleRectTransform.sizeDelta;
-            pictureFrameRectTransform.localScale = Vector3.one;
-
-            Image pictureFrameImage = pictureFrameGO.AddComponent<Image>();
-            pictureFrameImage.sprite = pictureFrameSprites[scenarioIndex % nPerPage];
-            pictureFrameImage.preserveAspect = true;
-            int index = scenarioIndex;
-            Button scenarioButton = scenarioFrameGO.GetComponent<Button>();
-            scenarioButton.onClick.AddListener(() => SetActiveScenario(index));
-
-            Debug.Log("scenarioGO image name: " + scenarioGOImage.name + "; pictureFrameGO name: " + pictureFrameGO.name);
-            scenarioFrameGO.SetActive(true);
+            InstantiatePictureFrame(scenarioIndex);
         }
 
         for (int i = 0; i < scenarioCount; i++)
@@ -81,6 +54,39 @@ public class GenerateNavCarouselContent : MonoBehaviour
             float quartetOffset = 0.0f + (featureAreaWidth * quartetIndex);
             scenarioFrameGOs[i].transform.localPosition += new Vector3(quartetOffset, 0f, 0f);
         }
+    }
+
+    private void InstantiatePictureFrame(int scenarioIndex)
+    {
+        GameObject scenarioFrameGO = Instantiate(pictureFramePrefabs[scenarioIndex % pictureFramePrefabs.Length], transform);
+        scenarioFrameGOs[scenarioIndex] = scenarioFrameGO;
+
+        Vector3 offset = CalculateFrameOffsets(scenarioIndex);
+        scenarioFrameGO.transform.localPosition = CalculateFrameOffsets(scenarioIndex);
+        float frameTiltZ = GetTilt(scenarioIndex);
+        scenarioFrameGO.transform.rotation = Quaternion.Euler(0, 0, frameTiltZ);
+        scenarioFrameGO.GetComponent<PictureFrame>().startTilt = frameTiltZ;
+
+        GameObject scenarioImageGO = scenarioFrameGO.transform.Find("ScenarioImage").gameObject;
+        Image scenarioImageComponent = scenarioImageGO.GetComponent<Image>();
+        scenarioImageComponent.sprite = scenarioSetter.scenarios[scenarioIndex].homeImage;
+
+        RectTransform rectTransform = scenarioImageGO.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(rectTransform.rect.width, rectTransform.rect.height);
+
+        int index = scenarioIndex;
+        Button scenarioButton = scenarioFrameGO.GetComponent<Button>();
+        scenarioButton.onClick.AddListener(() => SetActiveScenario(index));
+
+        scenarioFrameGO.SetActive(true);
+    }
+
+    private float GetTilt(int scenarioIndex)
+    {
+        System.Random random = new System.Random();
+        float frameTiltZ = (float)random.NextDouble() * 1.5f + 3;
+        frameTiltZ *= (scenarioIndex % 4 == 0 || scenarioIndex % 4 == 3) ? 1 : -1;
+        return frameTiltZ;
     }
 
     private Vector3 CalculateFrameOffsets(int scenarioIndex)

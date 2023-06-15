@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8d983c6f9e9e4d4389f6fa936195856, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8377e5f8a0434e3b8629110ea9e4df2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2125,12 +2125,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pagePositions: {fileID: 1727342042}
   carouselPage: 0
-  pictureFrameSprites:
-  - {fileID: 21300000, guid: fbb7976d4226c4c75979a133c0d712ce, type: 3}
-  - {fileID: 21300000, guid: 6ed4c27033b7b4b8aba4cb134d881a0b, type: 3}
-  - {fileID: 21300000, guid: 866a5e9134a354354ac320628e9e86de, type: 3}
-  - {fileID: 21300000, guid: 71334d8fb7af24399a51812a50ae350a, type: 3}
-  scenarioImagePrefab: {fileID: 2704138419036413648, guid: 9b3e2dd1df4804692bb80fc9d9012fcb, type: 3}
+  pictureFramePrefabs:
+  - {fileID: 7634231089902175833, guid: 1e56a8e54ba0c4403b4c4d7bcdb4e26f, type: 3}
+  - {fileID: 3502540754861504643, guid: 8ab30779abe4b4d75810a8cd3663b7ed, type: 3}
+  - {fileID: 9006678257791621486, guid: a04d9c15f80d9454394ef20ea19131a6, type: 3}
+  - {fileID: 2997713340776459261, guid: bcf3f6a4c847b4e46a1d4ed531a458ec, type: 3}
+  - {fileID: 5235210206176443037, guid: baa25191c2221418793d6d7c47bb1910, type: 3}
+  - {fileID: 4043927113503457112, guid: a0093d71d2cdb499988ffbf085be6612, type: 3}
+  - {fileID: 710417674890273333, guid: 9b3e2dd1df4804692bb80fc9d9012fcb, type: 3}
+  - {fileID: 7084292415608684843, guid: 9690518bec9474333b61db23cb243b7b, type: 3}
   scenarioSetter: {fileID: 11400000, guid: 387eb3ec76e734f9e9040542003c1f23, type: 2}
   moduleSpacing: 100
   rightButton: {fileID: 327462687}

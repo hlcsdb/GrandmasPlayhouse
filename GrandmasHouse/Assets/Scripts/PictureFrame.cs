@@ -3,17 +3,16 @@ using UnityEngine.EventSystems;
 
 public class PictureFrame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    float targetAngleZ = 10f;
-    float resetAngleZ = 0f;
+    public float startTilt;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.rotation = Quaternion.Euler(0, 0, targetAngleZ);
+        transform.rotation = Quaternion.Euler(0, 0, startTilt * -1);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.rotation = Quaternion.Euler(0, 0, resetAngleZ);
+        transform.rotation = Quaternion.Euler(0, 0, startTilt);
     }
 }
 
