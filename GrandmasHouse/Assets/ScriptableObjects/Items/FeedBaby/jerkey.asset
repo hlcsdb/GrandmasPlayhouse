@@ -21,10 +21,10 @@ MonoBehaviour:
   - 
   - 
   draggableImage:
-  - {fileID: 21300000, guid: 2eb2dcdf963d54e7fb2f3a34273fae6f, type: 3}
-  - {fileID: 21300000, guid: ab08d4a69a9d54ea99833595cc83187c, type: 3}
-  thisRandIndex: 0
-  dragged: 0
+  - {fileID: 21300000, guid: b188689add7e44209b6cfd019dc699b7, type: 3}
+  - {fileID: 21300000, guid: 9483eef936ff84ecfb9be8afeabf5d8e, type: 3}
+  thisRandIndex: 1
+  dragged: 1
   correct: 0
   dialect: 1
   tileStateOutlineColors:
@@ -33,10 +33,14 @@ MonoBehaviour:
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: a17b31faf0cc043c09092c408602d7a6, type: 3}
   draggableInstruction: {fileID: 0}
-  dropPos: {x: -218, y: -55}
+  dropPos: {x: -218, y: -52}
   dropSize: {x: 0.9, y: 1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 1, y: 1}
-  startPos: {x: 0, y: 0}
-  dzB: []
+  startPos: {x: -60, y: 46}
+  dzB:
+  - {x: -450, y: -300}
+  - {x: -450, y: 100}
+  - {x: 150, y: 100}
+  - {x: 150, y: -300}
   batch: 0
