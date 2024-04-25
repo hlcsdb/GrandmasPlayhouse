@@ -1,6 +1,6 @@
 # GrandmasPlayhouse
 
-This is the open-source code for Grandmas House, an online collection of drag and drop vocabulary games created for the hul’q’umi’num’ community by the members of the hul’q’umi’num’ Language and Culture Society.
+This is the code for Grandmas House, an online collection of drag and drop vocabulary games created for the hul’q’umi’num’ community by the members of the hul’q’umi’num’ Language and Culture Society. It is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
 
 This game was built using the Unity Game Engine, editor version 2021.2.9f1.
 
