@@ -23,8 +23,8 @@ MonoBehaviour:
   draggableImage:
   - {fileID: 21300000, guid: ecdcd913c714349e58fffb8c44ddab80, type: 3}
   - {fileID: 21300000, guid: 12351aabfcfda4046beddbd5fd25e9ad, type: 3}
-  thisRandIndex: 6
-  dragged: 0
+  thisRandIndex: 5
+  dragged: 1
   correct: 0
   dialect: 1
   tileStateOutlineColors:
@@ -37,10 +37,10 @@ MonoBehaviour:
   dropSize: {x: 1, y: 1}
   selectionPos: {x: 0, y: 0}
   startSize: {x: 0.8, y: 0.8}
-  startPos: {x: -80, y: 65}
+  startPos: {x: 100, y: 46}
   dzB:
-  - {x: 0, y: -150}
+  - {x: 0, y: -200}
   - {x: 0, y: 30}
   - {x: 380, y: 30}
-  - {x: 380, y: -150}
+  - {x: 380, y: -200}
   batch: 0

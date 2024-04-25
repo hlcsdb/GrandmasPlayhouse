@@ -279,7 +279,6 @@ public class ChallengeController : MonoBehaviour
     {
         new WaitForSeconds(2);
         selectedScenarioUI.ShowSuccessText();
-        //big particle effect
         yield return new WaitWhile(() => audioSource.isPlaying);
         audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
         yield return new WaitWhile(() => audioSource.isPlaying);

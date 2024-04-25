@@ -37,7 +37,7 @@ MonoBehaviour:
   - "nem\u2019 \u2019utth\u2019e\u2019um! wulh skoul ch!"
   openerPhrase:
   - Get dressed and fix yourself up.
-  - "\u2019u tth\u2019e\u2019um \u2019un suw\u2019 they\u2019yuwsum."
+  - "\u2019u tth\u2019e\u2019um \u2019un\u2019 suw\u2019 they\u2019uwsum."
   DZB:
   - {x: -105, y: -235}
   - {x: -105, y: 150}
@@ -48,13 +48,13 @@ MonoBehaviour:
   playSceneName: DressSchoolBoy
   repeaterPhrase:
   - Put on your
-  - "hakwush tthun\u2019"
+  - "nem\u2019 hakwush tthun\u2019"
   successPhrase:
   - Looking good in what your wear!
   - "\u2019i \u2019uy\u2019mut tthu hakwushuhw!"
   completionPhrase:
   - You are ready to go to school!
-  - "ni\u2019 ch hwusaay\u2019 kw\u2019uns nem\u2019 skoul!"
+  - "ni\u2019 ch hwu saay\u2019 kw\u2019un\u2019s nem\u2019 skoul!"
   numDraggables: 8
   titleAud: {fileID: 8300000, guid: 406f0cc59c7df4e4cb22fab0654d5df0, type: 3}
   openerPhraseAud: {fileID: 8300000, guid: 0d8daaf6d354d48208d0a0fc30414c87, type: 3}
